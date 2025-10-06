@@ -392,7 +392,13 @@ th{
     column-count: 3;
   }
 
-.pdo {
+.pdo-1 {
+    filter: blur(0.1px);
+}
+.pdo-2 {
+    filter: blur(0.2px);
+}
+.pdo-3 {
     filter: blur(0.3px);
 }
 
