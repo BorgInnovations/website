@@ -358,6 +358,21 @@ th{
 
 
 /*misc*/
+
+.si {
+    color: var(--mercury);
+    border-bottom: 1px solid var(--mercury);
+    text-align: left;
+}
+.si:hover {
+    background-color: var(--neil);
+}
+
+ul {
+    list-style: none;
+}
+
+
 .divider{
     margin-top: 24px;
     margin-bottom: 24px;

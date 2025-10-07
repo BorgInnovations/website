@@ -1,6 +1,6 @@
 function topMenu_load(){
 
-    document.getElementById("topMenu").innerHTML = '<ul><li><a href="./index.html">B0RG</a></li><li><a href="#news">Products</a></li><li><a class="nbus" onclick="showcontact()">Contact</a></li><li><a href="#about">About</a></li></ul>'
+    document.getElementById("topMenu").innerHTML = '<ul><li><a href="./index.html">B0RG</a></li><li><a class="nbus" onclick="showproducts()">Products</a></li><li><a class="nbus" onclick="showcontact()">Contact</a></li><li><a href="#about">About</a></li></ul>'
   
   }
   
