@@ -9,7 +9,7 @@ function topMenu_load(){
   
   function footMenu_load(){
   
-    document.getElementById("footMenu").innerHTML = '<p style="text-align: center;"><a href="./index.html"><img src="./img/icons/BI_1.svg" style="width: 200px;padding: 15px;" alt=""></a></p><p style="text-align: center;">© 2025 Jacob Borg</p>'
+    document.getElementById("footMenu").innerHTML = '<p style="text-align: center;"><a href="./index.html"><img src="./img/icons/BI_1.svg" style="width: 200px;padding: 15px;" alt=""></a></p><center><p><a class="a" href="./privacy.html">Privacy</a></p></center><p style="text-align: center;">© 2025 Jacob Borg</p>'
   
   }
   

@@ -42,7 +42,7 @@ function displayResults(results) {
   resultsElement.innerHTML = '';
   results.forEach(result => {
       const listItem = document.createElement('a');
-      listItem.innerHTML = '<span class="si">'+ result.content + '</span> <p>AI Score: '+result.ai_score+'</p>';
+      listItem.innerHTML = '<span class="si">'+ result.content + '</span> <p>AI Score: '+result.ai_score+' | Author: '+result.author+'</p>';
       listItem.style = 'color: var(--mercury);border-bottom: 0px solid var(--mercury);'
       listItem.target = '_blank'
       listItem.href = result.url
