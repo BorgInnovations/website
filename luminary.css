@@ -3,9 +3,9 @@ Welcome to Mercury!
 An American Space-Age Inspired CSS Library!
 */
 
-@font-face { 
+@font-face {
     font-family: Fira_Code;
-    src: url("./Fira_Code/FiraCode-VariableFont_wght.ttf"); 
+    src: url("./Fira_Code/FiraCode-VariableFont_wght.ttf");
 
     /*
     Credit goes to tonsky on GitHub for creating the Fira Code font.
@@ -15,6 +15,7 @@ An American Space-Age Inspired CSS Library!
     ./Fira_Code/OFL.text
     */
 }
+
 @property --mercury {
     syntax: "<color>";
     inherits: false;
@@ -90,7 +91,7 @@ An American Space-Age Inspired CSS Library!
 
 
 /*Global*/
-html{
+html {
     font-family: Fira_Code;
     animation-duration: 0.01s;
     animation-name: textflicker;
@@ -100,10 +101,12 @@ html{
     color: var(--mercury);
     margin: 15px;
 }
-button{
+
+button {
     font-family: Fira_Code;
 }
-a{
+
+a {
     font-family: Fira_Code;
 }
 
@@ -119,7 +122,7 @@ a{
 
 .grid-container {
     display: grid;
-  }
+}
 
 .flex-container {
     display: flex;
@@ -137,26 +140,54 @@ a{
     border: var(--mercury);
     border-width: 1px;
     border-style: solid;
-  }
-  
-  .nav ul li {
+}
+
+.nav-alt ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: var(--luminary);
+    border-width: 1px;
+    border-style: solid;
+    background-color: var(--mercury);
+}
+
+.nav ul li {
     float: left;
-  }
-  
-  .nav ul li a {
+}
+
+.nav-alt ul li {
+    float: left;
+}
+
+.nav ul li a {
     display: block;
     color: var(--mercury);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  .nav ul li a:hover {
+}
+
+.nav-alt ul li a {
+    display: block;
+    color: var(--luminary);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
     background-color: var(--mercury);
     color: var(--luminary);
-  }
+}
 
-.nbus:hover{
+.nav-alt ul li a:hover {
+    background-color: var(--luminary);
+    color: var(--mercury);
+}
+
+.nbus:hover {
     cursor: pointer;
 }
 
@@ -168,17 +199,30 @@ a{
     border-width: 1px;
 }
 
+.card-alt {
+    margin: 15px;
+    border-style: solid;
+    border-color: var(--luminary);
+    border-width: 1px;
+}
+
 .card p {
     padding-top: 0px;
     margin-top: 0px;
 }
 
-.card-body h1,.card-body h2,.card-body h3,.card-body h4,.card-body h5,.card-body h6 {
+.card-body h1,
+.card-body h2,
+.card-body h3,
+.card-body h4,
+.card-body h5,
+.card-body h6 {
     padding-top: 0px;
     margin-top: 0px;
     text-decoration: underline;
 }
-.card-body{
+
+.card-body {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -193,7 +237,14 @@ a{
     padding-right: 5px;
     text-align: center;
 }
-.card-heading h1,.card-heading h2,.card-heading h3,.card-heading h4,.card-heading h5,.card-heading h6 {
+
+
+.card-heading h1,
+.card-heading h2,
+.card-heading h3,
+.card-heading h4,
+.card-heading h5,
+.card-heading h6 {
     padding-top: 0px;
     margin-top: 0px;
     text-decoration: none;
@@ -213,7 +264,7 @@ a{
 }
 
 .abus:hover {
-    
+
     color: var(--mercury);
     background-color: var(--luminary);
     border-style: solid;
@@ -236,7 +287,7 @@ a{
 }
 
 .obus:hover {
-    
+
     color: var(--comanche);
     background-color: var(--luminary);
     border-style: solid;
@@ -259,7 +310,7 @@ a{
 }
 
 .bbus:hover {
-    
+
     color: var(--neil);
     background-color: var(--luminary);
     border-style: solid;
@@ -282,7 +333,7 @@ a{
 }
 
 .gbus:hover {
-    
+
     color: var(--buzz);
     background-color: var(--luminary);
     border-style: solid;
@@ -293,7 +344,7 @@ a{
     cursor: pointer;
 }
 
-.topbus{
+.topbus {
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -307,7 +358,7 @@ a{
 }
 
 .topbus:hover {
-    
+
     color: var(--mercury);
     background-color: var(--luminary);
     border-style: solid;
@@ -330,11 +381,12 @@ td {
     border-bottom: 1px solid var(--mercury);
     text-align: left;
 }
+
 tr:hover {
     background-color: var(--neil);
 }
 
-th{
+th {
     background-color: var(--mercury);
     color: var(--luminary);
     padding-left: 5px;
@@ -344,7 +396,7 @@ th{
 }
 
 /*Inputs*/
-.text-input{
+.text-input {
     font-family: Fira_Code;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -364,6 +416,7 @@ th{
     border-bottom: 1px solid var(--mercury);
     text-align: left;
 }
+
 .si:hover {
     background-color: var(--neil);
 }
@@ -373,7 +426,7 @@ ul {
 }
 
 
-.divider{
+.divider {
     margin-top: 24px;
     margin-bottom: 24px;
     opacity: 0.5;
@@ -389,30 +442,48 @@ ul {
     border-width: 1px;
 }
 
-.a{
+.a {
     padding-top: 0px;
     margin-top: 0px;
     text-decoration: underline;
     color: var(--mercury);
 }
 
-.a:hover{
+.a:hover {
     padding-top: 0px;
     margin-top: 0px;
     text-decoration: underline;
     color: var(--neil);
 }
 
+.a-alt {
+    padding-top: 0px;
+    margin-top: 0px;
+    text-decoration: underline;
+    color: var(--luminary);
+}
+
+.a-alt:hover {
+    padding-top: 0px;
+    margin-top: 0px;
+    text-decoration: underline;
+    color: var(--neil);
+}
+
+
+
 .cols-3 {
     column-count: 3;
-  }
+}
 
 .pdo-1 {
     filter: blur(0.1px);
 }
+
 .pdo-2 {
     filter: blur(0.2px);
 }
+
 .pdo-3 {
     filter: blur(0.3px);
 }

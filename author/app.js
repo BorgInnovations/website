@@ -1,179 +1,129 @@
 
 document.getElementById("heading").innerHTML =
-  localStorage["title"] || "The title"; // default text
+   localStorage["title"] || "The title"; // default text
 document.getElementById("body").innerHTML =
-  localStorage["text"] || "The body"; // default text
-  document.getElementById("footer").innerHTML =
-    localStorage["footer"] || "The footer"; // default text
-  
+   localStorage["text"] || "The body"; // default text
+document.getElementById("footer").innerHTML =
+   localStorage["footer"] || "The footer"; // default text
+
 document.getElementById("heading").style.color =
-      localStorage["titlec"] || "#000"; // default text
+   localStorage["titlec"] || "#000"; // default text
 document.getElementById("body").style.color =
-      localStorage["textc"] || "#000"; // default text
+   localStorage["textc"] || "#000"; // default text
 document.getElementById("footer").style.color =
-        localStorage["footerc"] || "#000"; // default text
-    
-        document.getElementById("heading").style.fontSize =
-        localStorage["titlefs"] || "18pt"; // default text
-  document.getElementById("body").style.fontSize =
-        localStorage["textfs"] || "12pt"; // default text
-  document.getElementById("footer").style.fontSize =
-          localStorage["footerfs"] || "12pt"; // default text
+   localStorage["footerc"] || "#000"; // default text
 
-        document.getElementById("heading").style.fontWeight =
-        localStorage["titlefw"] || "normal"; // default text
-  document.getElementById("body").style.fontWeight =
-        localStorage["textfw"] || "normal"; // default text
-  document.getElementById("footer").style.fontWeight =
-          localStorage["footerfw"] || "normal"; // default text
-      
-          document.getElementById("heading").style.fontStyle =
-          localStorage["titlefs"] || "normal"; // default text
-    document.getElementById("body").style.fontStyle =
-          localStorage["textfs"] || "normal"; // default text
-    document.getElementById("footer").style.fontStyle =
-            localStorage["footerfs"] || "normal"; // default text
-        
+document.getElementById("heading").style.fontSize =
+   localStorage["titlefs"] || "18pt"; // default text
+document.getElementById("body").style.fontSize =
+   localStorage["textfs"] || "12pt"; // default text
+document.getElementById("footer").style.fontSize =
+   localStorage["footerfs"] || "12pt"; // default text
 
-            document.getElementById("heading").style.textAlign =
-            localStorage["titlea"] || "left"; // default text
-      document.getElementById("body").style.textAlign =
-            localStorage["texta"] || "left"; // default text
-      document.getElementById("footer").style.textAlign =
-              localStorage["footera"] || "left"; // default text
-          
-              document.getElementById("document").style.margin =
-              localStorage["margins"] || "0px"; // default text
-              document.getElementById("document").style.paddingBottom =
-              localStorage["padding"] || "0px"; // default text
-          
+document.getElementById("heading").style.fontWeight =
+   localStorage["titlefw"] || "normal"; // default text
+document.getElementById("body").style.fontWeight =
+   localStorage["textfw"] || "normal"; // default text
+document.getElementById("footer").style.fontWeight =
+   localStorage["footerfw"] || "normal"; // default text
 
-            
+document.getElementById("heading").style.fontStyle =
+   localStorage["titlefs"] || "normal"; // default text
+document.getElementById("body").style.fontStyle =
+   localStorage["textfs"] || "normal"; // default text
+document.getElementById("footer").style.fontStyle =
+   localStorage["footerfs"] || "normal"; // default text
 
-setInterval(function() {
 
-  // fuction that is saving the innerHTML of the div
+document.getElementById("heading").style.textAlign =
+   localStorage["titlea"] || "left"; // default text
+document.getElementById("body").style.textAlign =
+   localStorage["texta"] || "left"; // default text
+document.getElementById("footer").style.textAlign =
+   localStorage["footera"] || "left"; // default text
+
+document.getElementById("document").style.margin =
+   localStorage["margins"] || "0px"; // default text
+document.getElementById("document").style.paddingBottom =
+   localStorage["padding"] || "0px"; // default text
 
 
 
-  localStorage["title"] = document.getElementById("heading").innerHTML + ' '; // heading div
-  localStorage["text"] = document.getElementById("body").innerHTML + ' '; // content div
-  localStorage["footer"] = document.getElementById("footer").innerHTML + ' '; // content div
 
-  localStorage["titlec"] = document.getElementById("header-color").style.color + ' '; // heading div
-  localStorage["textc"] = document.getElementById("body-color").style.color + ' '; // content div
-  localStorage["footerc"] = document.getElementById("footer-color").style.color + ' '; // content div
+setInterval(function () {
 
-  localStorage["titlefs"] = document.getElementById("heading").style.fontSize + ' '; // heading div
-  localStorage["textfs"] = document.getElementById("body").style.fontSize + ' '; // content div
-  localStorage["footerfs"] = document.getElementById("footer").style.fontSize + ' '; // content div
+   // fuction that is saving the innerHTML of the div
 
-  localStorage["titlefw"] = document.getElementById("heading").style.fontWeight + ' '; // heading div
-  localStorage["textfw"] = document.getElementById("body").style.fontWeight + ' '; // content div
-  localStorage["footerfw"] = document.getElementById("footer").style.fontWeight + ' '; // content div
 
-  localStorage["titlefs"] = document.getElementById("heading").style.fontStyle + ' '; // heading div
-  localStorage["textfs"] = document.getElementById("body").style.fontStyle + ' '; // content div
-  localStorage["footerfs"] = document.getElementById("footer").style.fontStyle + ' '; // content div
 
-  localStorage["titlea"] = document.getElementById("header-alignment").style.textAlign + ' '; // heading div
-  localStorage["texta"] = document.getElementById("body-alignment").style.textAlign + ' '; // content div
-  localStorage["footera"] = document.getElementById("footer-alignment").style.textAlign + ' '; // content div
+   localStorage["title"] = document.getElementById("heading").innerHTML + ' '; // heading div
+   localStorage["text"] = document.getElementById("body").innerHTML + ' '; // content div
+   localStorage["footer"] = document.getElementById("footer").innerHTML + ' '; // content div
 
-  localStorage["margins"] = document.getElementById("document").style.margin + ' '; // content div
-  localStorage["padding"] = document.getElementById("document").style.paddingBottom + ' '; // content div
+   localStorage["titlec"] = document.getElementById("header-color").style.color + ' '; // heading div
+   localStorage["textc"] = document.getElementById("body-color").style.color + ' '; // content div
+   localStorage["footerc"] = document.getElementById("footer-color").style.color + ' '; // content div
+
+   localStorage["titlefs"] = document.getElementById("heading").style.fontSize + ' '; // heading div
+   localStorage["textfs"] = document.getElementById("body").style.fontSize + ' '; // content div
+   localStorage["footerfs"] = document.getElementById("footer").style.fontSize + ' '; // content div
+
+   localStorage["titlefw"] = document.getElementById("heading").style.fontWeight + ' '; // heading div
+   localStorage["textfw"] = document.getElementById("body").style.fontWeight + ' '; // content div
+   localStorage["footerfw"] = document.getElementById("footer").style.fontWeight + ' '; // content div
+
+   localStorage["titlefs"] = document.getElementById("heading").style.fontStyle + ' '; // heading div
+   localStorage["textfs"] = document.getElementById("body").style.fontStyle + ' '; // content div
+   localStorage["footerfs"] = document.getElementById("footer").style.fontStyle + ' '; // content div
+
+   localStorage["titlea"] = document.getElementById("header-alignment").style.textAlign + ' '; // heading div
+   localStorage["texta"] = document.getElementById("body-alignment").style.textAlign + ' '; // content div
+   localStorage["footera"] = document.getElementById("footer-alignment").style.textAlign + ' '; // content div
+
+   localStorage["margins"] = document.getElementById("document").style.margin + ' '; // content div
+   localStorage["padding"] = document.getElementById("document").style.paddingBottom + ' '; // content div
 
 }, 1000);
-function clear(){
-  localStorage.clear();
+function clear() {
+   localStorage.clear();
+}
+/* Navigation Controls */
+function file() {
+   var x = document.getElementById("file");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
 }
 
 
-
-function hide(){
-document.getElementById("controlBar").style.visibility = "hidden";
-document.getElementById("footerHide").style.visibility = "hidden";
-var x = document.getElementById("top");
-if (x.style.display === "none") {
-  x.style.display = "block";
-} else {
-  x.style.display = "none";
-}
-}
-function show(){
-document.getElementById("controlBar").style.visibility = "visible";
-document.getElementById("footerHide").style.visibility = "visible";
-var x = document.getElementById("top");
-if (x.style.display === "none") {
-  x.style.display = "block";
-} else {
-  x.style.display = "visible";
-}
-}
-
-function hide3(){
-   document.getElementById("mobileditor1").style.visibility = 'hidden';
-   document.getElementById("mobileditor2").style.visibility = 'hidden';
-   document.getElementById("mobileditor3").style.visibility = 'hidden';
-
-}
-function show3(){
-   document.getElementById("mobileditor1").style.visibility = 'visible';
-   document.getElementById("mobileditor2").style.visibility = 'visible';
-   document.getElementById("mobileditor3").style.visibility = 'visible';
-
-}
-function hide2(){
-
-   
-
-
-   document.getElementById("ab").style.visibility = 'visible';
-var x = document.getElementById("controlBar2");
-if (x.style.display === "none") {
-  x.style.display = "block";
-} else {
-  x.style.display = "none";
-}
-}
-
-
-function show2(){
-   document.getElementById("ab").style.visibility = 'hidden';
-var x = document.getElementById("controlBar2");
-if (x.style.display === "none") {
-  x.style.display = "block";
-} else {
-  x.style.display = "visible";
-}
-}
-
-function hcustomcolor(){
+function hcustomcolor() {
 
 
    document.getElementById("heading").style.color = document.getElementById("customcolor").value;
 }
 
-function bcustomcolor(){
+function bcustomcolor() {
 
 
    document.getElementById("body").style.color = document.getElementById("customcolor").value;
 }
 
 
-function hcustomsize(){
+function hcustomsize() {
 
 
    document.getElementById("heading").style.fontSize = document.getElementById("customsize").value;
 }
 
-function bcustomsize(){
+function bcustomsize() {
 
 
    document.getElementById("body").style.fontSize = document.getElementById("customsize").value;
 }
 
-function fcustomsize(){
+function fcustomsize() {
 
 
    document.getElementById("footer").style.fontSize = document.getElementById("customsize").value;
@@ -182,15 +132,15 @@ function fcustomsize(){
 
 
 
-function hcustomfont(){
+function hcustomfont() {
    document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
 }
 
-function bcustomfont(){
+function bcustomfont() {
    document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
 }
 
-function fcustomfont(){
+function fcustomfont() {
    document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
 }
 
@@ -199,23 +149,23 @@ function fcustomfont(){
 
 
 
-function fcustomcolor(){
+function fcustomcolor() {
 
 
    document.getElementById("footer").style.color = document.getElementById("customcolor").value;
 }
 
-function hrecallcolor(){
+function hrecallcolor() {
    document.getElementById("hcustomcolor").value = document.getElementById("heading").style.color;
 }
-function brecallcolor(){
+function brecallcolor() {
    document.getElementById("bcustomcolor").value = document.getElementById("body").style.color;
 }
-function frecallcolor(){
+function frecallcolor() {
    document.getElementById("fcustomcolor").value = document.getElementById("footer").style.color;
 }
 
-function colorinspect(){
+function colorinspect() {
    document.getElementById("inspectortitle").innerHTML = 'Color Inspector';
    document.getElementById("inspector1").innerHTML = 'Heading: ' + document.getElementById("heading").style.color;
    document.getElementById("inspector2").innerHTML = 'Body: ' + document.getElementById("body").style.color;
@@ -227,7 +177,7 @@ function colorinspect(){
 
 
 
-function closeinspector(){
+function closeinspector() {
    document.getElementById("inspectortitle").innerHTML = '';
    document.getElementById("inspector1").innerHTML = '';
    document.getElementById("inspector2").innerHTML = '';
@@ -239,44 +189,44 @@ function closeinspector(){
 
 
 
-function welcome(){
+function welcome() {
    document.getElementById("iframe").src = "./welcome.html";
 }
-function meme(){
+function meme() {
    document.getElementById("iframe").src = "./meme.html";
 }
-function doc1(){
+function doc1() {
    document.getElementById("iframe").src = "./doc.html";
 }
-function doc2(){
+function doc2() {
    document.getElementById("iframe").src = "./doc2.html";
 }
-function doc3(){
+function doc3() {
    document.getElementById("iframe").src = "./doc3.html";
 }
-function doc4(){
+function doc4() {
    document.getElementById("iframe").src = "./doc4.html";
 }
-function doc5(){
+function doc5() {
    document.getElementById("iframe").src = "./doc5.html";
 }
-function doc6(){
+function doc6() {
    document.getElementById("iframe").src = "./doc6.html";
 }
-function doc7(){
+function doc7() {
    document.getElementById("iframe").src = "./doc7.html";
 }
-function docapp(){
+function docapp() {
    document.getElementById("iframe").src = "./docapp.html";
 }
 
-function privacy(){
+function privacy() {
    document.getElementById("iframe").src = "./privacy.html";
 }
 
 function save() {
    var blob = new Blob([localStorage["title"], localStorage["text"], localStorage["footer"]],
-    { type: "text/plain;charset=utf-8" });
+      { type: "text/plain;charset=utf-8" });
    saveAs(blob, "author.txt");
 }
 
@@ -304,14 +254,14 @@ function setmarginl() {
 
 function settitle() {
    document.getElementById("heading").innerHTML =
-   localStorage["title"+document.getElementById("documentname").value] || "The title"; // default text
+      localStorage["title" + document.getElementById("documentname").value] || "The title"; // default text
 }
 
 function resetstyles() {
    localStorage["titles"] = 'ba_l';
    localStorage["bodys"] = 'ba_m';
    localStorage["footers"] = 'ba_m';
-   
+
    document.getElementById("heading").className = 'ba_l';
    document.getElementById("body").className = 'ba_m';
    document.getElementById("footer").className = 'ba_m';
@@ -362,15 +312,15 @@ function cleardocument() {
    localStorage["title"] = '';
    localStorage["body"] = '';
    localStorage["footer"] = '';
-   
+
    document.getElementById("heading").innerHTML = 'The Title';
    document.getElementById("body").innerHTML = 'The Body';
    document.getElementById("footer").innerHTML = 'The Footer';
 
-      localStorage["titles"] = 'pn_l';
+   localStorage["titles"] = 'pn_l';
    localStorage["bodys"] = 'pn_m';
    localStorage["footers"] = 'pn_m';
-   
+
    document.getElementById("heading").className = 'pn_l';
    document.getElementById("body").className = 'pn_m';
    document.getElementById("footer").className = 'pn_m';
@@ -413,5 +363,5 @@ function cleardocument() {
 
    localStorage["padding"] = '10px';
 
-   document.getElementById("document").style.paddingBottom = '10px';  
+   document.getElementById("document").style.paddingBottom = '10px';
 }
