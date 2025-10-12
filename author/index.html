@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../luminary.css">
+
+
+
+	<meta property="og:title" content="Author by Borg Innovations">
+	<meta property="og:description" content="A browser based writing app for the minimalist.">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+
+	<meta property="twitter:title" content="Author by Borg Innovations">
+	<meta property="twitter:description" content="A browser based writing app for the minimalist.">
+	<meta property="twitter:image" content="">
+	<meta property="twitter:url" content="https:/borginnovations.com/author">
+
+	<meta name="title" content="Author">
+	<meta name="description" content="A browser based writing app for the minimalist.">
+	<meta name="keywords" content="professional, small business, development, web technologies, writing, writing-tool, productivity">
+	<meta name="robots" content="index, nofollow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="revisit-after" content="30 days">
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" href="./authorA.svg">
+		<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css">
+	  <title>Borg Innovation's Author</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--	<p id="top" class="pn_m_o" style="text-align: left; color: #cecece;"><span><a href="./index.html"><img src="./bcs-logo.PNG" width="50mm"></a></span>BCS Author<span class="pn_s" style="text-align: left; color: #cecece;"> - BETA</span></p>-->
+
+
+	</head>
+
+<header>
+    <a name="#top" hidden></a>
+    <div class="nav" id="topMenu">
+		<ul><li><a href="./index.html">Author</a></li>
+			<li>
+				<a class="nbus" onclick="showproducts()">Products</a></li>
+				<li><a class="nbus" onclick="showcontact()">Contact</a></li></ul>
+
+    </div>
+    <a href="#top">
+        <button class="topbus">
+            ^^^
+        </button>
+    </a>
+
+</header>
+
+
+	<body onload="widthcontrol()">
+		<p id="top"></p>
+		<center>
+			<!--<p id="controlBar"><button onclick="welcome();" class="buttonY">Welcome</button><button onclick="doc1();" class="buttonY">Template 1</button><button onclick="doc2();" class="buttonY">Template 2</button><button onclick="doc3();" class="buttonY">Template 3</button><button onclick="doc4();" class="buttonY">Template 4</button><button onclick="doc5();" class="buttonY">Template 5</button><button onclick="doc6();" class="buttonY">Template 6</button></p>-->
+		<iframe class="border" id="iframe" src="./welcome.html" width="90%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		<p id="controlBar"><!--<button class="buttonY" onclick="clear();">Clear</button><a id="printbtn" style="visibility: visible;" href="./docprint.html?utm_term=print" target="_blank"><button class="btn btn-outline-dark" >Print</button></a></p>-->
+		<!--onclick="hide(); window.print(); show();"-->
+		
+		
+		<script src="app.js"></script>
+		<script type="text/javascript">
+		function welcome(){
+			 document.getElementById("iframe").src = "./welcome.html";
+		}
+		</script>
+
+
+		</center>
+</body>
+<footer style="padding-top: 10mm; padding-bottom: 5mm;">
+	<p style="text-align: center;"><a href="./index.html"><img src="../img/icons/BI_2.svg" style="width: 200px;padding: 15px;" alt=""></a>
+	</p><center>
+		<p><a class="a" href="../privacy.html">Privacy</a></p></center><p style="text-align: center;">© 2025 Jacob Borg</p>
+
+
+<script>
+	function widthcontrol(){
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			document.getElementById("printbtn").style.visibility = 'hidden';
+}
+		
+	}
+	function editor(){
+		
+	}
+	if (window.location.href == 'https:/borginnovations.com/author/?utm_term=editor') {
+		document.getElementById("iframe").src = "./doc.html";
+	}
+	function nc(){
+		
+	}
+	if (window.location.href == 'https:/borginnovations.com/author/?utm_term=cloud') {
+		document.getElementById("iframe").src = "./doc.html";
+		document.getElementById("printbtn").style.visibility = 'hidden';
+		document.getElementById("controlBar").style.visibility = 'hidden';
+		document.getElementById("menu1").style.visibility = 'hidden';
+		document.getElementById("menu2").style.visibility = 'hidden';
+		document.getElementById("menu3").style.visibility = 'hidden';
+		document.getElementById("menu4").style.visibility = 'hidden';
+		document.getElementById("menu5").style.visibility = 'hidden';
+		document.getElementById("footname").style.visibility = 'hidden';
+		document.getElementById("controlBarfooter").style.visibility = 'visible';
+	}
+
+	if (window.location.href == 'https:/borginnovations.com/author/?utm_term=app') {
+		document.getElementById("iframe").src = "./doc.html";
+		document.getElementById("navbarNav").innerHTML = '';
+		document.getElementById("printbtn").style.visibility = 'hidden';
+		document.getElementById("menu1").style.visibility = 'hidden';
+		document.getElementById("menu2").style.visibility = 'hidden';
+		document.getElementById("menu3").style.visibility = 'hidden';
+		document.getElementById("menu4").style.visibility = 'hidden';
+		document.getElementById("menu5").style.visibility = 'hidden';
+		document.getElementById("footname").style.visibility = 'hidden';
+		document.getElementById("navtoggle").style.visibility = 'hidden';
+		document.getElementById("controlBarfooter").style.visibility = 'hidden';
+		document.getElementById("logobtn").href = '';
+
+
+	
+	}
+
+</script>
+</footer>
+  </html>
