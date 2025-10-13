@@ -58,6 +58,10 @@ An American Space-Age Inspired CSS Library!
     border-color: var(--mercury);
 }
 
+#luminary {
+    color: var(--luminary);
+}
+
 #mercury-glow {
     box-shadow: 0px 0px 10px var(--mercury);
 }
@@ -407,6 +411,17 @@ th {
     background-color: var(--luminary);
 }
 
+.text-input-alt {
+    font-family: Fira_Code;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--luminary);
+    border-style: solid;
+    border-color: var(--luminary);
+    border-width: 1px;
+    background-color: var(--mercury);
+}
+
 
 
 /*misc*/
@@ -439,6 +454,13 @@ ul {
     margin: 15px;
     border-style: solid;
     border-color: var(--mercury);
+    border-width: 1px;
+}
+
+.border-alt {
+    margin: 15px;
+    border-style: solid;
+    border-color: var(--luminary);
     border-width: 1px;
 }
 
