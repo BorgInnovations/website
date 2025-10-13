@@ -79,10 +79,6 @@ setInterval(function () {
    localStorage["titlea"] = document.getElementById("header-alignment").style.textAlign + ' '; // heading div
    localStorage["texta"] = document.getElementById("body-alignment").style.textAlign + ' '; // content div
    localStorage["footera"] = document.getElementById("footer-alignment").style.textAlign + ' '; // content div
-
-   localStorage["margins"] = document.getElementById("document").style.margin + ' '; // content div
-   localStorage["padding"] = document.getElementById("document").style.paddingBottom + ' '; // content div
-
 }, 1000);
 function clear() {
    localStorage.clear();
@@ -97,97 +93,146 @@ function file() {
    }
 }
 
+function edit() {
+   var x = document.getElementById("edit");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+}
+
+function color() {
+   var x = document.getElementById("color");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+}
+
+/* End Navigation Controls */
+
+/* Editor Controls */
+function headingcon() {
+
+   var x = document.getElementById("headingcons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
+function bodycon() {
+
+   var x = document.getElementById("bodycons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
+function footercon() {
+
+   var x = document.getElementById("footercons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
+/* Alignment Controls */
+
+function hleft() {
+   document.getElementById("heading").style.textAlign = "left";
+   localStorage["titlea"] = "left" + ' ';
+}
+function hcenter() {
+   document.getElementById("heading").style.textAlign = "center";
+   localStorage["titlea"] = "center" + ' ';
+}
+function hright() {
+   document.getElementById("heading").style.textAlign = "right";
+   localStorage["titlea"] = "right" + ' ';
+}
+
+
+function bleft() {
+   document.getElementById("body").style.textAlign = "left";
+   localStorage["texta"] = "left" + ' ';
+}
+function bcenter() {
+   document.getElementById("body").style.textAlign = "center";
+   localStorage["texta"] = "center" + ' ';
+}
+function bright() {
+   document.getElementById("body").style.textAlign = "right";
+   localStorage["texta"] = "right" + ' ';
+}
+
+
+function fleft() {
+   document.getElementById("footer").style.textAlign = "left";
+   localStorage["footera"] = "left" + ' ';
+}
+function fcenter() {
+   document.getElementById("footer").style.textAlign = "center";
+   localStorage["footera"] = "center" + ' ';
+}
+function fright() {
+   document.getElementById("footer").style.textAlign = "right";
+   localStorage["footera"] = "right" + ' ';
+}
+
+/* Font Controls */
+
+function hsetsize() {
+   var ff = document.getElementById("customsize").value;
+   document.getElementById("heading").style.fontSize = ff;
+   localStorage["titlefs"] = ff + ' ';
+}
+function bsetsize() {
+   var ff = document.getElementById("customsize").value;
+   document.getElementById("body").style.fontSize = ff;
+   localStorage["bodyfs"] = ff + ' ';
+}
+
+function fsetsize() {
+   var ff = document.getElementById("customsize").value;
+   document.getElementById("footer").style.fontSize = ff;
+   localStorage["footerfs"] = ff + ' ';
+}
+
+
+
+/* Color Controls */
 
 function hcustomcolor() {
 
 
    document.getElementById("heading").style.color = document.getElementById("customcolor").value;
+   localStorage["titlec"] = document.getElementById("customcolor").value + ' ';
 }
-
 function bcustomcolor() {
 
 
    document.getElementById("body").style.color = document.getElementById("customcolor").value;
+   localStorage["bodyc"] = document.getElementById("customcolor").value + ' ';
 }
-
-
-function hcustomsize() {
-
-
-   document.getElementById("heading").style.fontSize = document.getElementById("customsize").value;
-}
-
-function bcustomsize() {
-
-
-   document.getElementById("body").style.fontSize = document.getElementById("customsize").value;
-}
-
-function fcustomsize() {
-
-
-   document.getElementById("footer").style.fontSize = document.getElementById("customsize").value;
-}
-
-
-
-
-function hcustomfont() {
-   document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
-}
-
-function bcustomfont() {
-   document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
-}
-
-function fcustomfont() {
-   document.getElementById("heading").style.fontFamily = document.getElementById("customfont").value;
-}
-
-
-
-
-
-
 function fcustomcolor() {
 
 
    document.getElementById("footer").style.color = document.getElementById("customcolor").value;
+   localStorage["footerc"] = document.getElementById("customcolor").value + ' ';
 }
 
-function hrecallcolor() {
-   document.getElementById("hcustomcolor").value = document.getElementById("heading").style.color;
-}
-function brecallcolor() {
-   document.getElementById("bcustomcolor").value = document.getElementById("body").style.color;
-}
-function frecallcolor() {
-   document.getElementById("fcustomcolor").value = document.getElementById("footer").style.color;
-}
-
-function colorinspect() {
-   document.getElementById("inspectortitle").innerHTML = 'Color Inspector';
-   document.getElementById("inspector1").innerHTML = 'Heading: ' + document.getElementById("heading").style.color;
-   document.getElementById("inspector2").innerHTML = 'Body: ' + document.getElementById("body").style.color;
-   document.getElementById("inspector3").innerHTML = 'Footer: ' + document.getElementById("footer").style.color;
-
-   document.getElementById("inspectorcontrols").innerHTML = '<button class="btn btn-outline-dark" onclick="closeinspector();">X</button>';
-
-}
-
-
-
-function closeinspector() {
-   document.getElementById("inspectortitle").innerHTML = '';
-   document.getElementById("inspector1").innerHTML = '';
-   document.getElementById("inspector2").innerHTML = '';
-   document.getElementById("inspector3").innerHTML = '';
-
-   document.getElementById("inspectorcontrols").innerHTML = '';
-
-}
-
-
+/* End Editor Control */
 
 function welcome() {
    document.getElementById("iframe").src = "./welcome.html";
@@ -198,24 +243,7 @@ function meme() {
 function doc1() {
    document.getElementById("iframe").src = "./doc.html";
 }
-function doc2() {
-   document.getElementById("iframe").src = "./doc2.html";
-}
-function doc3() {
-   document.getElementById("iframe").src = "./doc3.html";
-}
-function doc4() {
-   document.getElementById("iframe").src = "./doc4.html";
-}
-function doc5() {
-   document.getElementById("iframe").src = "./doc5.html";
-}
-function doc6() {
-   document.getElementById("iframe").src = "./doc6.html";
-}
-function doc7() {
-   document.getElementById("iframe").src = "./doc7.html";
-}
+
 function docapp() {
    document.getElementById("iframe").src = "./docapp.html";
 }
@@ -239,74 +267,6 @@ function shrink() {
 }
 
 
-function setmargint() {
-   document.getElementById("document").style.marginTop = document.getElementById("custommargin").value;
-}
-function setmarginr() {
-   document.getElementById("document").style.marginRight = document.getElementById("custommargin").value;
-}
-function setmarginb() {
-   document.getElementById("document").style.paddingBottom = document.getElementById("custommargin").value;
-}
-function setmarginl() {
-   document.getElementById("document").style.marginLeft = document.getElementById("custommargin").value;
-}
-
-function settitle() {
-   document.getElementById("heading").innerHTML =
-      localStorage["title" + document.getElementById("documentname").value] || "The title"; // default text
-}
-
-function resetstyles() {
-   localStorage["titles"] = 'ba_l';
-   localStorage["bodys"] = 'ba_m';
-   localStorage["footers"] = 'ba_m';
-
-   document.getElementById("heading").className = 'ba_l';
-   document.getElementById("body").className = 'ba_m';
-   document.getElementById("footer").className = 'ba_m';
-
-   localStorage["titlec"] = '#000';
-   localStorage["bodyc"] = '#000';
-   localStorage["footerc"] = '#000';
-
-   document.getElementById("heading").style.color = '#000';
-   document.getElementById("body").style.color = '#000';
-   document.getElementById("footer").style.color = '#000';
-
-   localStorage["titlefw"] = 'normal';
-   localStorage["bodyfw"] = 'normal';
-   localStorage["footerfw"] = 'normal';
-
-   document.getElementById("heading").style.fontWeight = 'normal';
-   document.getElementById("body").style.fontWeight = 'normal';
-   document.getElementById("footer").style.fontWeight = 'normal';
-
-   localStorage["titlefs"] = 'normal';
-   localStorage["bodyfs"] = 'normal';
-   localStorage["footerfs"] = 'normal';
-
-   document.getElementById("heading").style.fontStyle = 'normal';
-   document.getElementById("body").style.fontStyle = 'normal';
-   document.getElementById("footer").style.fontStyle = 'normal';
-
-   localStorage["titlea"] = 'left';
-   localStorage["bodya"] = 'left';
-   localStorage["footera"] = 'left';
-
-   document.getElementById("heading").style.textAlign = 'left';
-   document.getElementById("body").style.textAlign = 'left';
-   document.getElementById("footer").style.textAlign = 'left';
-
-   localStorage["margins"] = '10px';
-
-   document.getElementById("document").style.margin = '10px';
-
-   localStorage["padding"] = '10px';
-
-   document.getElementById("document").style.paddpaddingBottoming = '10px';
-
-}
 
 function cleardocument() {
    localStorage["title"] = '';

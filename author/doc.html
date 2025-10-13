@@ -1,4 +1,4 @@
-<html style="background-color: #F6F9FD;">
+<html style="background-color: #F6F9FD; font-family: Fira_Code;">
 
 <head>
 
@@ -31,6 +31,7 @@
 
 		<ul>
 			<li><a onclick=" file()">File</a></li>
+			<li><a onclick=" edit()">Edit</a></li>
 		</ul>
 		<div id="file" style="display: none;">
 			<div class="card-alt">
@@ -45,11 +46,111 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="edit" style="display: none;">
+			<div class="card-alt">
+				<div class="card-body" style="padding-top: 15px;">
+					<div>
+						<h3>Edit</h3>
+
+						<div>
+							<p>
+								<a class="a-alt" onclick="headingcon();">Heading</a>
+							</p>
+							<div style="display: none;" id="headingcons">
+								<p>Align text
+									<a class="a-alt" onclick="headingcon(); hleft()">Left </a>
+									<a class="a-alt" onclick="headingcon(); hcenter()">Center </a>
+									<a class="a-alt" onclick="headingcon(); hright()">Right </a>
+								</p>
+								<div style="color: #243743" class="divider">***************</div>
+							</div>
+
+							<p>
+								<a class="a-alt" onclick="bodycon();">Body</a>
+							</p>
+							<div style="display: none;" id="bodycons">
+								<p>Align text
+									<a class="a-alt" onclick="bodycon(); bleft()">Left </a>
+									<a class="a-alt" onclick="bodycon(); bcenter()">Center </a>
+									<a class="a-alt" onclick="bodycon(); bright()">Right </a>
+								</p>
+								<div style="color: #243743" class="divider">***************</div>
+							</div>
+
+							<p>
+								<a class="a-alt" onclick="footercon();">Footer</a>
+							</p>
+							<div style="display: none;" id="footercons">
+								<p>Align text
+									<a class="a-alt" onclick="footercon(); fleft()">Left </a>
+									<a class="a-alt" onclick="footercon(); fcenter()">Center </a>
+									<a class="a-alt" onclick="footercon(); fright()">Right </a>
+								</p>
+								<div style="color: #243743" class="divider">***************</div>
+							</div>
+
+							<div style="color: #243743" class="divider">***************</div>
+
+							<p>
+								<input type="text" id="customsize" placeholder="Text size">
+							</p>
+							<p>
+								Set
+								<a class="a-alt" onclick="hsetsize()">Heading </a>
+								<a class="a-alt" onclick="bsetsize()">Body </a>
+								<a class="a-alt" onclick="fsetsize()">Footer </a>
+								text size
+							</p>
+
+
+
+							<div style="color: #243743" class="divider">***************</div>
+							<p>
+								<input type="text" id="customcolor" placeholder="#HEX">
+							</p>
+							<p>
+								Set
+								<a class="a-alt" onclick="color(); hcustomcolor()">Heading </a>
+								<a class="a-alt" onclick="color(); bcustomcolor()">Body </a>
+								<a class="a-alt" onclick="color(); fcustomcolor()">Footer </a>
+								color
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="color" style="display: none;">
+			<div class="card-alt">
+				<div class="card-body" style="padding-top: 15px;">
+					<div>
+						<h3>Color</h3>
+
+						<div>
+							<p>
+								<input type="text" id="customcolor" placeholder="#HEX">
+							</p>
+							<p>
+								Set
+								<a class="a-alt" onclick="color(); hcustomcolor()">Heading </a>
+								<a class="a-alt" onclick="color(); bcustomcolor()">Body </a>
+								<a class="a-alt" onclick="color(); fcustomcolor()">Footer </a>
+								color
+							</p>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="./js/FileSaver.js"></script>
 
 	</section>
 
-	<div id="document" style="top: 30px; width: 95%; height: 100%; overflow-y: scroll; overflow-x: hidden;">
+	<section id="document" style="top: 30px; width: 95%; height: 100%; overflow-y: scroll; overflow-x: hidden;">
 
 
 		<!--Doc Header-->
@@ -58,20 +159,18 @@
 			id="heading" contenteditable="true"></div>
 
 
-
 		<!--Doc Body-->
 
 		<div style="padding-top: 0mm; font-weight: normal; font-style: normal; font-family: Fira_Code;" class=""
 			id="body" contenteditable="true"></div>
-
-
 
 		<!--Doc Footer-->
 
 		<div style="padding-top: 5mm; font-weight: normal; font-style: normal; font-family: Fira_Code;" class=""
 			id="footer" contenteditable="true"></div>
 
-	</div>
+	</section>
+
 
 
 
