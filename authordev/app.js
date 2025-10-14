@@ -114,9 +114,14 @@ function color() {
 /* End Navigation Controls */
 
 /* Editor Controls */
-function headingcon() {
 
-   var x = document.getElementById("headingcons");
+
+function headingcon() {
+   document.getElementById("ac_1").innerHTML = '<a class="a-alt" onclick="headingcon(); hleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a-alt" onclick="headingcon(); hcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a-alt" onclick="headingcon(); hright()">Right </a>';
+
+   var x = document.getElementById("alignmentcons");
    if (x.style.display === "none") {
       x.style.display = "block";
    } else {
@@ -126,8 +131,12 @@ function headingcon() {
 }
 
 function bodycon() {
+   document.getElementById("ac_1").innerHTML = '<a class="a-alt" onclick="bodycon(); bleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a-alt" onclick="bodycon(); bcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a-alt" onclick="bodycon(); bright()">Right </a>';
 
-   var x = document.getElementById("bodycons");
+
+   var x = document.getElementById("alignmentcons");
    if (x.style.display === "none") {
       x.style.display = "block";
    } else {
@@ -138,13 +147,23 @@ function bodycon() {
 
 function footercon() {
 
-   var x = document.getElementById("footercons");
+   document.getElementById("ac_1").innerHTML = '<a class="a-alt" onclick="footercon(); fleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a-alt" onclick="footercon(); fcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a-alt" onclick="footercon(); fright()">Right </a>';
+
+
+   var x = document.getElementById("alignmentcons");
    if (x.style.display === "none") {
       x.style.display = "block";
    } else {
       x.style.display = "none";
    }
 
+}
+
+function headingalignment() {
+   document.getElementById("heading").style.textAlign = "left";
+   localStorage["titlea"] = "left" + ' ';
 }
 
 /* Alignment Controls */
@@ -269,21 +288,13 @@ function shrink() {
 
 
 function cleardocument() {
-   localStorage["title"] = '';
-   localStorage["body"] = '';
-   localStorage["footer"] = '';
+   localStorage["title"] = 'The Title';
+   localStorage["body"] = 'The Body';
+   localStorage["footer"] = 'The Footer';
 
    document.getElementById("heading").innerHTML = 'The Title';
    document.getElementById("body").innerHTML = 'The Body';
    document.getElementById("footer").innerHTML = 'The Footer';
-
-   localStorage["titles"] = 'pn_l';
-   localStorage["bodys"] = 'pn_m';
-   localStorage["footers"] = 'pn_m';
-
-   document.getElementById("heading").className = 'pn_l';
-   document.getElementById("body").className = 'pn_m';
-   document.getElementById("footer").className = 'pn_m';
 
    localStorage["titlec"] = '#000';
    localStorage["bodyc"] = '#000';
@@ -293,22 +304,6 @@ function cleardocument() {
    document.getElementById("body").style.color = '#000';
    document.getElementById("footer").style.color = '#000';
 
-   localStorage["titlefw"] = 'normal';
-   localStorage["bodyfw"] = 'normal';
-   localStorage["footerfw"] = 'normal';
-
-   document.getElementById("heading").style.fontWeight = 'normal';
-   document.getElementById("body").style.fontWeight = 'normal';
-   document.getElementById("footer").style.fontWeight = 'normal';
-
-   localStorage["titlefs"] = 'normal';
-   localStorage["bodyfs"] = 'normal';
-   localStorage["footerfs"] = 'normal';
-
-   document.getElementById("heading").style.fontStyle = 'normal';
-   document.getElementById("body").style.fontStyle = 'normal';
-   document.getElementById("footer").style.fontStyle = 'normal';
-
    localStorage["titlea"] = 'left';
    localStorage["bodya"] = 'left';
    localStorage["footera"] = 'left';
@@ -317,11 +312,4 @@ function cleardocument() {
    document.getElementById("body").style.textAlign = 'left';
    document.getElementById("footer").style.textAlign = 'left';
 
-   localStorage["margins"] = '10px';
-
-   document.getElementById("document").style.margin = '10px';
-
-   localStorage["padding"] = '10px';
-
-   document.getElementById("document").style.paddingBottom = '10px';
 }

@@ -33,6 +33,8 @@
 			<li><a href="./index.html">B0RG</a></li>
 			<li><a onclick=" file()">File</a></li>
 			<li><a onclick=" edit()">Edit</a></li>
+
+
 		</ul>
 		<div id="file" style="display: none;">
 			<div class="card-alt">
@@ -43,6 +45,7 @@
 						<p><a class="a-alt" id="printbtn" style="visibility: visible;" href="./doc.html?utm_term=print"
 								target="_blank" class="">Print</a></p>
 						<p><a class="a-alt" id="savebtn" onclick=" save();">Save (Beta)</a></p>
+						<p><a class="a-comanche" onclick="cleardocument();">DELETE</a></p>
 					</div>
 				</div>
 			</div>
@@ -55,40 +58,19 @@
 						<h3>Edit</h3>
 
 						<div>
-							<p>
-								<a class="a-alt" onclick="headingcon();">Heading</a>
+							<p>Align
+								<a class="a-alt" onclick="headingcon();">Heading </a>
+								<a class="a-alt" onclick="bodycon();">Body </a>
+								<a class="a-alt" onclick="footercon();">Footer </a>
+								text
 							</p>
-							<div style="display: none;" id="headingcons">
-								<p>Align text
-									<a class="a-alt" onclick="headingcon(); hleft()">Left </a>
-									<a class="a-alt" onclick="headingcon(); hcenter()">Center </a>
-									<a class="a-alt" onclick="headingcon(); hright()">Right </a>
-								</p>
-								<div style="color: #243743" class="divider">***************</div>
-							</div>
 
-							<p>
-								<a class="a-alt" onclick="bodycon();">Body</a>
-							</p>
-							<div style="display: none;" id="bodycons">
-								<p>Align text
-									<a class="a-alt" onclick="bodycon(); bleft()">Left </a>
-									<a class="a-alt" onclick="bodycon(); bcenter()">Center </a>
-									<a class="a-alt" onclick="bodycon(); bright()">Right </a>
-								</p>
+							<div style="display: none;" id="alignmentcons">
+								<span id="ac_1"></span>
+								<span id="ac_2"></span>
+								<span id="ac_3"></span>
 								<div style="color: #243743" class="divider">***************</div>
-							</div>
 
-							<p>
-								<a class="a-alt" onclick="footercon();">Footer</a>
-							</p>
-							<div style="display: none;" id="footercons">
-								<p>Align text
-									<a class="a-alt" onclick="footercon(); fleft()">Left </a>
-									<a class="a-alt" onclick="footercon(); fcenter()">Center </a>
-									<a class="a-alt" onclick="footercon(); fright()">Right </a>
-								</p>
-								<div style="color: #243743" class="divider">***************</div>
 							</div>
 
 							<div style="color: #243743" class="divider">***************</div>

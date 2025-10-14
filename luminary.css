@@ -492,6 +492,20 @@ ul {
     color: var(--neil);
 }
 
+.a-comanche {
+    padding-top: 0px;
+    margin-top: 0px;
+    text-decoration: underline;
+    color: var(--comanche);
+}
+
+.a-comanche:hover {
+    padding-top: 0px;
+    margin-top: 0px;
+    text-decoration: underline;
+    color: #d37257;
+}
+
 
 
 .cols-3 {
