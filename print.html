@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #F6F9FD; font-family: Fira_Code; overflow-x: hidden;">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css">
+	<link rel="stylesheet" href="./luminary.css">
+
+	<!--Font Links-->
+	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css">
+
+	<!--end-->
+
+	<title>Author</title>
+	<link rel="preload" href="./authordev/DocEd.css" />
+	<script src="./menu.js"></script>
+	<link rel="stylesheet" href="./authordev/DocEd.css" />
+
+
+	<div id="identifier" content=""></div>
+	<script>
+		function printdoc() {
+			window.print()
+		}
+
+
+	</script>
+</head>
+
+<body onload="widthcontrold();"
+	style="background-color: #F6F9FD; margin-left: 10px;margin-right: 10px; padding-bottom: 10px; display: grid; place-items: center;">
+
+
+
+
+	<section id="document" style="margin-top:15px; padding:10px; width: 85%; overflow-y: scroll; overflow-x: hidden;">
+
+
+		<!--Doc Header-->
+
+		<div style="padding-bottom: 0px; font-weight: normal; font-style: normal; font-family: Fira_Code;" class=""
+			id="heading" contenteditable="false"></div>
+
+
+		<!--Doc Body-->
+
+		<div style="padding-top: 0mm; font-weight: normal; font-style: normal; font-family: Fira_Code;" class=""
+			id="body" contenteditable="false"></div>
+
+		<!--Doc Footer-->
+
+		<div style="padding-top: 5mm; font-weight: normal; font-style: normal; font-family: Fira_Code;" class=""
+			id="footer" contenteditable="false"></div>
+
+	</section>
+
+
+
+
+
+
+	<script id="script" src="./authordev/app.js"></script>
+	<script>
+		function widthcontrold() {
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				document.getElementById("savebtn").innerHTML = '';
+
+			} else {
+				document.getElementById("mobileditor1").innerHTML = '';
+				document.getElementById("mobileditor2").innerHTML = '';
+				document.getElementById("mobileditor3").innerHTML = '';
+
+
+			}
+
+
+		}
+
+	</script>
+
+</body>
+<footer id="footMenu">
+
+</footer>
+<script>
+
+	if (window.location.href == 'https://borginnovations.com/author/doc.html=utm_term=print') {
+		document.getElementById("control-nav").display = 'none';
+
+	}
+
+	if (window.location.href == 'https://borginnovations.com/author/=utm_term=print') {
+		document.getElementById("control-nav").display = 'none';
+
+	}
+
+
+</script>
+
+</html>

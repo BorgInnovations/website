@@ -251,31 +251,12 @@ function fcustomcolor() {
    localStorage["footerc"] = document.getElementById("customcolor").value + ' ';
 }
 
-/* End Editor Control */
-
-function welcome() {
-   document.getElementById("iframe").src = "./welcome.html";
-}
-function meme() {
-   document.getElementById("iframe").src = "./meme.html";
-}
-function doc1() {
-   document.getElementById("iframe").src = "./doc.html";
-}
-
-function docapp() {
-   document.getElementById("iframe").src = "./docapp.html";
-}
-
-function privacy() {
-   document.getElementById("iframe").src = "./privacy.html";
-}
-
 function save() {
    var blob = new Blob([localStorage["title"], localStorage["text"], localStorage["footer"]],
       { type: "text/plain;charset=utf-8" });
    saveAs(blob, "author.txt");
 }
+/* End Editor Control */
 
 function expand() {
    document.getElementById("document").style.height = "500px";

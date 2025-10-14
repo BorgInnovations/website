@@ -42,10 +42,24 @@
 					<div>
 						<h3>File</h3>
 
-						<p><a class="a-alt" id="printbtn" style="visibility: visible;" href="./doc.html?utm_term=print"
-								target="_blank" class="">Print</a></p>
+						<p><a class="a-alt" id="printbtn" style="display: none;" onclick="printdoc" class="">Print</a>
+						</p>
 						<p><a class="a-alt" id="savebtn" onclick=" save();">Save (Beta)</a></p>
 						<p><a class="a-comanche" onclick="cleardocument();">DELETE</a></p>
+
+						<script>
+							function printdoc() {
+
+								document.getElementById("control-nav").style.display = 'none'
+								document.getElementById("footMenu").style.display = 'none'
+								window.print()
+
+								document.getElementById("control-nav").style.display = 'block'
+								document.getElementById("footMenu").style.display = 'block'
+							}
+
+
+						</script>
 					</div>
 				</div>
 			</div>
