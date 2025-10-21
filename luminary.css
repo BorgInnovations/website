@@ -430,6 +430,7 @@ th {
     color: var(--mercury);
     border-bottom: 1px solid var(--mercury);
     text-align: left;
+    text-decoration: none;
 }
 
 .si:hover {

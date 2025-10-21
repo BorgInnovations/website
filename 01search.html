@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,29 +13,36 @@
   <script src="./luminary.js"></script>
   <script src="./menu.js"></script>
 </head>
+
 <body onload="searching()" style="padding: 15px;">
 
-<section>
+  <section>
 
     <div class="con1" style="background-image: url(./media/network2.jpg);background-position: center;">
       <p style="padding:0mm;"></p>
 
       <div>
-<script src="./search.js" charset="utf-8"></script>
+        <script src="./search.js" charset="utf-8"></script>
 
 
-        <center style=""><input id="searchBox" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text" id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"  placeholder="* * * search * * *"><button hidden id="searchButt" style="margin-left: 5%;" onclick="searched()" class="buttonX_green" name="button">Search</button>
+        <center style=""><input id="searchBox"
+            style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
+            id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
+            placeholder="* * * search * * *"><button hidden id="searchButt" style="margin-left: 5%;"
+            onclick="searched()" class="buttonX_green" name="button">Search</button>
+        </center>
         <div id="results"></div>
-      </center>
-    </div>
+
+      </div>
 
 
 
 
 
-  <a href="#"  style="visibility: hidden;" id="topbutton" class="topbutton" hidden>Top</a>
+      <a href="#" style="visibility: hidden;" id="topbutton" class="topbutton" hidden>Top</a>
 
-</section>
+  </section>
 
 </body>
+
 </html>
