@@ -17,5 +17,3 @@ function footMenu_load_alt() {
 
   document.getElementById("footMenu").innerHTML = '<p style="text-align: center;"><a href="./index.html"><img src="./img/icons/BorgRetroFuturism_4.svg"style="width: 200px;padding: 15px;" alt=""></a></p><center><p><a class="a" href="./privacy.html">Privacy</a></p><p><a class="a" href="https://borginnovations.cronitorstatus.com/" target="_BLANK">Status</a></p></center><p style="text-align: center;">© 2025 Jacob Borg</p>'
 }
-
-
