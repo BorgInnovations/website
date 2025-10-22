@@ -102,6 +102,21 @@ function edit() {
    }
 }
 
+function printdoc() {
+   document.getElementById("control-nav").style.display = 'none'
+   document.getElementById("footMenu").style.display = 'none'
+   document.getElementById("document").style.borderStyle = 'none'
+   document.getElementById("document").style.width = '95%'
+
+   window.print();
+   console.log('Printer go brrrr')
+
+   document.getElementById("document").style.width = '85%'
+   document.getElementById("document").style.borderStyle = 'solid'
+   document.getElementById("footMenu").style.display = 'block'
+   document.getElementById("control-nav").style.display = 'block'
+}
+
 function color() {
    var x = document.getElementById("color");
    if (x.style.display === "none") {

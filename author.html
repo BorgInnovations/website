@@ -21,11 +21,11 @@
 
 	<div id="identifier" content=""></div>
 	<!-- Cronitor RUM -->
-<script async src="https://rum.cronitor.io/script.js"></script>
-<script>
-    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
-    cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
-</script>
+	<script async src="https://rum.cronitor.io/script.js"></script>
+	<script>
+		window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+		cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
+	</script>
 
 </head>
 
@@ -49,9 +49,10 @@
 					<div>
 						<h3>File</h3>
 
-						<p><a class="a-alt" id="printbtn" style="display: none;" onclick="printdoc" class="">Print</a>
+						<p><a class="a-alt" id="printbtn" style="display: block;" onclick="printdoc()"
+								class="">Print</a>
 						</p>
-						<p><a class="a-alt" id="savebtn" onclick=" save();">Save (Beta)</a></p>
+						<p><a class="a-alt" style="display: block;" id="savebtn" onclick=" save();">Save (Beta)</a></p>
 						<p><a class="a-comanche" onclick="cleardocument();">DELETE</a></p>
 
 						<script>
@@ -185,13 +186,10 @@
 	<script>
 		function widthcontrold() {
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				document.getElementById("savebtn").innerHTML = '';
+				document.getElementById("savebtn").style.display = 'none';
 
 			} else {
-				document.getElementById("mobileditor1").innerHTML = '';
-				document.getElementById("mobileditor2").innerHTML = '';
-				document.getElementById("mobileditor3").innerHTML = '';
-
+				document.getElementById("savebtn").style.display = 'block';
 
 			}
 
@@ -204,19 +202,6 @@
 <footer id="footMenu">
 
 </footer>
-<script>
 
-	if (window.location.href == 'https://borginnovations.com/author/doc.html=utm_term=print') {
-		document.getElementById("control-nav").display = 'none';
-
-	}
-
-	if (window.location.href == 'https://borginnovations.com/author/=utm_term=print') {
-		document.getElementById("control-nav").display = 'none';
-
-	}
-
-
-</script>
 
 </html>
