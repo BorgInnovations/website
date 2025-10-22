@@ -308,4 +308,11 @@ function cleardocument() {
    document.getElementById("body").style.textAlign = 'left';
    document.getElementById("footer").style.textAlign = 'left';
 
+   document.getElementById("header").style.fontSize = '12pt';
+   localStorage["titlefs"] = '18pt' + ' ';
+   document.getElementById("body").style.fontSize = '12pt';
+   localStorage["bodyfs"] = '12pt' + ' ';
+   document.getElementById("footer").style.fontSize = '12pt';
+   localStorage["footerfs"] = '12pt' + ' ';
+
 }
