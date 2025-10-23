@@ -1,6 +1,7 @@
 
 const cortex_core = ['jstor', 'jstor 2']
 
+const alert_icon = '<img src="./img/icons/alert-triangle.svg" alt="alert" style="width: 8pt;">'
 
 function conduct_search() {
 
@@ -26,6 +27,9 @@ const documents = [
   { id: 6, content: 'Google users are less likely to click on links when an AI summary appears in the results', author: 'Athena Chapekis and Anna Lieb', ai_score: 'Low', url: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
   { id: 7, content: 'Vivaldi takes a stand: keep browsing human', author: 'Jon von Tetzchner', ai_score: 'Low', url: 'https://vivaldi.com/blog/keep-exploring/' },
   { id: 8, content: 'Doing more, but learning less: The risks of AI in research', author: 'Mike Cummings', ai_score: 'Low', url: 'https://news.yale.edu/2024/03/07/doing-more-learning-less-risks-ai-research' },
+  { id: 9, content: 'Vibe Coding Is the New Open Source—in the Worst Way Possible | WIRED', author: 'Lily Hay Newman', ai_score: 'Low', url: 'https://www.wired.com/story/vibe-coding-is-the-new-open-source/' },
+  { id: 10, content: 'People Who Say Theyre Experiencing AI Psychosis Beg the FTC for Help | WIRED', author: 'Staff Writer '+alert_icon, ai_score: 'Medium', url: 'https://www.wired.com/story/ftc-complaints-chatgpt-ai-psychosis/' },
+
 ];
 const pre = 'https://'
 function performSearch() {
