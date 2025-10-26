@@ -88,7 +88,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     <div class="card">
         <div class="card-heading">
-            <h1>Synapse Index Check</h1>
+            <h1>Synapse Index Builder</h1>
         </div>
         <div class="card-body">
             <center>
@@ -103,9 +103,15 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             <center>
 
                 <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
-                        type="text" id="index_var" placeholder="* * * index * * *"></p>
+                        type="text" id="synapse_url" placeholder="* * * Synapse URL * * *"></p>
+                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                        type="text" id="synapse_author" placeholder="* * * Synapse Author * * *"></p>
+                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                        type="text" id="synapse_content" placeholder="* * * Synapse Content * * *"></p>
+                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                        type="text" id="synapse_score" placeholder="* * * Synapse AI Score * * *"></p>
 
-                <p> <button onclick="synapse_check()" class="abus">Check Resource</button> </p>
+                <p> <button onclick="synapse_build()" class="abus">Build Synapse</button> </p>
 
 
                 <div class="divider">***************</div>

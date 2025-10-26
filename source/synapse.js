@@ -19,3 +19,19 @@ async function synapse_check() {
         document.getElementById("synapse_output").innerHTML = error.message
     }
 }
+
+
+
+function synapse_build() {
+    document.getElementById("synapse_output").style.display = 'block';
+    d = new Date()
+    s_id = d.getTime()
+    s_url = document.getElementById("synapse_url").value
+    s_author = document.getElementById("synapse_author").value
+    s_content = document.getElementById("synapse_content").value
+    s_ai = document.getElementById("synapse_score").value
+
+    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', content: ' + s_content + ', author: ' + s_author + ', ai_score: ' + s_ai + ', url: ' + s_url + '}, </p>'
+
+    document.getElementById("synapse_output").innerHTML = s_result
+}
