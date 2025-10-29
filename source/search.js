@@ -29,6 +29,12 @@ const documents = [
   { id: 8, content: 'Doing more, but learning less: The risks of AI in research', author: 'Mike Cummings', ai_score: 'Low', url: 'https://news.yale.edu/2024/03/07/doing-more-learning-less-risks-ai-research' },
   { id: 9, content: 'Vibe Coding Is the New Open Source—in the Worst Way Possible | WIRED', author: 'Lily Hay Newman', ai_score: 'Low', url: 'https://www.wired.com/story/vibe-coding-is-the-new-open-source/' },
   { id: 10, content: 'People Who Say Theyre Experiencing AI Psychosis Beg the FTC for Help | WIRED', author: 'Staff Writer ' + alert_icon, ai_score: 'Medium', url: 'https://www.wired.com/story/ftc-complaints-chatgpt-ai-psychosis/' },
+  { id: 1761771245369, content: "Open Educational Resources (OER) Program", author: "MSU", ai_score: "Low", url: "https://lib.msu.edu/oer" },
+  { id: 1761771333022, content: "OER Commons", author: "OER Commons", ai_score: "Low", url: "https://oercommons.org/" },
+  { id: 1761771562622, content: "A-REI An Extraneous Solution ", author: "Illustrative Mathematics", ai_score: "Low", url: "https://oercommons.org/courses/a-rei-an-extraneous-solution" },
+  { id: 1761771620806, content: "Linear algebra I: First introduction", author: "David Liao", ai_score: "Low", url: "https://oercommons.org/courses/linear-algebra-i-first-introduction" },
+  { id: 1761771767097, content: "Coordinates and the Cartesian Plane ", author: "Aubrey McKelvey", ai_score: "Low", url: "https://oercommons.org/courses/coordinates-and-the-cartesian-plane" },
+
 
 ];
 const pre = 'https://'
