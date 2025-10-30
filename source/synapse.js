@@ -26,12 +26,14 @@ function synapse_build() {
     document.getElementById("synapse_output").style.display = 'block';
     d = new Date()
     s_id = d.getTime()
+
+    s_title = document.getElementById("synapse_title").value
     s_url = document.getElementById("synapse_url").value
     s_author = document.getElementById("synapse_author").value
     s_content = document.getElementById("synapse_content").value
     s_ai = document.getElementById("synapse_score").value
 
-    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', content: "' + s_content + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
+    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', title: "' + s_title + '", content: "' + s_content + ' ' + s_author + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
 
     document.getElementById("synapse_output").innerHTML = s_result
 }
