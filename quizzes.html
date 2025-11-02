@@ -127,22 +127,54 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             </section>
 
             <section id="quizzes" style="display: block;">
-                <h4>Am I a Prot or am I a Heretic?</h4>
+                <h4>Am I a Chad or am I a Heretic?</h4>
                 <p>Take this theology quiz to find out!</p>
                 <p> <button class="abus" onclick="amiaprot()">Take Quiz</button> </p>
                 <script src="./quizsource/amiaprot.js"></script>
             </section>
 
             <section id="quiz" style="display: none;">
-                <h4>Who intercedes on our behalf?</h4>
-                <p>Take this theology quiz to find out!</p>
-                <p>
-                    <button onclick="qa1" class="abus">Jesus Christ</button>
-                    <button onclick="qa2" class="abus">Mary</button>
-                    <button onclick="qa3" class="abus">The Saints</button>
-                    <button onclick="qa4" class="abus">Big Chungus</button>
 
-                </p>
+                <div id="q1" style="display: block;">
+                    <h4>Who intercedes on our behalf?</h4>
+                    <p></p>
+                    <p>
+                        <button onclick="qa1(), hideq1()" class="abus">Jesus Christ</button>
+                        <button onclick="qa2(), hideq1()" class="abus">Mary</button>
+                        <button onclick="qa3(), hideq1()" class="abus">The Saints</button>
+                        <button onclick="qa4(), hideq1()" class="abus">Big Chungus</button>
+
+                    </p>
+                </div>
+
+
+
+                <div id="q2" style="display: none;">
+                    <h4>Which has the higher authority?</h4>
+                    <p></p>
+                    <p>
+                        <button onclick="qb1(), hideq2()" class="abus">Tradition</button>
+                        <button onclick="qb2(), hideq2()" class="abus">Scripture</button>
+                        <button onclick="qb3(), hideq2()" class="abus">Church Leadership</button>
+                        <button onclick="qb4(), hideq2()" class="abus">They are Equal</button>
+
+                    </p>
+                </div>
+
+
+
+                <div id="q3" style="display: none;">
+                    <h4>Which Bible Translation do you use?</h4>
+                    <p></p>
+                    <p>
+                        <button onclick="qc1(), hideq3()" class="abus">Only King James</button>
+                        <button onclick="qc2(), hideq3()" class="abus">New Living Translation</button>
+                        <button onclick="qc3(), hideq3()" class="abus">The Message</button>
+                        <button onclick="qc4(), hideq3()" class="abus">New Revised Standard Version</button>
+
+                    </p>
+                </div>
+
                 <div class="divider">***************</div>
             </section>
 
