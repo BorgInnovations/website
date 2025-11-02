@@ -12,6 +12,7 @@ function amiaprot() {
 }
 var hscore = 0
 var pscore = 0
+var cscore = 0
 
 
 /*Q1*/
@@ -23,21 +24,22 @@ function qa1() {
     console.log('***')
 }
 function qa2() {
-    hscore += 1
+    hscore += 3
 
     console.log(pscore)
     console.log(hscore)
     console.log('***')
 }
 function qa3() {
-    hscore += 1
+    hscore += 2
 
     console.log(pscore)
     console.log(hscore)
     console.log('***')
 }
 function qa4() {
-    hscore += 1
+    hscore += 3
+    cscore += 1
 
     console.log(pscore)
     console.log(hscore)
@@ -61,21 +63,21 @@ function qb1() {
     console.log('***')
 }
 function qb2() {
-    pscore += 1
+    pscore += 2
 
     console.log(pscore)
     console.log(hscore)
     console.log('***')
 }
 function qb3() {
-    hscore += 1
+    hscore += 2
 
     console.log(pscore)
     console.log(hscore)
     console.log('***')
 }
 function qb4() {
-    hscore += 1
+    pscore += 1
 
     console.log(pscore)
     console.log(hscore)
@@ -91,7 +93,8 @@ function hideq2() {
 /*Q3*/
 
 function qc1() {
-    hscore += 1
+    hscore += 2
+    pscore += 1
 
     console.log(pscore)
     console.log(hscore)
@@ -122,14 +125,14 @@ function qc4() {
 function hideq3() {
     document.getElementById("q3").style.display = 'none'
 
-    if (hscore > 2) {
+    if (hscore >= 3) {
         document.getElementById("qresult").style.display = 'block'
         document.getElementById("qresult").innerHTML = '<h3>Uh oh, HERETIC</h3><p>Seems you commune with bad theology. Do better champ.</p><p>Pick up thy Bible and start reading Hebrews.</p>'
         console.log("HERETIC")
         console.log('***')
     } else {
         document.getElementById("qresult").style.display = 'block'
-        document.getElementById("qresult").innerHTML = '<h3>You are a CHAD</h3><p>Nice, you believe in the authority of Scripcture and reject modernism.</p>'
+        document.getElementById("qresult").innerHTML = '<h3>You are a CHAD</h3><p>Nice, you believe in the authority of Scripture and reject modernism.</p>'
         console.log("CHAD")
         console.log('***')
 
