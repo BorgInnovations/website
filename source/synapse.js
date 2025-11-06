@@ -37,3 +37,15 @@ function synapse_build() {
 
     document.getElementById("synapse_output").innerHTML = s_result
 }
+
+function synapse_clear(){
+    document.getElementById("synapse_title").value = ''
+    document.getElementById("synapse_url").value = ''
+    document.getElementById("synapse_author").value = ''
+    document.getElementById("synapse_content").value = ''
+    document.getElementById("synapse_score").value = ''
+}
+
+function synapse_open(){
+    window.open(document.getElementById("synapse_url").value)
+}
