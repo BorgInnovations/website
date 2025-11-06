@@ -36,6 +36,8 @@ function synapse_build() {
     s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', title: "' + s_title + '", content: "' + s_content + ' ' + s_author + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
 
     document.getElementById("synapse_output").innerHTML = s_result
+
+    document.getElementById("synapse_copy_btn").style.display = 'block';
 }
 
 function synapse_clear(){
@@ -48,4 +50,18 @@ function synapse_clear(){
 
 function synapse_open(){
     window.open(document.getElementById("synapse_url").value)
+}
+
+function synapse_preview(){
+
+    document.getElementById("synapse_preview").src = document.getElementById("synapse_url").value
+}
+
+
+  function synapse_copy() {
+
+
+    const text = document.getElementById('synapse_output').innerText
+    navigator.clipboard.writeText(text);
+
 }
