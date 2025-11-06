@@ -37,7 +37,9 @@ function synapse_build() {
 
     document.getElementById("synapse_output").innerHTML = s_result
 
-    document.getElementById("synapse_copy_btn").style.display = 'block';
+    document.getElementById("synapse_options").style.display = 'block';
+
+    
 }
 
 function synapse_clear(){
@@ -65,3 +67,13 @@ function synapse_preview(){
     navigator.clipboard.writeText(text);
 
 }
+
+const synapse_download = () => {
+    const link = document.createElement("a");
+    const content = document.getElementById("synapse_output").innerHTML;
+    const file = new Blob([content], { type: 'text/plain' });
+    link.href = URL.createObjectURL(file);
+    link.download = document.getElementById("synapse_title").value+"_synapse.txt";
+    link.click();
+    URL.revokeObjectURL(link.href);
+ };
