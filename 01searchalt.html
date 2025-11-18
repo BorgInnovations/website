@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" style="background-color: #F6F9FD; font-family: Fira_Code;>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C0RT3X 01 Search</title>
+
+  <!--remote files-->
+  <script src="./source/search.js"></script>
+  <link rel="stylesheet" href="./luminary.css">
+  <script src="./luminary.js"></script>
+  <script src="./menu.js"></script>
+</head>
+
+<body onload="searching()" style="padding: 15px;">
+
+  <section>
+
+    <div class="con1" style="background-image: url(./media/network2.jpg);background-position: center;">
+      <p style="padding:0mm;"></p>
+
+      <div>
+        <script src="./search.js" charset="utf-8"></script>
+
+
+        <center style=""><input id="searchBox"
+            style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input-alt" type="text"
+            id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
+            placeholder="* * * search * * *"><button hidden id="searchButt" style="margin-left: 5%;"
+            onclick="searched()" class="buttonX_green" name="button">Search</button>
+        </center>
+        <div id="results" style="color: #243743;"></div>
+
+      </div>
+
+
+
+
+
+      <a href="#" style="visibility: hidden;" id="topbutton" class="topbutton" hidden>Top</a>
+
+  </section>
+
+</body>
+
+</html>
