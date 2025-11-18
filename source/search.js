@@ -16,7 +16,7 @@ function conduct_search() {
 
 const documents = [
   /*
-    { id: , content: '',author: '', ai_score: '0%', url: ''},
+    { id: , content: '',author: '', ai_score: 'None, Low, Medium', url: ''},
 
   */
   { id: 1, title: 'Two Lectures on Comets', content: "Two Lectures on Comets", author: 'Winthrop, John', ai_score: 'None', url: 'https://www.jstor.org/stable/community.32503417?seq=1' },

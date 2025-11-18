@@ -181,6 +181,16 @@ function headingalignment() {
    localStorage["titlea"] = "left" + ' ';
 }
 
+
+function cortex01(){
+   var x = document.getElementById("c0rt3x");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
 /* Alignment Controls */
 
 function hleft() {
