@@ -12,4 +12,5 @@ function sendchat(){
 
 
         document.getElementById("chat").style.display='none'
+        document.getElementById("about").style.display='block'
       } 
