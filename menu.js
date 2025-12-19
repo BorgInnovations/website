@@ -18,3 +18,6 @@ function footMenu_load_alt() {
   document.getElementById("footMenu").innerHTML = '<p style="text-align: center;"><a href="./index.html"><img src="./img/icons/BorgRetroFuturism_4.svg" style="width: 200px;padding: 15px;" alt=""></a></p><p style="text-align: center;">Organically coded in San Diego, CA</p><center><p><a href="https://buymeacoffee.com/jborg_arts" target="_blank" class="a-alt"> Buy me a coffee </a></p><p><a class="a-alt" href="./privacy.html">Privacy</a> | <a class="a-alt" href="https://borginnovations.cronitorstatus.com/" target="_BLANK">Status</a></p></center><p style="text-align: center;">© 2025 Jacob Borg</p>  '
 }
 
+function loadContact() {
+  document.getElementById("contact").innerHTML = '<div class="card"><div class="card-heading"><h1>Contact.</h1></div ><div class="card-body"><center><iframe style="border: none; width: 640px; height: 701px" src="https://docs.getgrist.com/forms/b1EUs21w5g3cSCF67jrWbe/9"></iframe></center></div></div > '
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,11 @@
     <script src="./menu.js"></script>
     <script src="./source/disableselect.js"></script>
     <!-- Cronitor RUM -->
-<script async src="https://rum.cronitor.io/script.js"></script>
-<script>
-    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
-    cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
-</script>
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+        window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+        cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
+    </script>
 
 </head>
 
@@ -57,32 +58,35 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 </header>
 
 
-<body onload="topMenu_load(), footMenu_load()">
-<section style="display: none;" id="contact">
+<body onload="topMenu_load(), footMenu_load(), loadContact()">
+    <section style="display: none;" id="contact">
 
-    <div class="card">
-        <div class="card-heading">
-            <h1>Contact.</h1> 
+        <div class="card">
+            <div class="card-heading">
+                <h1>Contact.</h1>
+            </div>
+            <div class="card-body">
+                <iframe
+                    data-tally-src="https://tally.so/embed/nGW48Z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="476" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Contact"></iframe>
+                <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+            </div>
         </div>
-        <div class="card-body">
-            <iframe data-tally-src="https://tally.so/embed/nGW48Z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="476" frameborder="0" marginheight="0" marginwidth="0" title="Contact"></iframe>
-            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-    </div>
-    </div>
-</section>
+    </section>
 
-<section style="display: none;" id="products">
-</section>
+    <section style="display: none;" id="products">
+    </section>
 
 
-<center>
-    <img src="./img/icons/BI_1.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt="">
-</center>
+    <center>
+        <img src="./img/icons/BI_1.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt="">
+    </center>
 
 
     <div class="card">
         <div class="card-heading">
-            <h1>Privacy.</h1> 
+            <h1>Privacy.</h1>
         </div>
         <div class="card-body">
             <center>
@@ -96,14 +100,17 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             </h3>
 
             <p>
-                At Borg Innovations, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website, borginnovations.com (the "Website"), operated in the United States.
+                At Borg Innovations, we value your privacy and are committed to protecting your personal information.
+                This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website,
+                borginnovations.com (the "Website"), operated in the United States.
             </p>
             <h5>1. Information We Collect
 
             </h5>
 
             <ul>
-                <li>Anonymous Web Analytics: We use anonymous web analytics to understand how visitors interact with our Website. This data is aggregated and does not identify individual users.
+                <li>Anonymous Web Analytics: We use anonymous web analytics to understand how visitors interact with our
+                    Website. This data is aggregated and does not identify individual users.
 
                 </li>
                 <li>Voluntarily Provided Information: We collect personal information you voluntarily provide, such as:
@@ -111,11 +118,12 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                         <li>Email address</li>
                         <li>Name</li>
                         <li>Educational institution</li>
-                    </ul>                    
-                    </li>
-                    <p>
-                        This information is only collected when you submit it through our Website, such as via forms or other interactive features.
-                    </p>
+                    </ul>
+                </li>
+                <p>
+                    This information is only collected when you submit it through our Website, such as via forms or
+                    other interactive features.
+                </p>
             </ul>
 
             <h5>2. How We Use Your Information
@@ -141,25 +149,31 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
             </h5>
             <ul>
-                <li>No Sharing or Selling: We do not share, sell, or disclose your personal information to third parties, except as required by law or to protect the rights, property, or safety of Borg Innovations or others.                </li>
-                <li>Legal Requirements: We may disclose your information if required to comply with legal obligations, such as responding to a court order or subpoena.                </li>
+                <li>No Sharing or Selling: We do not share, sell, or disclose your personal information to third
+                    parties, except as required by law or to protect the rights, property, or safety of Borg Innovations
+                    or others. </li>
+                <li>Legal Requirements: We may disclose your information if required to comply with legal obligations,
+                    such as responding to a court order or subpoena. </li>
             </ul>
 
             <h5>4. Data Security
 
             </h5>
-            <p>We implement reasonable security measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.
+            <p>We implement reasonable security measures to protect your personal information from unauthorized access,
+                use, or disclosure. However, no method of transmission over the internet is completely secure, and we
+                cannot guarantee absolute security.
 
             </p>
 
             <h5>5. Your Choices
 
             </h5>
-<p>You have the choice to:
+            <p>You have the choice to:
 
-</p>
+            </p>
             <ul>
-                <li>Provide or withhold personal information. Note that not providing certain information may limit your ability to use certain features of the Website.
+                <li>Provide or withhold personal information. Note that not providing certain information may limit your
+                    ability to use certain features of the Website.
 
                 </li>
                 <li>Contact us to update or request deletion of your personal information (see Contact Us below).
@@ -172,7 +186,9 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             <h5>6. Cookies and Analytics
 
             </h5>
-            <p>We use cookies and similar technologies for anonymous web analytics to improve our Website’s functionality and user experience. These do not collect personally identifiable information. You can manage cookie preferences through your browser settings.
+            <p>We use cookies and similar technologies for anonymous web analytics to improve our Website’s
+                functionality and user experience. These do not collect personally identifiable information. You can
+                manage cookie preferences through your browser settings.
 
             </p>
 
@@ -180,14 +196,17 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
             </h5>
 
-            <p>Our Website may contain links to third-party websites. We are not responsible for the privacy practices or content of these sites. We encourage you to review their privacy policies.
+            <p>Our Website may contain links to third-party websites. We are not responsible for the privacy practices
+                or content of these sites. We encourage you to review their privacy policies.
 
             </p>
 
             <h5>8. Children’s Privacy
 
             </h5>
-            <p>Our Website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.
+            <p>Our Website is not intended for individuals under the age of 13. We do not knowingly collect personal
+                information from children under 13. If you believe we have collected such information, please contact us
+                immediately.
 
             </p>
 
@@ -195,7 +214,8 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
             </h5>
 
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically.
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an
+                updated effective date. We encourage you to review this policy periodically.
 
             </p>
 
@@ -203,12 +223,13 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
             </h5>
 
-            <p>For questions, concerns, or to exercise your rights regarding your personal information, please contact us via our <a href="https://tally.so/r/nGW48Z" target="_blank" class="a">contact form</a>.
+            <p>For questions, concerns, or to exercise your rights regarding your personal information, please contact
+                us via our <a href="https://tally.so/r/nGW48Z" target="_blank" class="a">contact form</a>.
 
             </p>
-    </div>
+        </div>
 
-    </div> 
+    </div>
 </body>
 <!--
     BR3@K FR0M SYNTHESIS
@@ -216,6 +237,5 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 <footer id="footMenu">
 
 </footer>
+
 </html>
-
-
