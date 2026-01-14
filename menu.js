@@ -22,7 +22,11 @@ function footMenu_load_alt() {
 
 function loadContact() {
 
-  document.getElementById("contact").innerHTML = '<div class="card"><div class="card-heading"><h1>Contact.</h1></div ><div class="card-body"><center><iframe style="border: none; width: 75%; height: 701px" src="https://docs.getgrist.com/forms/b1EUs21w5g3cSCF67jrWbe/9"></iframe></center></div></div > '
+  document.getElementById("contact").innerHTML = '<div class="card"><div class="card-heading"><h1>Contact.</h1></div ><div class="card-body"><center><iframe style="border: none; width: 95%; height: 701px" src="https://docs.getgrist.com/forms/b1EUs21w5g3cSCF67jrWbe/9"></iframe></center></div></div > '
+
+
+
+
 
   console.log('Contact factor loaded')
  
