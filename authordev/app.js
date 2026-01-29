@@ -42,13 +42,21 @@ document.getElementById("body").style.textAlign =
 document.getElementById("footer").style.textAlign =
    localStorage["footera"] || "left"; // default text
 
+document.getElementById("heading").style.fontFamily =
+   localStorage["titlefont"] || "Fira_Code"; // default text
+document.getElementById("body").style.fontFamily =
+   localStorage["textfont"] || "Fira_Code"; // default text
+document.getElementById("footer").style.fontFamily =
+   localStorage["footerfont"] || "Fira_Code"; // default text
+
+
 document.getElementById("document").style.margin =
    localStorage["margins"] || "0px"; // default text
 document.getElementById("document").style.paddingBottom =
    localStorage["padding"] || "0px"; // default text
 
 
-
+   
 
 setInterval(function () {
 
@@ -75,6 +83,11 @@ setInterval(function () {
    localStorage["titlefs"] = document.getElementById("heading").style.fontStyle + ' '; // heading div
    localStorage["textfs"] = document.getElementById("body").style.fontStyle + ' '; // content div
    localStorage["footerfs"] = document.getElementById("footer").style.fontStyle + ' '; // content div
+
+   localStorage["titlefont"] = document.getElementById("heading").style.fontFamily + ' '; // heading div
+   localStorage["textfont"] = document.getElementById("body").style.fontFamily + ' '; // content div
+   localStorage["footerfont"] = document.getElementById("footer").style.fontFamily + ' '; // content div
+
 
    localStorage["titlea"] = document.getElementById("header-alignment").style.textAlign + ' '; // heading div
    localStorage["texta"] = document.getElementById("body-alignment").style.textAlign + ' '; // content div
@@ -234,7 +247,7 @@ function fright() {
    localStorage["footera"] = "right" + ' ';
 }
 
-/* Font Controls */
+/* Font Size Controls */
 
 function hsetsize() {
    var ff = document.getElementById("customsize").value;
@@ -252,6 +265,64 @@ function fsetsize() {
    document.getElementById("footer").style.fontSize = ff;
    localStorage["footerfs"] = ff + ' ';
 }
+
+/* Font Family Controls */
+function hsetFiraCode(){
+   document.getElementById("heading").style.fontFamily = 'Fira_Code';
+   document.getElementById("hFont").innerHTML = 'Fira_Code'
+   localStorage["titlefont"] = 'Fira_Code'
+}
+
+function bsetFiraCode(){
+   document.getElementById("body").style.fontFamily = 'Fira_Code';
+   document.getElementById("bFont").innerHTML = 'Fira_Code'
+   localStorage["bodyfont"] = 'Fira_Code'
+}
+
+function fsetFiraCode(){
+   document.getElementById("footer").style.fontFamily = 'Fira_Code';
+   document.getElementById("fFont").innerHTML = 'Fira_Code'
+   localStorage["footerfont"] = 'Fira_Code'
+}
+
+//Open_Sans
+function hsetOpenSans(){
+   document.getElementById("heading").style.fontFamily = 'Open_Sans';
+   document.getElementById("hFont").innerHTML = 'Open_Sans'
+   localStorage["titlefont"] = 'Open_Sans'
+}
+
+function bsetOpenSans(){
+   document.getElementById("body").style.fontFamily = 'Open_Sans';
+   document.getElementById("bFont").innerHTML = 'Open_Sans'
+   localStorage["bodyfont"] = 'Open_Sans'
+}
+
+function fsetOpenSans(){
+   document.getElementById("footer").style.fontFamily = 'Open_Sans';
+   document.getElementById("fFont").innerHTML = 'Open_Sans'
+   localStorage["footerfont"] = 'Open_Sans'
+}
+
+//Merriweather
+function hsetMerriweather(){
+   document.getElementById("heading").style.fontFamily = 'Merriweather';
+   document.getElementById("hFont").innerHTML = 'Merriweather'
+   localStorage["titlefont"] = 'Merriweather'
+}
+
+function bsetMerriweather(){
+   document.getElementById("body").style.fontFamily = 'Merriweather';
+   document.getElementById("bFont").innerHTML = 'Merriweather'
+   localStorage["bodyfont"] = 'Merriweather'
+}
+
+function fsetMerriweather(){
+   document.getElementById("footer").style.fontFamily = 'Merriweather';
+   document.getElementById("fFont").innerHTML = 'Merriweather'
+   localStorage["footerfont"] = 'Merriweather'
+}
+
 
 
 
@@ -318,7 +389,14 @@ function cleardocument() {
    document.getElementById("body").style.textAlign = 'left';
    document.getElementById("footer").style.textAlign = 'left';
 
-   document.getElementById("header").style.fontSize = '12pt';
+   document.getElementById("heading").style.fontFamily = 'Fira_Code';
+   document.getElementById("body").style.fontFamily = 'Fira_Code';
+   document.getElementById("footer").style.fontFamily = 'Fira_Code';
+   localStorage["titlefont"] = 'Fira_Code'
+   localStorage["bodyfont"] = 'Fira_Code'
+   localStorage["footerfont"] = 'Fira_Code'
+
+   document.getElementById("header").style.fontSize = '18pt';
    localStorage["titlefs"] = '18pt' + ' ';
    document.getElementById("body").style.fontSize = '12pt';
    localStorage["bodyfs"] = '12pt' + ' ';

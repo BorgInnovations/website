@@ -95,6 +95,32 @@
 						<h3>Edit</h3>
 
 						<div>
+							<p><h4>Fonts</h4></p>
+							<p><span style="font-family: Fira_Code;">Fira Code</span> (Mono Sans)
+								<a class="a-alt" onclick=" hsetFiraCode();">Heading </a>
+								<a class="a-alt" onclick=" bsetFiraCode(); ">Body </a>
+								<a class="a-alt" onclick=" fsetFiraCode(); ">Footer </a>
+							</p>
+
+							<p><span style="font-family: Open_Sans;">Open Sans</span> (Sans)
+								<a class="a-alt" onclick=" hsetOpenSans(); ">Heading </a>
+								<a class="a-alt" onclick=" bsetOpenSans(); ">Body </a>
+								<a class="a-alt" onclick=" fsetOpenSans(); ">Footer </a>
+							</p>
+
+							<p><span style="font-family: Merriweather;">Merriweather</span> (Serif)
+								<a class="a-alt" onclick=" hsetMerriweather(); ">Heading </a>
+								<a class="a-alt" onclick=" bsetMerriweather(); ">Body </a>
+								<a class="a-alt" onclick=" fsetMerriweather(); ">Footer </a>
+							</p>
+							
+							<div style="display: none;">
+							<p id="hFont"></p>
+							<p id="bFont"></p>
+							<p id="fFont"></p>
+							</div>
+
+							<p><h4>Text Align</h4></p>
 							<p>Align
 								<a class="a-alt" onclick="headingcon();">Heading </a>
 								<a class="a-alt" onclick="bodycon();">Body </a>
@@ -110,8 +136,7 @@
 
 							</div>
 
-							<div style="color: #243743" class="divider">***************</div>
-
+							<p><h4>Text Size</h4></p>
 							<p>
 								<input class="text-input-alt" type="text" id="customsize" placeholder="Text size">
 							</p>
@@ -125,7 +150,7 @@
 
 
 
-							<div style="color: #243743" class="divider">***************</div>
+							<p><h4>Text Color</h4></p>
 							<p>
 								<input class="text-input-alt" type="text" id="customcolor" placeholder="#HEX">
 							</p>

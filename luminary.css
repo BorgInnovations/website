@@ -15,6 +15,23 @@ An American Space-Age Inspired CSS Library!
     ./Fira_Code/OFL.text
     */
 }
+@font-face {
+    font-family: Open_Sans;
+    src: url("https://fonts.borgcreative.com/Open_Sans/OpenSans-VariableFont_wdthwght.ttf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url("https://fonts.borgcreative.com/merriweather/Merriweather-RXwe.ttf");
+
+}
+
+@font-face {
+    font-family: Mechanical;
+    src: url("https://fonts.borgcreative.com/mechanical-font/Mechanical-g5Y5.otf");
+
+}
+
 
 @property --mercury {
     syntax: "<color>";
