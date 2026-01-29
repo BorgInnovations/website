@@ -45,7 +45,7 @@ document.getElementById("footer").style.textAlign =
 document.getElementById("heading").style.fontFamily =
    localStorage["titlefont"] || "Fira_Code"; // default text
 document.getElementById("body").style.fontFamily =
-   localStorage["textfont"] || "Fira_Code"; // default text
+   localStorage["bodyfont"] || "Fira_Code"; // default text
 document.getElementById("footer").style.fontFamily =
    localStorage["footerfont"] || "Fira_Code"; // default text
 
@@ -80,12 +80,12 @@ setInterval(function () {
    localStorage["textfw"] = document.getElementById("body").style.fontWeight + ' '; // content div
    localStorage["footerfw"] = document.getElementById("footer").style.fontWeight + ' '; // content div
 
-   localStorage["titlefs"] = document.getElementById("heading").style.fontStyle + ' '; // heading div
-   localStorage["textfs"] = document.getElementById("body").style.fontStyle + ' '; // content div
-   localStorage["footerfs"] = document.getElementById("footer").style.fontStyle + ' '; // content div
+   localStorage["titlefstyle"] = document.getElementById("heading").style.fontStyle + ' '; // heading div
+   localStorage["textfstyle"] = document.getElementById("body").style.fontStyle + ' '; // content div
+   localStorage["footerfstyle"] = document.getElementById("footer").style.fontStyle + ' '; // content div
 
    localStorage["titlefont"] = document.getElementById("heading").style.fontFamily + ' '; // heading div
-   localStorage["textfont"] = document.getElementById("body").style.fontFamily + ' '; // content div
+   localStorage["bodyfont"] = document.getElementById("body").style.fontFamily + ' '; // content div
    localStorage["footerfont"] = document.getElementById("footer").style.fontFamily + ' '; // content div
 
 
@@ -321,6 +321,44 @@ function fsetMerriweather(){
    document.getElementById("footer").style.fontFamily = 'Merriweather';
    document.getElementById("fFont").innerHTML = 'Merriweather'
    localStorage["footerfont"] = 'Merriweather'
+}
+
+//Oswald
+function hsetOswald(){
+   document.getElementById("heading").style.fontFamily = 'Oswald';
+   document.getElementById("hFont").innerHTML = 'Oswald'
+   localStorage["titlefont"] = 'Oswald'
+}
+
+function bsetOswald(){
+   document.getElementById("body").style.fontFamily = 'Oswald';
+   document.getElementById("bFont").innerHTML = 'Oswald'
+   localStorage["bodyfont"] = 'Oswald'
+}
+
+function fsetOswald(){
+   document.getElementById("footer").style.fontFamily = 'Oswald';
+   document.getElementById("fFont").innerHTML = 'Oswald'
+   localStorage["footerfont"] = 'Oswald'
+}
+
+//OpenDyslexic
+function hsetOpenDyslexic(){
+   document.getElementById("heading").style.fontFamily = 'OpenDyslexic';
+   document.getElementById("hFont").innerHTML = 'OpenDyslexic'
+   localStorage["titlefont"] = 'OpenDyslexic'
+}
+
+function bsetOpenDyslexic(){
+   document.getElementById("body").style.fontFamily = 'OpenDyslexic';
+   document.getElementById("bFont").innerHTML = 'OpenDyslexic'
+   localStorage["bodyfont"] = 'OpenDyslexic'
+}
+
+function fsetOpenDyslexic(){
+   document.getElementById("footer").style.fontFamily = 'OpenDyslexic';
+   document.getElementById("fFont").innerHTML = 'OpenDyslexic'
+   localStorage["footerfont"] = 'OpenDyslexic'
 }
 
 

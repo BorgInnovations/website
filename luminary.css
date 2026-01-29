@@ -32,6 +32,21 @@ An American Space-Age Inspired CSS Library!
 
 }
 
+@font-face {
+    font-family: OpenDyslexic;
+    src: url("https://fonts.borgcreative.com/OpenDyslexic/OpenDyslexic-Regular.ttf");
+
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url("https://fonts.borgcreative.com/Oswald/Oswald-VariableFont_wght.ttf");
+
+}
+
+
+
+
 
 @property --mercury {
     syntax: "<color>";
