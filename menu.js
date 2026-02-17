@@ -21,3 +21,4 @@ function loadContact() {
 }
 console.log('All menu factors loaded')
 
+
