@@ -458,6 +458,37 @@ th {
 
 
 /*misc*/
+.synapses {
+    border-style: solid;
+    border-color: var(--mercury);
+    color: var(--mercury);
+    border-width: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding:10px;
+    background-color: var(--luminary);
+}
+
+.synapses:hover {
+    border-style: solid;
+    color: var(--luminary);
+    border-color: var(--mercury);
+    border-width: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding:10px;
+    background-color: var(--mercury);
+}
+
+.synapseheading {
+    background-color: var(--mercury);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    width: max-content;
+}
+
 
 .si {
     color: var(--mercury);

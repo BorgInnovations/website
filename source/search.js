@@ -31,7 +31,7 @@ const documents = [
   { id: 8, title: 'Doing more, but learning less: The risks of AI in research', content: 'Doing more, but learning less: The risks of AI in research', author: 'Mike Cummings', ai_score: 'Low', url: 'https://news.yale.edu/2024/03/07/doing-more-learning-less-risks-ai-research' },
   { id: 9, title: 'Vibe Coding Is the New Open Source—in the Worst Way Possible | WIRED', content: 'Vibe Coding Is the New Open Source—in the Worst Way Possible | WIRED', author: 'Lily Hay Newman', ai_score: 'Low', url: 'https://www.wired.com/story/vibe-coding-is-the-new-open-source/' },
   { id: 10, title: 'People Who Say Theyre Experiencing AI Psychosis Beg the FTC for Help | WIRED', content: 'People Who Say Theyre Experiencing AI Psychosis Beg the FTC for Help | WIRED', author: 'Staff Writer ' + alert_icon, ai_score: 'Medium', url: 'https://www.wired.com/story/ftc-complaints-chatgpt-ai-psychosis/' },
-  { id: 1761771245369, title: '', content: "Open Educational Resources (OER) Program", author: "MSU", ai_score: "Low", url: "https://lib.msu.edu/oer" },
+  { id: 1761771245369, title: 'Open Educational Resources (OER) Program', content: "Open Educational Resources (OER) Program", author: "MSU", ai_score: "Low", url: "https://lib.msu.edu/oer" },
   { id: 1761771333022, title: 'OER Commons', content: "OER Commons", author: "OER Commons", ai_score: "Low", url: "https://oercommons.org/" },
   { id: 1761771562622, title: 'A-REI An Extraneous Solution', content: "A-REI An Extraneous Solution ", author: "Illustrative Mathematics", ai_score: "Low", url: "https://oercommons.org/courses/a-rei-an-extraneous-solution" },
   { id: 1761771620806, title: 'Linear algebra I: First introduction', content: "Linear algebra I: First introduction", author: "David Liao", ai_score: "Low", url: "https://oercommons.org/courses/linear-algebra-i-first-introduction" },
@@ -162,8 +162,8 @@ function displayResults(results) {
   resultsElement.innerHTML = '';
   results.forEach(result => {
     const listItem = document.createElement('a');
-    listItem.innerHTML = '<span class="si" style="font-size: 12pt;">' + result.title + '</span> <p style="font-size: 8pt;" id="sid">AI Likelihood: ' + result.ai_score + ' | Author: ' + result.author + '</p>';
-    listItem.style = 'color: var(--mercury);border-bottom: 0px solid var(--mercury);'
+    listItem.innerHTML = '<div class="synapses"><span class="" style="font-size: 12pt; ">' + result.title + '</span> <p style="font-size: 8pt;" id="sid">AI Likelihood: ' + result.ai_score + ' | Author: ' + result.author + '</p></div>';
+    listItem.style = 'color: var(--mercury);border-bottom: 0px solid var(--mercury); text-decoration: none;'
     listItem.target = '_blank'
     listItem.href = result.url
     listItem.rel = 'noreferrer'
