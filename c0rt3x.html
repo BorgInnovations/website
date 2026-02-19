@@ -100,10 +100,28 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             </center>
             <div class="divider">***************</div>
 
+
+            <div>
+                <script src="./source/search.js"></script>
+                <script src="./search.js" charset="utf-8"></script>
+        
+        
+                <center style=""><input id="searchBox"
+                    style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
+                    id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
+                    placeholder="* * * search * * *"><button hidden id="searchButt" style="margin-left: 5%;"
+                    onclick="searched()" class="buttonX_green" name="button">Search</button>
+                </center>
+                <div id="results" style="padding-bottom: 15px%;"></div>
+        
+              </div>
+              <div class="divider">***************</div>
+            <!--
             <center>
                 <embed src="./01search.html" style="width: 80%; min-width: 200px;" height="300"
                     style="overflow-y: auto;">
             </center>
+        -->
             </center>
 
         </div>
