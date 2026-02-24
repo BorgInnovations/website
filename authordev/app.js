@@ -56,7 +56,7 @@ document.getElementById("document").style.paddingBottom =
    localStorage["padding"] || "0px"; // default text
 
 
-   
+
 
 setInterval(function () {
 
@@ -195,7 +195,7 @@ function headingalignment() {
 }
 
 
-function cortex01(){
+function cortex01() {
    var x = document.getElementById("c0rt3x");
    if (x.style.display === "none") {
       x.style.display = "block";
@@ -267,95 +267,95 @@ function fsetsize() {
 }
 
 /* Font Family Controls */
-function hsetFiraCode(){
+function hsetFiraCode() {
    document.getElementById("heading").style.fontFamily = 'Fira_Code';
    document.getElementById("hFont").innerHTML = 'Fira_Code'
    localStorage["titlefont"] = 'Fira_Code'
 }
 
-function bsetFiraCode(){
+function bsetFiraCode() {
    document.getElementById("body").style.fontFamily = 'Fira_Code';
    document.getElementById("bFont").innerHTML = 'Fira_Code'
    localStorage["bodyfont"] = 'Fira_Code'
 }
 
-function fsetFiraCode(){
+function fsetFiraCode() {
    document.getElementById("footer").style.fontFamily = 'Fira_Code';
    document.getElementById("fFont").innerHTML = 'Fira_Code'
    localStorage["footerfont"] = 'Fira_Code'
 }
 
 //Open_Sans
-function hsetOpenSans(){
+function hsetOpenSans() {
    document.getElementById("heading").style.fontFamily = 'Open_Sans';
    document.getElementById("hFont").innerHTML = 'Open_Sans'
    localStorage["titlefont"] = 'Open_Sans'
 }
 
-function bsetOpenSans(){
+function bsetOpenSans() {
    document.getElementById("body").style.fontFamily = 'Open_Sans';
    document.getElementById("bFont").innerHTML = 'Open_Sans'
    localStorage["bodyfont"] = 'Open_Sans'
 }
 
-function fsetOpenSans(){
+function fsetOpenSans() {
    document.getElementById("footer").style.fontFamily = 'Open_Sans';
    document.getElementById("fFont").innerHTML = 'Open_Sans'
    localStorage["footerfont"] = 'Open_Sans'
 }
 
 //Merriweather
-function hsetMerriweather(){
+function hsetMerriweather() {
    document.getElementById("heading").style.fontFamily = 'Merriweather';
    document.getElementById("hFont").innerHTML = 'Merriweather'
    localStorage["titlefont"] = 'Merriweather'
 }
 
-function bsetMerriweather(){
+function bsetMerriweather() {
    document.getElementById("body").style.fontFamily = 'Merriweather';
    document.getElementById("bFont").innerHTML = 'Merriweather'
    localStorage["bodyfont"] = 'Merriweather'
 }
 
-function fsetMerriweather(){
+function fsetMerriweather() {
    document.getElementById("footer").style.fontFamily = 'Merriweather';
    document.getElementById("fFont").innerHTML = 'Merriweather'
    localStorage["footerfont"] = 'Merriweather'
 }
 
 //Oswald
-function hsetOswald(){
+function hsetOswald() {
    document.getElementById("heading").style.fontFamily = 'Oswald';
    document.getElementById("hFont").innerHTML = 'Oswald'
    localStorage["titlefont"] = 'Oswald'
 }
 
-function bsetOswald(){
+function bsetOswald() {
    document.getElementById("body").style.fontFamily = 'Oswald';
    document.getElementById("bFont").innerHTML = 'Oswald'
    localStorage["bodyfont"] = 'Oswald'
 }
 
-function fsetOswald(){
+function fsetOswald() {
    document.getElementById("footer").style.fontFamily = 'Oswald';
    document.getElementById("fFont").innerHTML = 'Oswald'
    localStorage["footerfont"] = 'Oswald'
 }
 
 //OpenDyslexic
-function hsetOpenDyslexic(){
+function hsetOpenDyslexic() {
    document.getElementById("heading").style.fontFamily = 'OpenDyslexic';
    document.getElementById("hFont").innerHTML = 'OpenDyslexic'
    localStorage["titlefont"] = 'OpenDyslexic'
 }
 
-function bsetOpenDyslexic(){
+function bsetOpenDyslexic() {
    document.getElementById("body").style.fontFamily = 'OpenDyslexic';
    document.getElementById("bFont").innerHTML = 'OpenDyslexic'
    localStorage["bodyfont"] = 'OpenDyslexic'
 }
 
-function fsetOpenDyslexic(){
+function fsetOpenDyslexic() {
    document.getElementById("footer").style.fontFamily = 'OpenDyslexic';
    document.getElementById("fFont").innerHTML = 'OpenDyslexic'
    localStorage["footerfont"] = 'OpenDyslexic'
@@ -386,9 +386,9 @@ function fcustomcolor() {
 }
 
 function save() {
-   var blob = new Blob([localStorage["title"], localStorage["text"], localStorage["footer"]],
+   var blob = new Blob(['<section>' + localStorage["title"] + '</section>', '<section>' + localStorage["text"] + '</section>', '<section>' + localStorage["footer"] + '<section>'],
       { type: "text/plain;charset=utf-8" });
-   saveAs(blob, "author.txt");
+   saveAs(blob, "authorFile.html");
 }
 /* End Editor Control */
 
