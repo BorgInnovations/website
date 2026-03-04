@@ -64,6 +64,8 @@
     column-width: 75%;
     display: flex;
     margin-top: 15px;
+    background-color: #fff;
+    color: black;
 }
 
 #textEditor{
@@ -72,3 +74,4 @@
     color: #758ECD;
 
 }
+

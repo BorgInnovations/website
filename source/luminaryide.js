@@ -1,16 +1,17 @@
-document.getElementById("viewport").value =
-   localStorage["file"] || " "; // default text
+document.getElementById("textEditor").value =
+   localStorage["file"] || ""; // default text
 
-
+   
    setInterval(function () { 
-    localStorage["file"] = document.getElementById("viewport").value + ' ';
+    localStorage["file"] = document.getElementById("textEditor").value + ' ';
+    console.log(document.getElementById("textEditor").value)
 
    }, 1000);
 
-function save() {
-    var blob = new Blob([localStorage["file"]],
+function saveFile() {
+    var blob = new Blob([document.getElementById("textEditor").value],
        { type: "text/plain;charset=utf-8" });
-    saveAs(blob, "luminaryide.html");
+    saveAs(blob, "luminaryDocument.html");
  }
 
 
