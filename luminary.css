@@ -223,6 +223,53 @@ a {
     color: var(--mercury);
 }
 
+.appMenu {
+    padding-top: 10px;
+    font-size: 30px;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    
+}
+#menuList{
+    background-color: var(--luminary);
+}
+
+.menuItem {
+    border-style: solid;
+    border-color: var(--mercury);
+    border-width: 1px;
+    padding: 5px;
+    text-align: center;
+    color: var(--mercury);
+    width:30px;
+    height: 30px;
+    background-color: var(--luminary);
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    color: var(--luminary);
+    background-color: var(--mercury);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.subMenuItem{
+    border-style: none;
+    margin: 5px;
+    text-align: center;
+    color: var(--mercury);
+    text-decoration: none;
+}
+
+.subMenuItem:hover{
+    color: var(--neil);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 .nbus:hover {
     cursor: pointer;
 }

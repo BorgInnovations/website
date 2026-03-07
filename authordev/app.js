@@ -1,6 +1,6 @@
 
 document.getElementById("heading").innerHTML =
-   localStorage["title"] || "The title"; // default text
+   localStorage["title"] || "New Document"; // default text
 document.getElementById("body").innerHTML =
    localStorage["text"] || "The body"; // default text
 document.getElementById("footer").innerHTML =
@@ -104,6 +104,10 @@ function file() {
    } else {
       x.style.display = "none";
    }
+}
+
+function previewTitle(){
+   document.getElementById("previewTitle").innerHTML = localStorage["title"]
 }
 
 function edit() {

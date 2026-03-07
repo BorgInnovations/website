@@ -16,13 +16,26 @@
     <meta name="description" content="*Not an AI company">
     <meta name="twitter:description" content="*Not an AI company">
 
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="/img/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__6.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__5.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__4.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__3.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01_192.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<meta name="apple-mobile-web-app-status-bar" content="#243743" />
+	<meta name="theme-color" content="#243743" />
 
     <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./luminary.css">
     <script src="./luminary.js"></script>
     <script src="./menu.js"></script>
     <script src="./source/disableselect.js"></script>
+    <script src="./source/01menu.js"></script>
     <link rel="manifest" href="./authorManifest.json" />
+    <script src="./authorServiceWorker.js"></script>
 
     <!-- Cronitor RUM -->
     <script async src="https://rum.cronitor.io/script.js"></script>
@@ -56,9 +69,13 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
 
 <header>
-    <a name="#top" hidden></a>
-    <div class="nav" id="topMenu">
+    <a id="top" hidden></a>
+    <div class="appMenu" id="topMenu">
 
+        <a id="iobtn" class="menuItem" onclick="showMenu()" >01</a>
+
+        <div id="menuList" class="card" style="display: none">
+        </div>
     </div>
     <a href="#top">
         <button class="topbus">
@@ -72,7 +89,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 </header>
 
 
-<body onload="topMenu_load(), footMenu_load()">
+<body onload="oiMenu_load()">
     <section style="display: none;" id="contact">
 
         <div class="card">
@@ -93,7 +110,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     <center>
         <p>
-            <img src="./img/icons/notanaicompany_banner.svg" style="width: 50%; min-width: 250px; max-width: 500px;" alt='Borg Innovations logo with the tagline, "*not an ai company" below.'>
+            <img src="./img/icons/01/01_clear.svg" style="width: 50%; min-width: 250px; max-width: 500px;" alt='Borg Innovations logo with the tagline, "*not an ai company" below.'>
         </p>
     </center>
 
@@ -107,17 +124,29 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
 <section class="card">
     <div class="card-heading">
-        <h2>Made on earth by humans</h2>
+        <h1>0rganic 1ntelligence</h1>
     </div>
     <div class="card-body">
 
         <center>
-            <p><img src="./img/CortexOI_full_t.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt=""></p>
+            <a href="./01_author.html">
+                <img src="./img/icons/author.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt="">
+            </a>
             
-            <p>Human-centric academic resources for students and researchers.</p>
+            <!--<p>AI-free writing space</p>
             <p>
-                <a href="./c0rt3x.html"> <button class="abus">Learn More</button> </a>
-            </p>
+                <a href="./author.html"> <button class="abus">Open</button> </a>
+            </p>-->
+
+
+            <div class="divider">***************</div>
+            <p>
+                <a href="./01_c0rt3x.html"><img src="./img/CortexOI_full_t.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt=""></a></p>
+            
+            <!--<p>Human-centric academic resources</p>
+            <p>
+                <a href="./01_c0rt3x.html"> <button class="abus">Open</button> </a>
+            </p>-->
             <div class="divider">***************</div>
 
 
@@ -125,22 +154,13 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
             <img src="./img/icons/projectluminary.svg" style="width: 50%; min-width: 200px; max-width: 500px;"
                 alt="">
-                <p>Redefining web and code standards to be more effecient and private.</p>
+                <p>Tools for making the web faster, independent, and more private.</p>
 
             <p>
-                <a href="./luminary.html"> <button class="abus">Learn More</button> </a>
+                <i>Coming Soon</i>
             </p>
 
 
-
-            <div class="divider">***************</div>
-
-            <img src="./img/icons/author.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt="">
-            
-            <p>Browser-based writing environment that is free of AI.</p>
-            <p>
-                <a href="./author.html"> <button class="abus">Learn More</button> </a>
-            </p>
 
         
         

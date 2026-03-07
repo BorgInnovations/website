@@ -1,9 +1,9 @@
 const staticAuthor = "Author"
 const assets = [
   "/",
-  "/index.html",
-  '/author.html',
-  '/c0rt3x.html',
+  "/01.html",
+  '/01_author.html',
+  '/01_c0rt3x.html',
   '/img/icons/BorgRetroFuturism_4.svg',
   '/img/icons/BI_1.svg',
   '/img/icons/BI_2.svg',
@@ -13,10 +13,11 @@ const assets = [
   '/img/CortexOI_full_t.svg',
   '/authordev/app.js',
   '/luminary.css',
-  '/luminary.html',
+  '/01_luminary.html',
   '/01search.html',
   '/source/search.js',
-  '/source/disableselect.js'
+  '/source/disableselect.js',
+  '/menu.js'
 
 ]
 
