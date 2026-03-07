@@ -12,7 +12,7 @@
     <script src="./menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js"></script>
     <script src="./source/synapse.js"></script>
-    <script src="./source/disableselect.js"></script>
+    <!--<script src="./source/disableselect.js"></script>-->
 
 
 
@@ -97,15 +97,15 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             <div class="divider">***************</div>
 
             <center>
-                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_title" placeholder="* * * Synapse Title * * *"></p>
-                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_url" placeholder="* * * Synapse URL * * *"></p>
-                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_author" placeholder="* * * Synapse Author * * *"></p>
-                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_content" placeholder="* * * Synapse Content * * *"></p>
-                <p><input style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_score" placeholder="* * * Synapse AI Score * * *"></p>
 
                 <p> <button onclick="synapse_build()" class="abus">Build Synapse</button>
@@ -118,7 +118,25 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                 <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
                         Synapse</button> <button onclick="synapse_download()" class="abus">Download Synapse</button></p>
 
-                <code class="border" id="synapse_output" style="display: none;"></code>
+                <code class="border" id="synapse_output" style="display: none;" contenteditable="true">
+                <!--
+                    <div>
+                    <p>
+                        <span id="s_open"></span>
+                        <span id="s_id"></span>
+                        <span id="s_title"></span>
+                        <span id="s_url"></span>
+                        <span id="s_author"></span>
+                        <span id="s_content"></span>
+                        <span id="s_ai"></span>
+                        <span id="s_close"></span>
+
+                     </p>
+                </div>
+            -->
+
+                
+                </code>
 
 
             </center>

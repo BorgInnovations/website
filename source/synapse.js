@@ -25,7 +25,7 @@ async function synapse_check() {
 function synapse_build() {
     document.getElementById("synapse_output").style.display = 'block';
     d = new Date()
-    s_id = d.getTime()
+    s_id = 'm'+d.getDate()+d.getMonth()+d.getYear()+d.getHours()+d.getSeconds()+d.getMilliseconds()
 
     s_title = document.getElementById("synapse_title").value
     s_url = document.getElementById("synapse_url").value
@@ -33,7 +33,7 @@ function synapse_build() {
     s_content = document.getElementById("synapse_content").value
     s_ai = document.getElementById("synapse_score").value
 
-    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', title: "' + s_title + '", content: "' + s_content + ' ' + s_author + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
+    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', title: "' + s_title + '", content: "' +s_title + ' | '+ s_content +' | '+ ' ' + s_author + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
 
     document.getElementById("synapse_output").innerHTML = s_result
 
@@ -77,3 +77,32 @@ const synapse_download = () => {
     link.click();
     URL.revokeObjectURL(link.href);
  };
+
+ function liveSynapse(){
+    
+    document.getElementById("synapse_output").style.display = 'block';
+    d = new Date()
+    s_id = d.getTime()
+    s_open = '<p style="padding-top:15px">{ id: '
+    s_title = document.getElementById("synapse_title").value
+    s_url = document.getElementById("synapse_url").value
+    s_author = document.getElementById("synapse_author").value
+    s_content = document.getElementById("synapse_content").value
+    s_ai = document.getElementById("synapse_score").value
+    s_close = '"}, </p>'
+
+    s_result = '<p style="padding-top:15px">{ id: ' + s_id + ', title: "' + s_title + '", content: "' + s_content + ' ' + s_author + '", author: "' + s_author + '", ai_score: "' + s_ai + '", url: "' + s_url + '"}, </p>'
+
+    document.getElementById("s_open").innerHTML = s_open + s_id
+    document.getElementById("s_title").innerHTML = ', title: "' +s_title
+    document.getElementById("s_url").innerHTML = '", url: "' + s_url
+    document.getElementById("s_author").innerHTML = ', author: "' +s_author
+    document.getElementById("s_content").innerHTML = '", content: "' +s_title+' '+s_content+ ' ' + s_author
+    document.getElementById("s_ai").innerHTML = '", ai_score: "' + s_ai
+    document.getElementById("s_close").innerHTML = s_close
+    /*
+    document.getElementById("synapse_output").innerHTML = s_result
+    */
+    document.getElementById("synapse_options").style.display = 'block';
+
+}
