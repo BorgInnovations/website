@@ -1,0 +1,43 @@
+{
+    "name": "Author| by Borg Innovations",
+    "short_name": "Author|",
+    "start_url": "author.html",
+    "display": "standalone",
+    "background_color": "#EAF4F4",
+    "theme_color": "#243743",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/img/icons/author/Icon-Small-40@2x",
+        "type": "image/png", "sizes": "72x72"
+      },
+      {
+        "src": "/images/icons/Icon-Notification@3x.png",
+        "type": "image/png", "sizes": "96x96"
+      },
+      {
+        "src": "/images/icons/Icon-60@3x.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "/images/icons/Icon-60@3x.png",
+        "type": "image/png", "sizes": "144x144"
+      },
+      {
+        "src": "/images/icons/Icon-60@3x.png",
+        "type": "image/png", "sizes": "152x152"
+      },
+      {
+        "src": "/images/icons/Icon-60@3x.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons/aIcon.png",
+        "type": "image/png", "sizes": "384x384"
+      },
+      {
+        "src": "/images/icons/aIcon.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
