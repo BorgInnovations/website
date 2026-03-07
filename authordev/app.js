@@ -442,3 +442,6 @@ function cleardocument() {
    localStorage["footerfs"] = '12pt' + ' ';
 
 }
+
+
+

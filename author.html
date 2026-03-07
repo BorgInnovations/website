@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css">
+	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css" >
 	<link rel="stylesheet" href="./luminary.css">
 
 	<!--Font Links-->
@@ -55,7 +55,16 @@
 <body onload="footMenu_load_alt(), widthcontrold();"
 	style="background-color: #F6F9FD; margin-left: 10px;margin-right: 10px; padding-bottom: 10px; display: grid; place-items: center;">
 
-
+<script>
+	if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("/authorServiceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
+</script>
 
 	<section id="control-nav" class="nav-alt" style="overflow-y: scroll; width: 95%; margin-bottom: 15px;">
 
