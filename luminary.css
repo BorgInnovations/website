@@ -231,9 +231,24 @@ a {
     left: 0px;
     
 }
+
+.toolMenu {
+    padding-top: 10px;
+    font-size: 30px;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    
+    
+}
 #menuList{
     background-color: var(--luminary);
 }
+
+#toolList{
+    background-color: var(--luminary);
+}
+
 
 .menuItem {
     border-style: solid;
@@ -257,7 +272,7 @@ a {
 
 .subMenuItem{
     border-style: none;
-    margin: 5px;
+    margin: 3px;
     text-align: center;
     color: var(--mercury);
     text-decoration: none;

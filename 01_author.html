@@ -1,72 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #F6F9FD; font-family: Fira_Code; overflow-x: hidden;">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Borg Innovations</title>
 
-	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css" >
-	<link rel="stylesheet" href="./luminary.css">
-
-	<!--Font Links-->
-	<link rel="stylesheet" href="https://fonts.borgcreative.com/fonts.css">
-
-	<!--end-->
-
-
-	<title>Author</title>
-	<link rel="preload" href="./authordev/DocEd.css" />
-	<script src="./menu.js"></script>
-	<link rel="stylesheet" href="./authordev/DocEd.css" />
-
-
-	<div id="identifier" content=""></div>
-	<script src="https://cdn.counter.dev/script.js" data-id="49ff21d8-7cbe-4f83-b436-97b778216657" data-utcoffset="-7"></script>
-	<!-- Cronitor RUM -->
-	<script async src="https://rum.cronitor.io/script.js"></script>
-	<script>
-		window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
-		cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
-	</script>
-
-	<!--SEO Images-->
-	<meta name="twitter:title" content="Author by Borg Innovations">
-    <meta name="twitter:image" content="img/icons/BI_Ads_author.svg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:description" content="Author by Borg Innovations: A focused writing space.">
+    <meta name="theme-color" content="#fff">
+    <meta property="og:image" content="./img/ads/notanaicompany.png">
+    <meta name="twitter:image" content="./img/ads/notanaicompany.png">
     <meta name="twitter:card" content="summary">
-    <meta name="description" content="No AI thoughts. Only your thoughts.">
-	<meta property="og:image" content="img/icons/BI_Ads_author.svg">
+    <meta name="twitter:title" content="Borg Innovations">
+    <meta property="og:type" content="website">
+    <meta name="description" content="*Not an AI company">
+    <meta name="twitter:description" content="*Not an AI company">
 
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="/img/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__6.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__5.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__4.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__3.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01_192.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<meta name="apple-mobile-web-app-status-bar" content="#243743" />
+	<meta name="theme-color" content="#243743" />
+
+    <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./luminary.css">
+    <script src="./luminary.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./source/disableselect.js"></script>
+    <script src="./source/01menu.js"></script>
+    <link rel="manifest" href="./authorManifest.json" />
+    <script src="./authorServiceWorker.js"></script>
+
+    <!-- Cronitor RUM -->
+	<!--
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+        window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+        cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
+    </script>
+    <script src="https://cdn.counter.dev/script.js" data-id="49ff21d8-7cbe-4f83-b436-97b778216657" data-utcoffset="-7"></script>
+-->
 </head>
 
-<body onload="footMenu_load_alt(), widthcontrold();"
-	style="background-color: #F6F9FD; margin-left: 10px;margin-right: 10px; padding-bottom: 10px; display: grid; place-items: center;">
+<!--
+          _____
+         /   o \
+        | o   O |
+        \_____ /
+                 
+        
+ /^\
+ |O|
+/| |\
+||_||
+^   ^
+^   ^
+^   ^
 
-<script>
-	if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/authorServiceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
-}
-</script>
-
-	<section id="control-nav" class="nav-alt" style="overflow-y: scroll; width: 95%; margin-bottom: 15px;">
-
-		<ul>
-			<li><a href="./index.html">B0RG</a></li>
-			<li><a onclick=" file()">File</a></li>
-			<li><a onclick=" edit()">Edit</a></li>
-			<li><a onclick=" cortex01()">C0RT3X01</a></li>
+Inspired by the software engineers of the Luminary and Comanche flight software system for the Apollo NASA program.
+    https://github.com/chrislgarry/Apollo-11
+    https://www.ibiblio.org/apollo/#gsc.tab=0
+-->
 
 
-		</ul>
+<header>
+    <a id="top" hidden></a>
+    <div class="appMenu" id="topMenu">
 
+        <a id="iobtn" class="menuItem" onclick="showMenu()" >01</a>
+
+        <div id="menuList" class="card" style="display: none">
+
+        </div>
+
+		
+    </div>
+
+	<div class="toolMenu" id="topMenu">
+
+        <a id="abtn" class="menuItem" onclick="showA()" >A|</a>
+
+        <div id="toolList" class="card" style="display: none">
+
+			<ul>
+				<li><a onclick=" file(), closeA()">File</a></li>
+				<li><a onclick=" edit(), closeA()">Edit</a></li>
+				<li><a onclick=" cortex01(), closeA()">C0RT3X01</a></li>
+			</ul>
+
+
+        </div>
+
+		
+    </div>
+
+
+
+
+
+</header>
+
+<body onload="oiMenu_load(), widthcontrold();">
+	
+    <center>
+        <p>
+            <img src="./img/icons/author.svg" style="width: 50%; min-width: 250px; max-width: 500px;" alt='Borg Innovations logo with the tagline, "*not an ai company" below.'>
+        </p>
+    </center>
+
+
+	<section id="control_hub">
 		<div id="c0rt3x" style="display: none;">
-			<div class="card-alt">
+			<div class="card">
 				<div class="card-body" style="padding-top: 15px;">
 					<div>
 
@@ -79,15 +130,15 @@
 
 
 		<div id="file" style="display: none;">
-			<div class="card-alt">
+			<div class="card">
 				<div class="card-body" style="padding-top: 15px;">
 					<div>
 						<h3>File</h3>
 
-						<p><a class="a-alt" id="printbtn" style="display: block;" onclick="printdoc()"
+						<p><a class="a" id="printbtn" style="display: block;" onclick="printdoc()"
 								class="">Print/PDF</a>
 						</p>
-						<p><a class="a-alt" style="display: block;" id="savebtn" onclick=" save();">Download</a></p>
+						<p><a class="a" style="display: block;" id="savebtn" onclick=" save();">Download</a></p>
 						<p><a class="a-comanche" onclick="cleardocument();">DELETE</a></p>
 
 						<script>
@@ -109,12 +160,13 @@
 		</div>
 
 		<div id="edit" style="display: none;">
-			<div class="card-alt">
+			<div class="card">
 				<div class="card-body" style="padding-top: 15px;">
 					<div>
 						<h3>Edit</h3>
 
 						<div>
+							<!--
 							<p><h4>Fonts</h4></p>
 							<p><span style="font-family: Fira_Code;">Fira Code</span> (Mono Sans)
 								<a class="a-alt" onclick=" hsetFiraCode();">Heading </a>
@@ -151,12 +203,12 @@
 							<p id="bFont"></p>
 							<p id="fFont"></p>
 							</div>
-
+						-->
 							<p><h4>Text Align</h4></p>
 							<p>Align
-								<a class="a-alt" onclick="headingcon();">Heading </a>
-								<a class="a-alt" onclick="bodycon();">Body </a>
-								<a class="a-alt" onclick="footercon();">Footer </a>
+								<a class="a" onclick="headingcon();">Heading </a>
+								<a class="a" onclick="bodycon();">Body </a>
+								<a class="a" onclick="footercon();">Footer </a>
 								text
 							</p>
 
@@ -164,19 +216,19 @@
 								<span id="ac_1"></span>
 								<span id="ac_2"></span>
 								<span id="ac_3"></span>
-								<div style="color: #243743" class="divider">***************</div>
+								<div style="color: #F6F9FD" class="divider">***************</div>
 
 							</div>
 
 							<p><h4>Text Size</h4></p>
 							<p>
-								<input class="text-input-alt" type="text" id="customsize" placeholder="Text size">
+								<input class="text-input" type="text" id="customsize" placeholder="Text size">
 							</p>
 							<p>
 								Set
-								<a class="a-alt" onclick="hsetsize()">Heading </a>
-								<a class="a-alt" onclick="bsetsize()">Body </a>
-								<a class="a-alt" onclick="fsetsize()">Footer </a>
+								<a class="a" onclick="hsetsize()">Heading </a>
+								<a class="a" onclick="bsetsize()">Body </a>
+								<a class="a" onclick="fsetsize()">Footer </a>
 								text size
 							</p>
 
@@ -184,13 +236,13 @@
 
 							<p><h4>Text Color</h4></p>
 							<p>
-								<input class="text-input-alt" type="text" id="customcolor" placeholder="#HEX">
+								<input class="text-input" type="text" id="customcolor" placeholder="#HEX">
 							</p>
 							<p>
 								Set
-								<a class="a-alt" onclick="hcustomcolor()">Heading </a>
-								<a class="a-alt" onclick="bcustomcolor()">Body </a>
-								<a class="a-alt" onclick="fcustomcolor()">Footer </a>
+								<a class="a" onclick="hcustomcolor()">Heading </a>
+								<a class="a" onclick="bcustomcolor()">Body </a>
+								<a class="a" onclick="fcustomcolor()">Footer </a>
 								color
 							</p>
 						</div>
@@ -207,13 +259,13 @@
 
 						<div>
 							<p>
-								<input type="text" id="customcolor" placeholder="#HEX">
+								<input  class="text-input" type="text" id="customcolor" placeholder="#HEX">
 							</p>
 							<p>
 								Set
-								<a class="a-alt" onclick="color(); hcustomcolor()">Heading </a>
-								<a class="a-alt" onclick="color(); bcustomcolor()">Body </a>
-								<a class="a-alt" onclick="color(); fcustomcolor()">Footer </a>
+								<a class="a" onclick="color(); hcustomcolor()">Heading </a>
+								<a class="a" onclick="color(); bcustomcolor()">Body </a>
+								<a class="a" onclick="color(); fcustomcolor()">Footer </a>
 								color
 							</p>
 
@@ -225,10 +277,12 @@
 		</div>
 		<script src="./authordev/js/FileSaver.js"></script>
 
-	</section>
 
-	<section class="border-alt" id="document"
-		style="margin-top:15px; padding:10px; width: 85%; overflow-y: scroll; overflow-x: hidden;">
+
+
+
+
+		<section class="border" id="document" style="background-color: #F6F9FD; margin-top:15px; padding:10px; width: 85%; overflow-y: scroll; overflow-x: hidden;">
 
 
 		<!--Doc Header-->
@@ -254,28 +308,24 @@
 
 
 
-	<script id="script" src="./authordev/app.js"></script>
-	<script>
-		function widthcontrold() {
-			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				document.getElementById("savebtn").style.display = 'block';
-				document.getElementById("printbtn").style.display = 'none';
 
-			} else {
-				document.getElementById("savebtn").style.display = 'block';
-				document.getElementById("printbtn").style.display = 'block';
 
+		<script id="script" src="./authordev/app.js"></script>
+		<script>
+			function widthcontrold() {
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					document.getElementById("savebtn").style.display = 'block';
+					document.getElementById("printbtn").style.display = 'none';
+	
+				} else {
+					document.getElementById("savebtn").style.display = 'block';
+					document.getElementById("printbtn").style.display = 'block';
+	
+				}
+	
+	
 			}
-
-
-		}
-
-	</script>
-
+	
+		</script>
+	</section>
 </body>
-<footer id="footMenu">
-
-</footer>
-
-
-</html>
