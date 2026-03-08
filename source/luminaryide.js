@@ -1,3 +1,5 @@
+/*
+
 document.getElementById("textEditor").value =
    localStorage["file"] || ""; // default text
 
@@ -7,6 +9,87 @@ document.getElementById("textEditor").value =
     console.log(document.getElementById("textEditor").value)
 
    }, 1000);
+
+   */
+
+const DB_NAME    = "pwaDB";
+const DB_VERSION = 1;
+const STORE_NAME = "editorStore";
+const SAVE_KEY   = "file";
+const SAVE_DELAY = 1000; // ms between saves
+
+// Opens (or creates) the database
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+    request.onupgradeneeded = (event) => {
+      const db = event.target.result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME);
+      }
+    };
+
+    request.onsuccess = (event) => resolve(event.target.result);
+    request.onerror   = (event) => reject(event.target.error);
+  });
+}
+
+// Saves a value to the store by key
+async function idbSet(key, value) {
+  try {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+      const tx      = db.transaction(STORE_NAME, "readwrite");
+      const store   = tx.objectStore(STORE_NAME);
+      const request = store.put(value, key);
+
+      request.onsuccess = () => resolve();
+      request.onerror   = (event) => reject(event.target.error);
+    });
+  } catch (err) {
+    console.error("idbSet failed:", err);
+  }
+}
+
+// Retrieves a value from the store by key
+async function idbGet(key) {
+  try {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+      const tx      = db.transaction(STORE_NAME, "readonly");
+      const store   = tx.objectStore(STORE_NAME);
+      const request = store.get(key);
+
+      request.onsuccess = (event) => resolve(event.target.result || "");
+      request.onerror   = (event) => reject(event.target.error);
+    });
+  } catch (err) {
+    console.error("idbGet failed:", err);
+    return "";
+  }
+}
+
+// AUTO-LOAD — call this via <body onload="loadEditor()">
+async function loadEditor() {
+  const saved = await idbGet(SAVE_KEY);
+  document.getElementById("textEditor").value = saved;
+  console.log("Editor content loaded.");
+}
+
+// AUTO-SAVE — starts a 1s interval that saves editor content
+function startAutoSave() {
+  setInterval(async () => {
+    const content = document.getElementById("textEditor").value;
+    await idbSet(SAVE_KEY, content);
+    console.log("Auto-saved:", content);
+  }, SAVE_DELAY);
+}
+
+// Kick off auto-save immediately when script loads
+startAutoSave();
+
+   //End
 
 function saveFile() {
     var blob = new Blob([document.getElementById("textEditor").value],
