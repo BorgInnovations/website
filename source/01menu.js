@@ -8,7 +8,7 @@ function showMenu() {
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
        x.style.display = "block";
-       document.getElementById("iobtn").innerHTML = "XX";
+       document.getElementById("iobtn").innerHTML = 'XX';
     } else {
        x.style.display = "none";
        document.getElementById("iobtn").innerHTML = "01";
@@ -21,10 +21,23 @@ function showMenu() {
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
        x.style.display = "block";
-       document.getElementById("abtn").innerHTML = "XX";
+       document.getElementById("abtn").innerHTML = 'XX';
     } else {
        x.style.display = "none";
        document.getElementById("abtn").innerHTML = "A|";
+    }
+ }
+
+ function showL() {
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a onclick=" saveFile()">Download</a></li></ul></center></div>'
+
+    var x = document.getElementById("menuList");
+    if (x.style.display === "none") {
+       x.style.display = "block";
+       document.getElementById("abtn").innerHTML = 'XX';
+    } else {
+       x.style.display = "none";
+       document.getElementById("abtn").innerHTML = "L|";
     }
  }
 function closeA(){

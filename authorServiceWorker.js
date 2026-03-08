@@ -17,7 +17,9 @@ const assets = [
   '/01search.html',
   '/source/search.js',
   '/source/disableselect.js',
-  '/menu.js'
+  '/menu.js',
+  'https://luminary.borginnovations.com/source/luminaryide.js',
+  '/img/icons/Luminary.svg'
 
 ]
 
