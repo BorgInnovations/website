@@ -4,7 +4,7 @@ function oiMenu_load() {
 
 
 function showMenu() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a href="./01.html" class="subMenuItem">Home</a> </p><p> <a href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a href="./01.html" class="subMenuItem">Home</a> </p><p> <a href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a href="./01_luminary.html" class="subMenuItem">Luminary</a> </p><p> <a href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
        x.style.display = "block";
