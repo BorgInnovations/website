@@ -162,10 +162,39 @@ function headingcon() {
 
 }
 
+function mheadingcon() {
+   document.getElementById("ac_1").innerHTML = '<a class="a" onclick="headingcon(); hleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a" onclick="headingcon(); hcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a" onclick="headingcon(); hright()">Right </a>';
+
+   var x = document.getElementById("alignmentcons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
 function bodycon() {
    document.getElementById("ac_1").innerHTML = '<a class="a-alt" onclick="bodycon(); bleft()">Left </a>';
    document.getElementById("ac_2").innerHTML = '<a class="a-alt" onclick="bodycon(); bcenter()">Center </a>';
    document.getElementById("ac_3").innerHTML = '<a class="a-alt" onclick="bodycon(); bright()">Right </a>';
+
+
+   var x = document.getElementById("alignmentcons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
+function mbodycon() {
+   document.getElementById("ac_1").innerHTML = '<a class="a" onclick="bodycon(); bleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a" onclick="bodycon(); bcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a" onclick="bodycon(); bright()">Right </a>';
 
 
    var x = document.getElementById("alignmentcons");
@@ -182,6 +211,22 @@ function footercon() {
    document.getElementById("ac_1").innerHTML = '<a class="a-alt" onclick="footercon(); fleft()">Left </a>';
    document.getElementById("ac_2").innerHTML = '<a class="a-alt" onclick="footercon(); fcenter()">Center </a>';
    document.getElementById("ac_3").innerHTML = '<a class="a-alt" onclick="footercon(); fright()">Right </a>';
+
+
+   var x = document.getElementById("alignmentcons");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+
+}
+
+function mfootercon() {
+
+   document.getElementById("ac_1").innerHTML = '<a class="a" onclick="footercon(); fleft()">Left </a>';
+   document.getElementById("ac_2").innerHTML = '<a class="a" onclick="footercon(); fcenter()">Center </a>';
+   document.getElementById("ac_3").innerHTML = '<a class="a" onclick="footercon(); fright()">Right </a>';
 
 
    var x = document.getElementById("alignmentcons");
