@@ -12,7 +12,7 @@ document.getElementById("textEditor").value =
 
    */
 
-const DB_NAME    = "pwaDB";
+const DB_NAME    = "luminaryIDE";
 const DB_VERSION = 1;
 const STORE_NAME = "editorStore";
 const SAVE_KEY   = "file";
