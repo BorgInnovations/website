@@ -38,3 +38,21 @@ self.addEventListener("fetch", fetchEvent => {
       })
     )
   })
+
+
+
+  async function forceRefetch(urls = assets) {
+    const cache = await caches.open(staticAuthor);
+    await Promise.all(
+      urls.map(async url => {
+        const freshResponse = await fetch(url, { cache: "no-store" });
+        if (freshResponse.ok) {
+          await cache.put(url, freshResponse);
+        }
+      })
+    );
+  }
+
+  function refreshAlert(){
+    alert('Refresh Successful')
+  }
