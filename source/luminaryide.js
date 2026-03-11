@@ -125,6 +125,7 @@ function updateBody(){
 }
 function updateLFile(){
   document.getElementById("lFile").src = './lfile.html'
+  console.log('Viewport Rendered')
  }
 
 function versionID(){
