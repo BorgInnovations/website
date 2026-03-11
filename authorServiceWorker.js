@@ -19,7 +19,9 @@ const assets = [
   '/source/disableselect.js',
   '/menu.js',
   '/source/luminaryide.js',
-  '/img/icons/Luminary.svg'
+  '/img/icons/Luminary.svg',
+  '/source/dbload.js',
+  '/Fira_Code/FiraCode-VariableFont_wght.ttf'
 
 ]
 

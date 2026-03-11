@@ -125,6 +125,6 @@ function updateBody(){
 }
 
 function versionID(){
-  cv = 'Alpha 1.1.1'
+  cv = 'Alpha 1.2.1'
   document.getElementById("versionID").innerHTML = cv
 }

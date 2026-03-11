@@ -23,6 +23,7 @@
         <script src="./source/01menu.js"></script>
         <link rel="manifest" href="./authorManifest.json" />
         <script src="./authorServiceWorker.js"></script>
+        <script src="./source/dbload.js"></script>
 
         <script src="./source/luminaryide.js"></script>
         <!--<script src="https://luminary.borginnovations.com/source/luminaryide.js"></script>-->
@@ -90,7 +91,7 @@
 
         </section>
 
-        <section id="viewport" contenteditable="true" onkeyup="updateBody();">
+        <!--<section id="viewport" contenteditable="true" onkeyup="updateBody();">
             <div class="container-viewport card">
                 <p><div id="ide-menu">
 
@@ -104,6 +105,14 @@
             </div>
             
 
+        </section>-->
+
+
+        <section id="viewport">
+            <center>
+                <embed id="lFile" src="./lfile.html" class="container-viewport card" type="" style="width: 95%; height: max-content; min-height: 300px;"> 
+
+            </center>
         </section>
 
     </section>
