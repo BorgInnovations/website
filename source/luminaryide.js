@@ -91,29 +91,13 @@ startAutoSave();
 
    //End
 
-   // Clears all entries from the store
-async function idbClear() {
-  document.getElementById("textEditor").value =''
-  try {
-    const db = await openDB();
-    return new Promise((resolve, reject) => {
-      const tx      = db.transaction(STORE_NAME, "readwrite");
-      const store   = tx.objectStore(STORE_NAME);
-      const request = store.clear();
-      request.onsuccess = () => {
-        console.log("Store cleared.");
-        resolve();
-      };
-      request.onerror = (event) => reject(event.target.error);
-    });
+     // Clears all entries from the store
+     function idbClear() {
+      document.getElementById("textEditor").value =''
+      document.getElementById("lFile").src = './lfile.html'
+    }
     
-  } catch (err) {
-    console.error("idbClear failed:", err);
-  }
-  location.reload(); 
-}
-
-//end
+    //end
 
 function saveFile() {
     var blob = new Blob([document.getElementById("textEditor").value],
