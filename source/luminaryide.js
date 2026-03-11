@@ -123,6 +123,9 @@ function updateBody(){
     
 
 }
+function updateLFile(){
+  document.getElementById("lFile").src = './lfile.html'
+ }
 
 function versionID(){
   cv = 'Alpha 1.2.1'
