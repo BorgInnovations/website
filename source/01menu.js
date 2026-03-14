@@ -4,7 +4,7 @@ function oiMenu_load() {
 
 
 function showMenu() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a href="./01.html" class="subMenuItem">Home</a> </p><p> <a href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a href="./01_luminary.html" class="subMenuItem">Luminary</a> </p><p> <a href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a class="a" href="./01.html" class="subMenuItem">Home</a> </p><p> <a class="a" href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a class="a" href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a class="a" href="./01_luminary.html" class="subMenuItem">Luminary</a> </p><p> <a class="a" href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
        x.style.display = "block";
@@ -16,7 +16,7 @@ function showMenu() {
  }
 
  function showA() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a onclick=" file()">File</a></li><li><a onclick=" edit()">Edit</a></li><li><a onclick=" cortex01()">C0RT3X01</a></li></ul></center></div>'
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a" onclick=" file()">File</a></li><li><a class="a" onclick=" edit()">Edit</a></li><li><a class="a" onclick=" cortex01()">C0RT3X01</a></li></ul></center></div>'
 
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
@@ -29,7 +29,7 @@ function showMenu() {
  }
 
  function showL() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a onclick=" idbClear(),updateLFile()">Delete</a></li><li><a onclick=" updateLFile()">Render</a></li><li><a onclick=" saveFile()">Download</a></li></ul></center></div>'
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a-comanche" onclick=" idbClear(),updateLFile()">Delete</a></li><li><a class="a" onclick=" openSnippets()">Snippets</a></li><li><a class="a" onclick=" updateLFile()">Render</a></li><li><a class="a" onclick=" copyCode()">Copy Code</a></li><li><a class="a" onclick=" saveFile()">Download</a></li></ul></center></div>'
 
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
@@ -45,3 +45,16 @@ function closeA(){
     document.getElementById("menuList").style.display = 'none'
     document.getElementById("abtn").innerHTML = 'A|'
 }
+
+
+function openSnippets() {
+
+   var x = document.getElementById("snippets");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+ 
+   } else {
+      x.style.display = "none";
+ 
+   }
+ }

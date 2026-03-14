@@ -93,8 +93,14 @@ startAutoSave();
 
      // Clears all entries from the store
      function idbClear() {
-      document.getElementById("textEditor").value =''
-      document.getElementById("lFile").src = './lfile.html'
+
+      if (confirm("Are you sure you want to DELETE? This CANNOT be undone.")) {
+        document.getElementById("textEditor").value =''
+        document.getElementById("lFile").src = './lfile.html'
+      } else {
+        console.log('Canceled file deletion')
+      }
+    
     }
     
     //end
@@ -136,7 +142,29 @@ function updateLFile(){
   console.log('Viewport Rendered')
  }
 
+ function copyCode() {
+  const text = document.getElementById('textEditor').value
+  navigator.clipboard.writeText(text);
+  window.alert('Code copied to clipboard')
+
+}
+
 function versionID(){
   cv = 'Alpha 1.2.1'
   document.getElementById("versionID").innerHTML = cv
 }
+
+   /*
+===
+Change log: Mobile Alpha 1.3.0 and on
+===
+
+Mobile Alpha 1.3.0
++Snippets support
+*Menu updates
++Copy Code function
+
+===
+End of line
+===
+   */
