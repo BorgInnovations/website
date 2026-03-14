@@ -150,7 +150,7 @@ function updateLFile(){
 }
 
 function versionID(){
-  cv = 'Alpha 1.2.1'
+  cv = 'Alpha 1.3.0'
   document.getElementById("versionID").innerHTML = cv
 }
 
