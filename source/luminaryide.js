@@ -150,7 +150,7 @@ function updateLFile(){
 }
 
 function versionID(){
-  cv = 'Alpha 1.3.0'
+  cv = 'Alpha 1.3.1'
   document.getElementById("versionID").innerHTML = cv
 }
 
@@ -158,6 +158,9 @@ function versionID(){
 ===
 Change log: Mobile Alpha 1.3.0 and on
 ===
+Mobile Alpha 1.3.1
+   *Disabled Autocorrect in TextEditor pane
+
 
 Mobile Alpha 1.3.0
 +Snippets support
