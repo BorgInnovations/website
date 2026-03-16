@@ -29,7 +29,7 @@ function showMenu() {
  }
 
  function showL() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a-comanche" onclick=" idbClear(),updateLFile(),showL()">Delete</a></li><li><a class="a" onclick=" openSnippets(), showL()">Snippets</a></li><li><a class="a" onclick=" updateLFile(),showL()">Render</a></li><li><a class="a" onclick=" copyCode(),showL()">Copy Code</a></li><li><a class="a" onclick=" saveFile(),showL()">Download</a></li></ul></center></div>'
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a-comanche" onclick=" idbClear(),updateLFile(),showL()">Delete</a></li><li><a class="a" onclick=" openSnippets(), showL()">Snippets</a></li><li><a class="a" onclick=" updateLFile(),forceRenderAlert(),showL()">Render</a></li><li><a class="a" onclick=" copyCode(),showL()">Copy Code</a></li><li><a class="a" onclick=" saveFile(),showL()">Download</a></li></ul></center></div>'
 
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
