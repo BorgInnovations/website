@@ -74,11 +74,25 @@
     <div id="snippets" style="display: none;">
         <div class="card">
             <div class="card-body" style="padding-top: 15px;">
+
                 <div>
+
+                    <script src="https://luminary.borginnovations.com/source/snippets.js"></script>
+
+                    <center style=""><input id="searchBox"
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
+                        id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
+                        placeholder="* * * search snippets * * *"><button hidden id="searchButt" style="margin-left: 5%;"
+                        onclick="searched()" class="buttonX_green" name="button">Search</button>
+                    </center>
+                    <div id="results" style="height: 300px; overflow-y: scroll;"></div>
+            
+                  </div>
+                <!--<div>
 
                     <embed src="https://luminary.borginnovations.com/snippetsearch.html" style="width: 100%; min-width: 200px; padding: 0px; margin: 0px;" height="300"
                     style="overflow-y: auto;">
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
