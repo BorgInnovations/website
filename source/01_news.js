@@ -1,5 +1,5 @@
 function loadNews(){
-    var heading = '<h3>New 01 Update!</h3>'
-    var body = '<div> <p>A new 01 App update is available! This update <i>should</i> auto install after 24 hours. However, with PWAs this does not always work. On the "about" page try the force refresh option, or delete the app and resinstall if the update does not auto populate. Make sure to EXPORT all Author| and Luminary projects BEFORE deleting as you may lose in-app files.</p> <p> <a class="bbus" href="./01_luminary.html">Try out the LuminaryIDE</a> </p> </div>'
+    var heading = '<h3>C0RT3X 01 is now in beta!</h3>'
+    var body = '<div> <p>C0RT3X has a new update, and it is now in beta! This update brings the largest single batch indexing yet, a refined search database, and new search options!</p> <p>This update may take up to 24 hours to reflect in the 01 app.</p> <p> <a class="bbus" href="./01_c0rt3x.html">Use C0RT3X</a> </p> </div>'
     document.getElementById("newspanel").innerHTML = heading + body
 }
