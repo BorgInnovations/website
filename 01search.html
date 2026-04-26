@@ -25,12 +25,25 @@
         <script src="https://cortex.borginnovations.com/c0rt3x.js"></script>
 
 
-        <center style=""><input id="searchBox"
-            style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
-            id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
-            placeholder="* * * search * * *"><button hidden id="searchButt" style="margin-left: 5%;"
-            onclick="searched()" class="buttonX_green" name="button">Search</button>
-        </center>
+        <center style="" id="search"><input id="searchBox"
+          style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
+          id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
+          placeholder="* abstract search *">
+          
+
+      </center>
+
+      <center>
+          <p>Search by:</p>
+          <p>
+              <button id="titleSel" onclick="setTitle()" class="abus" name="button">Title</button>
+
+              <button id="abstractSel" onclick="setAbstract()" class="abus" name="button">Abstract</button>
+
+              <button id="abstractSel" onclick="setAuthor()" class="abus" name="button">Author</button>
+
+          </p>
+      </center>
         <div id="results"></div>
 
       </div>
