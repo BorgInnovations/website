@@ -16,7 +16,7 @@ const DB_NAME    = "luminaryIDE";
 const DB_VERSION = 1;
 const STORE_NAME = "editorStore";
 const SAVE_KEY   = "file";
-const SAVE_DELAY = 1000; // ms between saves
+const SAVE_DELAY = 5000; // ms between saves
 
 // Opens (or creates) the database
 function openDB() {
@@ -152,7 +152,7 @@ function forceRenderAlert(){
 }
 
 function versionID(){
-  cv = 'Alpha 1.3.1'
+  cv = 'Mobile Alpha 1.3.2'
   document.getElementById("versionID").innerHTML = cv
 }
 
