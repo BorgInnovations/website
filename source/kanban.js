@@ -37,16 +37,16 @@ initDB().then(() => {
   loadSaved();
 });
 
-function clearCork(){
-    document.getElementById("cork").innerHTML = '<div id="noteBoard"></div>'
+function clearCork() {
+  document.getElementById("cork").innerHTML = '<div id="noteBoard"></div>'
 }
 
 
 function clear() {
-    document.getElementById("cork").innerHTML = "";
-    const transaction = db.transaction([STORE_NAME], "readwrite");
-    transaction.objectStore(STORE_NAME).delete("noteBoard");
-  }
+  document.getElementById("cork").innerHTML = "";
+  const transaction = db.transaction([STORE_NAME], "readwrite");
+  transaction.objectStore(STORE_NAME).delete("noteBoard");
+}
 
 
 function saveBrowser() {
@@ -106,23 +106,29 @@ function clear() {
 
 
 
- //=====
- //Base Functions
- //=====
+//=====
+//Base Functions
+//=====
 
-function addNote(){
-    var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">'+document.getElementById("noteTitle").value+'</h3>'
-    var nc = document.getElementById("noteText").value
-    var noteText = '<p class="card-body" contentEditable="true">'+nc+'</p>'
-    var noteBody = noteTitle + noteText
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = noteBody;
-    document.getElementById("noteBoard").appendChild(div);
+function addNote() {
+  var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+  var nc = document.getElementById("noteText").value
+  var noteText = '<p class="card-body" contentEditable="true">' + nc + '</p>'
+  var noteBody = noteTitle + noteText
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = noteBody;
+  document.getElementById("noteBoard").appendChild(div);
 
 }
 
-function clearInputs(){
-    document.getElementById("noteTitle").value =''
-    document.getElementById("noteText").value = ''
+function saveFile() {
+  var blob = new Blob([document.getElementById("noteBoard").value],
+    { type: "text/plain;charset=utf-8" });
+  saveAs(blob, "corkboard.txt");
+}
+
+function clearInputs() {
+  document.getElementById("noteTitle").value = ''
+  document.getElementById("noteText").value = ''
 }
