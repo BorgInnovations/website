@@ -1,5 +1,5 @@
 function loadNews(){
-    var heading = '<h3>C0RT3X 01 is now in beta!</h3>'
-    var body = '<div> <p>C0RT3X has a new update, and it is now in beta! This update brings the largest single batch indexing yet, a refined search database, and new search options!</p> <p>This update may take up to 24 hours to reflect in the 01 app.</p> <p> <a class="bbus" href="./01_c0rt3x.html">Use C0RT3X</a> </p> </div>'
+    var heading = '<h3>Cork Board Beta is HERE!</h3>'
+    var body = '<div> <p>Cork Board is our new simple note taking tool!</p> <p>Just like all our other tools, Cork Board data is only store locally on your device.</p> <p>This update may take up to 24 hours to reflect in the 01 app.</p> <p> <a class="bbus" href="./01_corkboard.html.html">Use Cork Board</a> </p> </div>'
     document.getElementById("newspanel").innerHTML = heading + body
 }
