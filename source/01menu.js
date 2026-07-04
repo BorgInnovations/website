@@ -16,7 +16,7 @@ function showMenu() {
  }
 
  function showA() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a" onclick=" file()">File</a></li><li><a class="a" onclick=" edit()">Edit</a></li><li><a class="a" onclick=" cortex01()">C0RT3X01</a></li></ul></center></div>'
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a" onclick=" file(), showA()">File</a></li><li><a class="a" onclick=" edit(), showA()">Edit</a></li><li><a class="a" onclick=" cortex01(), showA()">C0RT3X01</a></li></ul></center></div>'
 
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
