@@ -46,7 +46,12 @@ An American Space-Age Inspired CSS Library!
 
 
 
-
+@property --luminary {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #243743;
+    /*243743*/
+}
 
 @property --mercury {
     syntax: "<color>";
@@ -55,18 +60,25 @@ An American Space-Age Inspired CSS Library!
     /*F6F9FD*/
     /*var(--buzz)*/
 }
-
-@property --luminary {
+@property --mercurydark {
     syntax: "<color>";
     inherits: false;
-    initial-value: #243743;
-    /*243743*/
+    initial-value: #B9BBBE;
+    /*F6F9FD*/
+    /*var(--buzz)*/
 }
 
 @property --comanche {
     syntax: "<color>";
     inherits: false;
     initial-value: #F05126;
+    /*F05126*/
+}
+
+@property --comanchedark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #B53D1D;
     /*F05126*/
 }
 
@@ -77,10 +89,24 @@ An American Space-Age Inspired CSS Library!
     /*758ECD*/
 }
 
+@property --neildark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #586B9A;
+    /*758ECD*/
+}
+
 @property --buzz {
     syntax: "<color>";
     inherits: false;
     initial-value: #E0FF4F;
+    /*E0FF4F*/
+}
+
+@property --buzzdark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #A9C03B;
     /*E0FF4F*/
 }
 
@@ -351,13 +377,13 @@ a {
 /*Buttons*/
 
 .abus {
-    color: var(--mercury);
+    color: var(--mercurydark);
     background-color: var(--luminary);
     border-style: solid;
-    border-color: var(--mercury);
+    border-color: var(--mercurydark);
     border-width: 1px;
     padding: 5px;
-    opacity: 0.5;
+
 
 
 }
@@ -375,13 +401,13 @@ a {
 }
 
 .obus {
-    color: var(--comanche);
+    color: var(--comanchedark);
     background-color: var(--luminary);
     border-style: solid;
-    border-color: var(--comanche);
+    border-color: var(--comanchedark);
     border-width: 1px;
     padding: 5px;
-    opacity: 0.5;
+
 
 }
 
@@ -398,13 +424,13 @@ a {
 }
 
 .bbus {
-    color: var(--neil);
+    color: var(--neildark);
     background-color: var(--luminary);
     border-style: solid;
-    border-color: var(--neil);
+    border-color: var(--neildark);
     border-width: 1px;
     padding: 5px;
-    opacity: 0.5;
+
 
 }
 
@@ -421,13 +447,13 @@ a {
 }
 
 .gbus {
-    color: var(--buzz);
+    color: var(--buzzdark);
     background-color: var(--luminary);
     border-style: solid;
-    border-color: var(--buzz);
+    border-color: var(--buzzdark);
     border-width: 1px;
     padding: 5px;
-    opacity: 0.5;
+
 
 }
 
@@ -447,13 +473,13 @@ a {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    color: var(--mercury);
+    color: var(--mercurydark);
     background-color: var(--luminary);
     border-style: solid;
-    border-color: var(--mercury);
+    border-color: var(--mercurydark);
     border-width: 1px;
     padding: 5px;
-    opacity: 0.5;
+
 }
 
 .topbus:hover {
@@ -571,8 +597,7 @@ ul {
 .divider {
     margin-top: 24px;
     margin-bottom: 24px;
-    opacity: 0.5;
-    color: var(--mercury);
+    color: var(--mercurydark);
     text-align: center;
     cursor: default;
 }
