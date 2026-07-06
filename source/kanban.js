@@ -48,6 +48,20 @@ function clear() {
   transaction.objectStore(STORE_NAME).delete("noteBoard");
 }
 
+function clearNew() {
+
+  if (confirm("Are you sure you want to DELETE? This CANNOT be undone.")) {
+    document.getElementById("cork").innerHTML = '<div id="noteBoard"></div>';
+    const transaction = db.transaction([STORE_NAME], "readwrite");
+    transaction.objectStore(STORE_NAME).delete("noteBoard");
+
+    document.getElementById("noteTitle").value = ''
+    document.getElementById("noteText").value = ''
+  } else {
+    console.log('Canceled board deletion')
+
+  }
+}
 
 function saveBrowser() {
   return new Promise((resolve, reject) => {
@@ -83,22 +97,22 @@ function loadSaved() {
 /*
 document.getElementById("noteBoard").innerHTML =
    localStorage["noteBoard"] || ""; // default text
-
-
+ 
+ 
    setInterval(function () {
     localStorage["noteBoard"] = document.getElementById("noteBoard").innerHTML + ' '; // heading div
 }, 1000);
-
+ 
 function clear() {
     localStorage.clear();
     localStorage["noteBoard"] = '';
     document.getElementById('cork').innerHTML='<div id="noteBoard"></div>'
  }
-
+ 
  function saveBrowser(){
     localStorage["noteBoard"] = document.getElementById("noteBoard").innerHTML
  }
-
+ 
  function loadSaved(){
     document.getElementById("noteBoard").innerHTML = localStorage["noteBoard"]
  }
@@ -162,7 +176,7 @@ function addNote() {
   div.className = "card";
   div.innerHTML = noteBody;
   document.getElementById("noteBoard").appendChild(div);
-
+ 
 }
   */
 
