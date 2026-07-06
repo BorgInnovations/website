@@ -135,13 +135,20 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
         </div>
         <div class="card-body">
             <script src="./source/kanban.js"></script>
+            <script src="./source/corkboardMenu.js"></script>
             <center>
-                <p><input id="noteTitle" style="width:90%; max-width: 750px; min-width: 300px; text-align: center;"
-                        class="text-input" type="text" placeholder="* * * title * * *"></input></p>
+                <p>
+                    <input id="noteTitle" style="width:90%; max-width: 750px; min-width: 300px; text-align: center;"
+                        class="text-input" type="text" placeholder="* * * title * * *"></input>
+                    <span id="tag">
+                        <button id="tagbtn" onclick="tagblu()" class="abus">Tag</button>
+                    </span>
+                    <span hidden id="tagv">nul</span>
+                </p>
 
                 <p><textarea id="noteText"
-                        style="width:90%; max-width: 750px; min-width: 300px; text-align: left; height: 150px;"
-                        class="text-input" type="text" placeholder="note * * *"></textarea></p>
+                        style="width:90%; max-width: 750px; min-width: 300px; text-align: center; height: 150px;"
+                        class="text-input" type="text" placeholder="* * * note * * *"></textarea></p>
                 <p><a style="margin-right: 15px;" class="abus" onclick="addNote(), clearInputs(),saveBrowser()">Add
                         Note</a><a class="obus" onclick="clearInputs(),clear(),saveBrowser(),clearCork()">Clear
                         Board</a></p>
@@ -150,7 +157,10 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
                 <div id="noteBoard"></div>
 
+
+
             </section>
+
 
 
         </div>
@@ -162,7 +172,8 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
         <div class="card-body">
             <center>
-                <img src="./img/icons/01/01_clear.svg" style="display:block;width: 80%; max-width: 300px;" alt="01 Icon">
+                <img src="./img/icons/01/01_clear.svg" style="display:block;width: 80%; max-width: 300px;"
+                    alt="01 Icon">
                 <h1>
                     01: The App for Thinking
                 </h1>

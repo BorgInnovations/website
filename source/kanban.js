@@ -111,6 +111,36 @@ function clear() {
 //=====
 
 function addNote() {
+  var tag = document.getElementById("tagv").innerHTML
+  if (tag == 'blu') {
+    var noteTitle = '<h3 class="card-heading-neil" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+  if (tag == 'grn') {
+    var noteTitle = '<h3 class="card-heading-buzz" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+  if (tag == 'red') {
+    var noteTitle = '<h3 class="card-heading-comanche" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+
+  if (tag == 'nul') {
+    var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+
+  var nc = document.getElementById("noteText").value
+  var noteText = '<p class="card-body" contentEditable="true">' + nc + '</p>'
+  var noteBody = noteTitle + noteText
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = noteBody;
+  document.getElementById("noteBoard").appendChild(div);
+
+}
+
+function addNot_mobile() {
   var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
   var nc = document.getElementById("noteText").value
   var noteText = '<p class="card-body" contentEditable="true">' + nc + '</p>'
@@ -121,6 +151,20 @@ function addNote() {
   document.getElementById("noteBoard").appendChild(div);
 
 }
+
+/*
+function addNote() {
+  var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+  var nc = document.getElementById("noteText").value
+  var noteText = '<p class="card-body" contentEditable="true">' + nc + '</p>'
+  var noteBody = noteTitle + noteText
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = noteBody;
+  document.getElementById("noteBoard").appendChild(div);
+
+}
+  */
 
 function saveFile() {
   var blob = new Blob([document.getElementById("noteBoard").value],

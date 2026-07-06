@@ -112,30 +112,32 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     <center>
         <p>
-            <img src="./img/icons/corkboard.svg" style="width: 50%; min-width: 250px; max-width: 500px;"
-                alt=''>
+            <img src="./img/icons/corkboard.svg" style="width: 50%; min-width: 250px; max-width: 500px;" alt=''>
         </p>
     </center>
     <h1 hidden>*not an ai company</h1>
 
-
-
-
-
-
     <section class="card">
         <div class="card-heading">
-            <h1>Your Notes
+            <h1>
+                Your Notes
             </h1>
         </div>
         <div class="card-body">
             <script src="./source/kanban.js"></script>
+            <script src="./source/corkboardMenu.js"></script>
             <center>
-                <p><input id="noteTitle" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;"
-                        class="text-input" type="text" placeholder="* * * title * * *"></input></p>
+                <p>
+                    <input id="noteTitle" style="width:90%; max-width: 750px; min-width: 300px; text-align: center;"
+                        class="text-input" type="text" placeholder="* * * title * * *"></input>
+                    <span id="tag">
+                        <button id="tagbtn" onclick="tagblu()" class="abus">Tag</button>
+                    </span>
+                    <span hidden id="tagv">nul</span>
+                </p>
 
                 <p><textarea id="noteText"
-                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center; height: 150px;"
+                        style="width:90%; max-width: 800px; min-width: 125px; text-align: center; height: 150px;"
                         class="text-input" type="text" placeholder="* * * note * * *"></textarea></p>
                 <p><a style="margin-right: 15px;" class="abus" onclick="addNote(), clearInputs(),saveBrowser()">Add
                         Note</a><a class="obus" onclick="clearInputs(),clear(),saveBrowser(),clearCork()">Clear

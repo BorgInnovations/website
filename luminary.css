@@ -15,6 +15,7 @@ An American Space-Age Inspired CSS Library!
     ./Fira_Code/OFL.text
     */
 }
+
 @font-face {
     font-family: Open_Sans;
     src: url("https://fonts.borgcreative.com/Open_Sans/OpenSans-VariableFont_wdthwght.ttf");
@@ -60,6 +61,7 @@ An American Space-Age Inspired CSS Library!
     /*F6F9FD*/
     /*var(--buzz)*/
 }
+
 @property --mercurydark {
     syntax: "<color>";
     inherits: false;
@@ -255,7 +257,7 @@ a {
     position: fixed;
     top: 30px;
     left: 0px;
-    
+
 }
 
 .toolMenu {
@@ -264,14 +266,15 @@ a {
     position: fixed;
     top: 80px;
     left: 0px;
-    
-    
+
+
 }
-#menuList{
+
+#menuList {
     background-color: var(--luminary);
 }
 
-#toolList{
+#toolList {
     background-color: var(--luminary);
 }
 
@@ -283,7 +286,7 @@ a {
     padding: 5px;
     text-align: center;
     color: var(--mercury);
-    width:30px;
+    width: 30px;
     height: 30px;
     background-color: var(--luminary);
     text-decoration: none;
@@ -296,7 +299,7 @@ a {
     cursor: pointer;
 }
 
-.subMenuItem{
+.subMenuItem {
     border-style: none;
     margin: 3px;
     text-align: center;
@@ -304,7 +307,7 @@ a {
     text-decoration: none;
 }
 
-.subMenuItem:hover{
+.subMenuItem:hover {
     color: var(--neil);
     text-decoration: none;
     cursor: pointer;
@@ -362,6 +365,29 @@ a {
     text-align: center;
 }
 
+.card-heading-neil {
+    background-color: var(--neil);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.card-heading-buzz {
+    background-color: var(--buzz);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.card-heading-comanche {
+    background-color: var(--comanche);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
 
 .card-heading h1,
 .card-heading h2,
@@ -394,6 +420,30 @@ a {
     background-color: var(--luminary);
     border-style: solid;
     border-color: var(--mercury);
+    border-width: 1px;
+    padding: 5px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.lbus {
+    color: var(--luminary);
+    background-color: var(--mercury);
+    border-style: solid;
+    border-color: var(--luminary);
+    border-width: 1px;
+    padding: 5px;
+
+
+
+}
+
+.lbus:hover {
+
+    color: var(--luminary);
+    background-color: var(--mercurydark);
+    border-style: solid;
+    border-color: var(--luminary);
     border-width: 1px;
     padding: 5px;
     opacity: 1.0;
@@ -553,7 +603,7 @@ th {
     border-width: 1px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding:10px;
+    padding: 10px;
     background-color: var(--luminary);
 }
 
@@ -564,7 +614,7 @@ th {
     border-width: 1px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding:10px;
+    padding: 10px;
     background-color: var(--mercury);
 }
 
