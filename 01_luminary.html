@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <title>Luminary IDE</title>
-    
-        <meta name="theme-color" content="#fff">
-        <meta property="og:image" content="">
-        <meta name="twitter:image" content="">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Luminary IDE">
-        <meta property="og:type" content="website">
-        <meta name="description" content="*Not an AI company">
-        <meta name="twitter:description" content="*Not an AI company">
-    
-        <script src="./source/FileSaver.js"></script>
-        <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="./luminary.css">
-        <link rel="stylesheet" href="./luminaryide.css">
-        <script src="./luminary.js"></script>
-        <script src="./source/01menu.js"></script>
-        <link rel="manifest" href="./authorManifest.json" />
-        <script src="./authorServiceWorker.js"></script>
-        <script src="./source/dbload.js"></script>
 
-        <script src="./source/luminaryide.js"></script>
-        <!--<script src="https://luminary.borginnovations.com/source/luminaryide.js"></script>-->
-    
-        <!-- Cronitor RUM -->
-        <!--
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Luminary IDE</title>
+
+    <meta name="theme-color" content="#fff">
+    <meta property="og:image" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Luminary IDE">
+    <meta property="og:type" content="website">
+    <meta name="description" content="*Not an AI company">
+    <meta name="twitter:description" content="*Not an AI company">
+
+    <script src="./source/FileSaver.js"></script>
+    <link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./luminary.css">
+    <link rel="stylesheet" href="./luminaryide.css">
+    <script src="./luminary.js"></script>
+    <script src="./source/01menu.js"></script>
+    <link rel="manifest" href="./authorManifest.json" />
+    <script src="./authorServiceWorker.js"></script>
+    <script src="./source/dbload.js"></script>
+
+    <script src="./source/luminaryide.js"></script>
+
+    <!--<script src="https://luminary.borginnovations.com/source/luminaryide.js"></script>-->
+
+    <!-- Cronitor RUM -->
+    <!--
         <script async src="https://rum.cronitor.io/script.js"></script>
         <script>
             window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
@@ -37,40 +39,45 @@
         </script>
         <script src="https://cdn.counter.dev/script.js" data-id="49ff21d8-7cbe-4f83-b436-97b778216657" data-utcoffset="-7"></script>
     -->
-    </head>
+</head>
 
-    <header>
-        <a id="top" hidden></a>
-        <div class="appMenu" id="topMenu">
-    
-            <a id="iobtn" class="menuItem" onclick="showMenu()" >01</a>
-    
-            <div id="menuList" class="card" style="display: none">
-            </div>
+<header>
+    <a id="top" hidden></a>
+    <div class="appMenu" id="topMenu">
+
+        <a id="iobtn" class="menuItem" onclick="showMenu()">01</a>
+
+        <div id="menuList" class="card" style="display: none">
+        </div>
+    </div>
+
+    <div class="toolMenu" id="topMenu" style="position: fixed;">
+
+        <a id="abtn" class="menuItem" onclick="showL()">L|</a>
+
+        <div id="toolList" class="card" style="display: none">
+
+
+
         </div>
 
-        <div class="toolMenu" id="topMenu" style="position: fixed;">
 
-            <a id="abtn" class="menuItem" onclick="showL()" >L|</a>
-    
-            <div id="toolList" class="card" style="display: none">
+    </div>
 
-    
-    
-            </div>
-    
-            
-        </div>
-    
-    </header>
+</header>
 
 <body onload="oiMenu_load(), loadEditor(), versionID(),updateLFile();">
+    <a href="https://buymeacoffee.com/jborg_arts" target="_blank">
+        <button style="width: 50px; height: 50px;" class="bmc">
+            <img src="./img/icons/bmc-logo-no-background.png" height="40px" alt="">
+        </button>
+    </a>
     <center>
         <p>
             <img src="./img/icons/Luminary.svg" style="width: 50%; min-width: 250px; max-width: 500px;" alt=''>
         </p>
     </center>
-    
+
     <div id="snippets" style="display: none;">
         <div class="card">
             <div class="card-body" style="padding-top: 15px;">
@@ -80,14 +87,15 @@
                     <script src="https://luminary.borginnovations.com/source/snippets.js"></script>
 
                     <center style=""><input id="searchBox"
-                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input" type="text"
-                        id="search_var" onkeydown="performSearch()" onkeyup="performSearch()"
-                        placeholder="* * * search snippets * * *"><button hidden id="searchButt" style="margin-left: 5%;"
-                        onclick="searched()" class="buttonX_green" name="button">Search</button>
+                            style="width:50%; max-width: 500px; min-width: 125px; text-align: center;"
+                            class="text-input" type="text" id="search_var" onkeydown="performSearch()"
+                            onkeyup="performSearch()" placeholder="* * * search snippets * * *"><button hidden
+                            id="searchButt" style="margin-left: 5%;" onclick="searched()" class="buttonX_green"
+                            name="button">Search</button>
                     </center>
                     <div id="results" style="height: 300px; overflow-y: scroll;"></div>
-            
-                  </div>
+
+                </div>
                 <!--<div>
 
                     <embed src="https://luminary.borginnovations.com/snippetsearch.html" style="width: 100%; min-width: 200px; padding: 0px; margin: 0px;" height="300"
@@ -106,13 +114,14 @@
 
             <div class="m-container-editor">
                 <div>
-                        <textarea onkeyup="updateLFile();" name="" id="textEditor" cols="50" rows="15" width="100%" autocorrect="off" placeholder='Say "Hello World!"'></textarea>
+                    <textarea onkeyup="updateLFile();" name="" id="textEditor" cols="50" rows="15" width="100%"
+                        autocorrect="off" placeholder='Say "Hello World!"'></textarea>
 
 
-                        
+
                 </div>
             </div>
-            
+
 
         </section>
 
@@ -135,17 +144,19 @@
 
         <section id="viewport">
             <center>
-                <embed id="lFile" src="./lfile.html" class="container-viewport card" type="" style="width: 90%; height: max-content; min-height: 300px;"> 
+                <embed id="lFile" src="./lfile.html" class="container-viewport card" type=""
+                    style="width: 90%; height: max-content; min-height: 300px;">
 
             </center>
         </section>
 
     </section>
-<div class="card-body">
-    <p style="text-align: center;">
-        <i>*Due to this stage of development, we do not advice using LuminaryIDE for critical development and advise manual saving of any projects (Tap the "L|" button).</i>
-    </p>
-</div>
+    <div class="card-body">
+        <p style="text-align: center;">
+            <i>*Due to this stage of development, we do not advice using LuminaryIDE for critical development and advise
+                manual saving of any projects (Tap the "L|" button).</i>
+        </p>
+    </div>
 
 
 </body>

@@ -544,6 +544,32 @@ a {
     cursor: pointer;
 }
 
+.bmc {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: var(--mercury);
+    background-color: var(--mercurydark);
+    border-style: solid;
+    border-color: var(--mercury);
+    border-width: 1px;
+    padding: 5px;
+
+
+}
+
+.bmc:hover {
+
+    color: var(--mercury);
+    background-color: var(--mercury);
+    border-style: solid;
+    border-color: var(--mercury);
+    border-width: 1px;
+    padding: 5px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
 /*Table*/
 
 table {

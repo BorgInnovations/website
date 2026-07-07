@@ -44,9 +44,9 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
     <div class="nav" id="topMenu">
 
     </div>
-    <a href="#top">
-        <button class="topbus">
-            ^^^
+    <a href="https://buymeacoffee.com/jborg_arts" target="_blank">
+        <button style="width: 50px; height: 50px;" class="bmc">
+            <img src="./img/icons/bmc-logo-no-background.png" height="40px" alt="">
         </button>
     </a>
 
@@ -64,9 +64,13 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                 <h1>Contact.</h1>
             </div>
             <div class="card-body">
-                <iframe data-tally-src="https://tally.so/embed/nGW48Z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="476" frameborder="0" marginheight="0" marginwidth="0" title="Contact"></iframe>
+                <iframe
+                    data-tally-src="https://tally.so/embed/nGW48Z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="476" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Contact"></iframe>
 
-                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>                </iframe>
+                <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+                </iframe>
 
             </div>
         </div>
@@ -97,28 +101,35 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             <div class="divider">***************</div>
 
             <center>
-                <p><input spellcheck="false" onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_title" placeholder="* * * Synapse Title * * *"></p>
-                <p><input spellcheck="false" onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_url" placeholder="* * * Synapse URL * * *"></p>
-                <p><input spellcheck="false" onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_author" placeholder="* * * Synapse Author * * *"></p>
-                <p><input spellcheck="false" onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_content" placeholder="* * * Synapse Content * * *"></p>
-                <p><input spellcheck="false" onkeyup="" style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
+                <p><input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 500px; min-width: 125px; text-align: center;" class="text-input"
                         type="text" id="synapse_score" placeholder="* * * Synapse AI Score * * *"></p>
 
                 <p> <button onclick="synapse_build()" class="abus">Build Synapse</button>
                     <!--<button onclick="synapse_preview()" class="bbus">Preview Synapse</button>--> <button
                         onclick="synapse_open()" class="bbus">Open Synapse</button> <button onclick="synapse_clear()"
-                        class="obus">Clear</button> </p>
+                        class="obus">Clear</button>
+                </p>
 
                 <div class="divider">***************</div>
 
                 <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
                         Synapse</button> <button onclick="synapse_download()" class="abus">Download Synapse</button></p>
 
-                <code class="border" id="synapse_output" style="display: none;" contenteditable="true" spellcheck="false">
+                <code class="border" id="synapse_output" style="display: none;" contenteditable="true"
+                    spellcheck="false">
                 <!--
                     <div>
                     <p>
