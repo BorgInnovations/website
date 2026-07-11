@@ -355,6 +355,14 @@ a {
     padding-bottom: 15px;
 }
 
+.card-body-alt {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: var(--mercury);
+    color: var(--luminary);
+}
+
 
 
 .card-heading {
