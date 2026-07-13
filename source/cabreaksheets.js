@@ -23,14 +23,15 @@ function deleteSheet(){
         localStorage.sheet = ''
 
         document.getElementById("name").value = ''
-        document.getElementById("sthr").value = ''
-        document.getElementById("stmn").value = ''
-        document.getElementById("ethr").value = ''
-        document.getElementById("etmn").value = ''
+        document.getElementById("sthr").value = '00'
+        document.getElementById("stmn").value = '00'
+        document.getElementById("ethr").value = '00'
+        document.getElementById("etmn").value = '00'
     document.getElementById("business").innerHTML = 'business'
     document.getElementById("team").innerHTML = 'team/department'
     document.getElementById("date").innerHTML = 'xx/xx/xx'
     document.getElementById("note").innerHTML = 'notes here'
+
         
 
     }else{
@@ -308,14 +309,14 @@ function addShift() {
             if (br1t>12){
                 afternoon = br1t-12
                 document.getElementById("b1").innerHTML ='break '+ afternoon
-                document.getElementById("lunch").innerHTML = ''
-                document.getElementById("b2").innerHTML = ''
+
 
             }else{
                 document.getElementById("b1").innerHTML ='break '+  br1t
-                document.getElementById("lunch").innerHTML = ''
-                document.getElementById("b2").innerHTML = ''
+
             }
+            document.getElementById("lunch").innerHTML = ''
+            document.getElementById("b2").innerHTML = ''
 
 
         }
@@ -341,6 +342,7 @@ function addShift() {
             }else{
                 document.getElementById("lunch").innerHTML ='lunch '+  lunch
             }
+            document.getElementById("b2").innerHTML = ''
         }
 
         //2 breaks and lunch 6.25 - 7
