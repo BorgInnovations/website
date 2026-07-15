@@ -126,6 +126,28 @@ function pmEnd() {
 
 }
 
+//verification
+function a17() {
+    document.getElementById("ageVal").innerHTML = '<button id="agV" onclick="a18()" class="obus">17</button>'
+    document.getElementById("ageVar").innerHTML = '17'
+
+
+}
+function a18() {
+    document.getElementById("ageVal").innerHTML = '<button id="agV" onclick="a21()" class="bbus">18</button>'
+    document.getElementById("ageVar").innerHTML = '18'
+
+
+}
+function a21() {
+    document.getElementById("ageVal").innerHTML = '<button id="agV" onclick="a17()" class="gbus">21</button>'
+    document.getElementById("ageVar").innerHTML = '21'
+
+
+}
+
+//
+
 
 
 
@@ -298,6 +320,7 @@ function addShift() {
                 document.getElementById("b1").innerHTML ='no break required'
                 document.getElementById("lunch").innerHTML = ''
                 document.getElementById("b2").innerHTML = ''
+                document.getElementById("ageError").innerHTML = ''
 
         }
 
@@ -317,6 +340,7 @@ function addShift() {
             }
             document.getElementById("lunch").innerHTML = ''
             document.getElementById("b2").innerHTML = ''
+            document.getElementById("ageError").innerHTML = ''
 
 
         }
@@ -342,6 +366,7 @@ function addShift() {
             }else{
                 document.getElementById("lunch").innerHTML ='lunch '+  lunch
             }
+            document.getElementById("ageError").innerHTML = ''
             document.getElementById("b2").innerHTML = ''
         }
 
@@ -375,6 +400,7 @@ function addShift() {
                 document.getElementById("b2").innerHTML =' break '+  br2t + ' '
 
             }
+            document.getElementById("ageError").innerHTML = ''
         }
 
                 //2 breaks and lunch 6.25 - 7
@@ -384,6 +410,7 @@ function addShift() {
             br1t = parseInt(sthr) + 2 +':00'
             lunch = parseInt(sthr) + 4 +':00'
             br2t = parseInt(sthr) + 6
+            ageVar = document.getElementById("ageVar").innerHTML
             if (br1t>12){
                 afternoon = br1t-12
                 document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
@@ -407,6 +434,14 @@ function addShift() {
                 document.getElementById("b2").innerHTML =' break '+  br2t +':'+ parseFloat(stmn)+' '
 
             }
+
+            if (ageVar == '17' || totalTime>7.5){
+                document.getElementById("ageError").innerHTML = '<span style="color:red"> <i>OVER HOURS FOR AGE</i></span>'
+
+            }else{
+                document.getElementById("ageError").innerHTML = ''
+
+            }
         }
 
         //OT ERROR
@@ -416,6 +451,7 @@ function addShift() {
             br1t = parseInt(sthr) + 2 +':00'
             lunch = parseInt(sthr) + 4 +':00'
             br2t = parseInt(sthr) + 6 +':'+ parseFloat(stmn)
+            ageVar = document.getElementById("ageVar").innerHTML
             if (br1t>12){
                 afternoon = br1t-12
                 document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
@@ -440,13 +476,23 @@ function addShift() {
 
             }
 
+            if (ageVar == '17'){
+                document.getElementById("ageError").innerHTML = '<span style="color:red"> <i>OVER HOURS FOR AGE</i></span>'
+
+            }else{
+                document.getElementById("ageError").innerHTML = ''
+
+
+            }
+
+
         }
 
 
         //=====
     console.log(emp + ' | ' + hmnReadSt + ' to ' + hmnReadEt+' | '+totalTime+' | ')
 
-    var shiftEntry = '<p><span contentEditable="true">' + emp + '</span> | '+document.getElementById("shiftName").innerHTML+' | =-=-=-=-= <span contentEditable="true">' + hmnReadSt + '</span> to <span contentEditable="true">' + hmnReadEt + '</span> | <span contenteditable="true">'+totalTime+'</span>'+document.getElementById("error").innerHTML+' | =-=-=-=-= <span contentEditable="true">'+document.getElementById("b1").innerHTML+'</span><span contentEditable="true">'+document.getElementById("lunch").innerHTML+'</span><span contentEditable="true">'+document.getElementById("b2").innerHTML+ '</span></p>'
+    var shiftEntry = '<p><span contentEditable="true">' + emp + '</span> | '+'<span>'+document.getElementById("ageVar").innerHTML+' | </span>'+document.getElementById("shiftName").innerHTML+' | =-=-=-=-= <span contentEditable="true">' + hmnReadSt + '</span> to <span contentEditable="true">' + hmnReadEt + '</span> | <span contenteditable="true">'+totalTime+'</span>'+document.getElementById("error").innerHTML+document.getElementById("ageError").innerHTML+' | =-=-=-=-= <span contentEditable="true">'+document.getElementById("b1").innerHTML+'</span><span contentEditable="true">'+document.getElementById("lunch").innerHTML+'</span><span contentEditable="true">'+document.getElementById("b2").innerHTML+ '</span></p>'
     const div = document.createElement("div");
     div.className = "";
     div.innerHTML = shiftEntry;
