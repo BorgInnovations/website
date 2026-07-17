@@ -89,150 +89,25 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     <div class="card">
         <div class="card-heading">
-            <h2>Simplified Textual Break Sheets</h2>
+            <h1>Textual Data Tools</h1>
         </div>
         <div class="card-body">
-            <center>
-                <h1 hidden style="text-decoration: none;">
-                    type sheet
-                </h1>
 
-
-            </center>
+            <h2 style="text-align: center;">Complex visuals do not make data more digestable.</h2>
+            <div class="divider">***************</div>
+            <p><i>Mega sheets</i> with 3d graphics and decorations are a waste of time, and your system's processing. We are taking data applications simpler, to make it more understandable. <i>Type sheet</i> is just getting started...</p>
+            
             <div class="divider">***************</div>
 
             <center>
-                <p>
-
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 200px; min-width: 75px; text-align: center;" class="text-input"
-                        type="text" id="name" placeholder="* * * Name * * *">
-                    <a onclick="showShifts()" class="a" id="shiftName">lead</a>
-
-                    <span id="ageVal">
-                        <button id="agV" onclick="a21()" class="bbus">18</button>
-                    </span>
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="1" max="12" id="sthr" placeholder="hr">:
-
-                        <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="00" max="59" id="stmn" placeholder="min">
- 
-
-                    <span id="startVal">
-                        <button id="apm" onclick="pmStart()" class="gbus">AM</button>
-                    </span>
-
-
-
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="1" max="12" id="ethr" placeholder="hr">
-
-
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="00" max="59" id="etmn" placeholder="min">
-
-
-                    <span id="endVal">
-                        <button id="apm2" onclick="amEnd()" class="bbus">PM</button>
-                    </span>
-
-
-                </p>
-
-   
-
-                <div id="shiftMenu" style="display: none" class="card">
-                    <div class="card-heading">Shifts</div>
-                    <div class="card-body">
-
-                        <p>
-                            <a class="a" onclick="leadShift(), showShifts()">Lead</a>
-                            <a class="a" onclick="supervisorShift(), showShifts()">Supervisor</a>
-                            <a class="a" onclick="assistantSupShift(), showShifts()">Assistant Sup.</a>
-                        </p>
-
-                        <p>
-                            <a class="a" onclick="frontlineShift(), showShifts()">Frontline</a>
-                            <a class="a" onclick="supportShift(), showShifts()">Support</a>
-                            <a class="a" onclick="backOfHouseShift(), showShifts()">Back of House</a>
-                        </p>
-
-                        <p>
-                            <input type="text" class="text-input" name="" id="shiftTitle" placeholder="Shift Title">    
-                            <button class="abus" onclick="customShift(), showShifts()">Input</button>
-                            </p>
-                    </div>
-                    
-                </div>
-
-                <p> <button onclick="addShift()" class="gbus">Add Shift</button>
-                    <button
-                        onclick="saveSheet()" class="bbus">Save</button>
-                        
-                    <button onclick="saveSheet(), saveFile()" class="bbus">Download</button>
-                    <button onclick="removeLastShift()"
-                        class="obus">Remove Shift</button>    
-                        
-                        <button onclick="deleteSheet()"
-                        class="obus">Delete All</button>
-                </p>
-
-
-
-                <div class="divider">***************</div>
-                            <center>
-            <p>This algorithm/program may make mistakes.</p>
-            <p>It is the individual business's and/or supervisor's respsonsibility to ensure that staff are provided breaks at the correct times in accordance with state and local laws.</p>
-            <p><i>Type sheet</i> is merely a break sheet <i>suggestion</i> generator.</p>
+                <h3>Tools</h3>    
             </center>
-            <div class="divider">***************</div>
-                <section hidden id="">
-                    <span id="shiftName" ></span>
-                    <span id="error" ></span>
-                    <span id="ageError" ></span>
-                    <span id="ageVar" >18</span>
-                    <span id="sthrVar" ></span>
-                    <span id="stmnVar" ></span>
-                    <span id="ethrVar" ></span>
-                    <span id="etmnVar" ></span>
-                    <span id="mnv" ></span>  
-                    <span id="hrmnv" ></span>   
-                    <span id="etmnv" ></span>  
-                    <span id="b1" ></span>
-                    <span id="lunch" ></span>
-                    <span id="b2" ></span>
-                </section>
+            
+            <p style="text-align: center;"> <a href="./typesheetschedules.html"> <button class="abus">type sheet schedules</button> </a> </p>
 
-                <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
-                        Synapse</button> <button onclick="synapse_download()" class="abus">Download Synapse</button></p>
-
-
-            </center>
         </div>
 
-        <section class="card-body-alt" id="breakSheet">
 
-            <section id="sheetHeader">
-            <p><span contenteditable="true" id="business">Business</span> </p> 
-            <p>Team: <span contenteditable="true" id="team">Department/Team</span> </p>       
-            <p>Date: <span contenteditable="true" id="date">xx/xx/xx</span> </p>    
-            </section>
-
-            <section id="breaks">
-            
-            </section>
-
-            <section id="sheetFooter">
-                <p>Notes:</p> 
-                <p><span contenteditable="true" id="note">Note here</span> </p> 
-            </section>
-
-        </section>
     </div>
 
 

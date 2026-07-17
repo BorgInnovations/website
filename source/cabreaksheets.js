@@ -148,6 +148,45 @@ function a21() {
 
 //
 
+//Stagger Controls
+function s0() {
+    document.getElementById("staggerFunc").innerHTML = 'Stagger Breaks by: <button id="" onclick="s10()" class="abus">00</button>'
+    document.getElementById("stagger").innerHTML = '00'
+
+
+}
+
+function s10() {
+    document.getElementById("staggerFunc").innerHTML = 'Stagger Breaks by: <button id="" onclick="s20()" class="abus">10</button>'
+    document.getElementById("stagger").innerHTML = '10'
+
+
+}
+
+function s20() {
+    document.getElementById("staggerFunc").innerHTML = 'Stagger Breaks by: <button id="" onclick="s30()" class="abus">20</button>'
+    document.getElementById("stagger").innerHTML = '20'
+
+
+}
+
+function s30() {
+    document.getElementById("staggerFunc").innerHTML = 'Stagger Breaks by: <button id="" onclick="s40()" class="abus">30</button>'
+    document.getElementById("stagger").innerHTML = '30'
+
+
+}
+
+function s40() {
+    document.getElementById("staggerFunc").innerHTML = 'Stagger Breaks by: <button id="" onclick="s0()" class="abus">40</button>'
+    document.getElementById("stagger").innerHTML = '40'
+
+
+}
+
+
+//
+
 
 
 
@@ -331,11 +370,11 @@ function addShift() {
             br1t = parseInt(sthr) + 2
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon
+                document.getElementById("b1").innerHTML ='break '+ afternoon +':'+parseInt(document.getElementById("stagger").innerHTML)
 
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t
+                document.getElementById("b1").innerHTML ='break '+  br1t +':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }
             document.getElementById("lunch").innerHTML = ''
@@ -349,22 +388,22 @@ function addShift() {
         if (totalTime >= 5 && totalTime <= 6){
             document.getElementById("error").innerHTML = ''
             console.log('break required and lunch')
-            br1t = parseInt(sthr) + 1 +':'+ parseFloat(stmn)
+            br1t = parseInt(sthr) + 1 
             lunch = parseInt(sthr) + 3 
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseFloat(stmn)+parseInt(document.getElementById("stagger").innerHTML)
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ' '
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)
             }
             document.getElementById("ageError").innerHTML = ''
             document.getElementById("b2").innerHTML = ''
@@ -374,30 +413,30 @@ function addShift() {
         if (totalTime >= 6.25 && totalTime <= 7){
             document.getElementById("error").innerHTML = ''
             console.log('2 break required and lunch')
-            br1t = parseInt(sthr) + 2 +':00'
-            lunch = parseInt(sthr) + 4 +':00'
+            br1t = parseInt(sthr) + 2 
+            lunch = parseInt(sthr) + 4 
             br2t = parseInt(sthr) + 5
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ' '
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)
             }
             if (br2t>12){
                 evening = br2t-12
-                document.getElementById("b2").innerHTML =' break '+ evening +':'+ parseFloat(stmn)+ ' '
+                document.getElementById("b2").innerHTML =' break '+ evening +':'+ parseFloat(stmn)+ ':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }else{
-                document.getElementById("b2").innerHTML =' break '+  br2t + ' '
+                document.getElementById("b2").innerHTML =' break '+  br2t + ':'+parseInt(document.getElementById("stagger").innerHTML)
 
             }
             document.getElementById("ageError").innerHTML = ''
@@ -407,35 +446,35 @@ function addShift() {
         if (totalTime > 7 && totalTime <= 8.5){
             document.getElementById("error").innerHTML = ''
             console.log('2 break required and lunch')
-            br1t = parseInt(sthr) + 2 +':00'
-            lunch = parseInt(sthr) + 4 +':00'
+            br1t = parseInt(sthr) + 2
+            lunch = parseInt(sthr) + 4
             br2t = parseInt(sthr) + 6
             ageVar = document.getElementById("ageVar").innerHTML
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ' '
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime+ ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch+ ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
             }
             if (br2t>12){
                 evening = br2t-12
-                document.getElementById("b2").innerHTML =' break '+ evening +':'+ parseFloat(stmn)+ ' '
+                document.getElementById("b2").innerHTML =' break '+ evening + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b2").innerHTML =' break '+  br2t +':'+ parseFloat(stmn)+' '
+                document.getElementById("b2").innerHTML =' break '+  br2t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
 
-            if (ageVar == '17' || totalTime>7.5){
+            if (ageVar == '17' && totalTime>7.5){
                 document.getElementById("ageError").innerHTML = '<span style="color:red"> <i>OVER HOURS FOR AGE</i></span>'
 
             }else{
@@ -448,31 +487,31 @@ function addShift() {
         if (totalTime > 8.5){
             document.getElementById("error").innerHTML = '<i style="color: red"> OT</i>'
             console.log('2 break required and lunch')
-            br1t = parseInt(sthr) + 2 +':00'
-            lunch = parseInt(sthr) + 4 +':00'
-            br2t = parseInt(sthr) + 6 +':'+ parseFloat(stmn)
+            br1t = parseInt(sthr) + 2 
+            lunch = parseInt(sthr) + 4
+            br2t = parseInt(sthr) + 6 
             ageVar = document.getElementById("ageVar").innerHTML
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ' '
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ' '
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime+ ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch+ ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
             }
             if (br2t>12){
                 evening = br2t-12
-                document.getElementById("b2").innerHTML =' break '+ evening + ' '
+                document.getElementById("b2").innerHTML =' break '+ evening + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b2").innerHTML =' break '+  br2t + ' '
+                document.getElementById("b2").innerHTML =' break '+  br2t + ':'+parseFloat(stmn)+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
 
