@@ -149,19 +149,20 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                 <p><textarea id="noteText"
                         style="width:90%; max-width: 600px; min-width: 150px; text-align: center; height: 150px;"
                         class="text-input" type="text" placeholder="* * * note * * *"></textarea></p>
-                <p><a style="margin-right: 15px;" class="abus" onclick="addNote(), clearInputs(),saveBrowser()">Add
-                        Note</a><a class="obus" onclick="clearNew(), saveBrowser()">Clear
+                <p><a style="" class="abus" onclick="addNote(), clearInputs(),saveBrowser()">Add
+                        Note</a> 
+                        <a class="obus" onclick="removeLastNote(), saveBrowser()">Remove Item</a> 
+                        <a class="obus" onclick="clearNew(), saveBrowser()">Clear
                         Board</a></p>
             </center>
             <section id="cork" onkeyup="saveBrowser()">
 
                 <div id="noteBoard"></div>
 
-
+                <!--Noteboard-->
+                <!--Controlled via external file-->
 
             </section>
-
-
 
         </div>
     </section>

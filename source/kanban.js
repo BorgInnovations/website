@@ -154,6 +154,11 @@ function addNote() {
 
 }
 
+function removeLastNote(){
+    const board = document.getElementById("noteBoard");
+    board.removeChild(board.lastElementChild);
+}
+
 function addNot_mobile() {
   var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
   var nc = document.getElementById("noteText").value
