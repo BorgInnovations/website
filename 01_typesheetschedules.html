@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Borg Innovations</title>
+
+	<meta name="theme-color" content="#fff">
+	<meta property="og:image" content="./img/ads/notanaicompany.png">
+	<meta name="twitter:image" content="./img/ads/notanaicompany.png">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Borg Innovations">
+	<meta property="og:type" content="website">
+	<meta name="description" content="*Not an AI company">
+	<meta name="twitter:description" content="*Not an AI company">
+
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="/img/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__6.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__5.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__4.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__3.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01_192.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<meta name="apple-mobile-web-app-status-bar" content="#243743" />
+	<meta name="theme-color" content="#243743" />
+
+	<link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="./luminary.css">
+	<script src="./luminary.js"></script>
+	<script src="./source/01menu.js"></script>
+	<script src="./source/cabreaksheets.js"></script>
+    <script src="./source/FileSaver.js"></script>
+
+
+	<!-- Cronitor RUM -->
+	<!--
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+        window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+        cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
+    </script>
+    <script src="https://cdn.counter.dev/script.js" data-id="49ff21d8-7cbe-4f83-b436-97b778216657" data-utcoffset="-7"></script>
+-->
+</head>
+
+<!--
+          _____
+         /   o \
+        | o   O |
+        \_____ /
+                 
+        
+ /^\
+ |O|
+/| |\
+||_||
+^   ^
+^   ^
+^   ^
+
+Inspired by the software engineers of the Luminary and Comanche flight software system for the Apollo NASA program.
+    https://github.com/chrislgarry/Apollo-11
+    https://www.ibiblio.org/apollo/#gsc.tab=0
+-->
+
+
+<header>
+	<a id="top" hidden></a>
+	<div class="appMenu" id="topMenu" style="position: fixed;">
+
+		<a id="iobtn" class="menuItem" onclick="showMenu()">01</a>
+
+		<div id="menuList" class="card" style="display: none">
+
+		</div>
+
+
+	</div>
+
+	<div class="toolMenu" id="topMenu" style="position: fixed;">
+
+		<a id="abtn" class="menuItem" onclick="showSched()">TS</a>
+
+		<div id="toolList" class="card" style="display: none">
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+</header>
+
+<body onload="oiMenu_load(),loadSheet()">
+	<a href="https://buymeacoffee.com/jborg_arts" target="_blank">
+		<button style="width: 50px; height: 50px;" class="bmc">
+			<img src="./img/icons/bmc-logo-no-background.png" height="40px" alt="">
+		</button>
+	</a>
+
+	<center>
+		<p>
+			<img src="./img/icons/typesheet_bordered.svg" style="width: 50%; min-width: 250px; max-width: 500px;"
+				alt='Borg Innovations logo with the tagline, "*not an ai company" below.'>
+		</p>
+	</center>
+
+
+	<section id="control_hub">
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card">
+        <div class="card-heading">
+            <h2>Alpha 1.0.0</h2>
+        </div>
+        <div class="card-body">
+            <center>
+                <h3>Simplified Textual Break Sheets</h3>
+                <h1 hidden style="text-decoration: none;">
+                    type sheet
+                </h1>
+
+
+            </center>
+            <div class="divider">***************</div>
+
+            <center>
+                <p>
+
+                    <input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 200px; min-width: 75px; text-align: center;" class="text-input"
+                        type="text" id="name" placeholder="* * * Name * * *">
+                    <a onclick="showShifts()" class="a" id="shiftName">lead</a>
+
+                    <span id="ageVal">
+                        <button id="agV" onclick="a21()" class="bbus">18</button>
+                    </span>
+                    </p>
+                    <p>
+                    <input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                        type="number" min="1" max="12" id="sthr" placeholder="hr">:
+
+                        <input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                        type="number" min="00" max="59" id="stmn" placeholder="min">
+ 
+
+                    <span id="startVal">
+                        <button id="apm" onclick="pmStart()" class="gbus">AM</button>
+                    </span>
+                    </p>
+                    <p>
+
+
+                    <input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                        type="number" min="1" max="12" id="ethr" placeholder="hr">
+
+
+                    <input spellcheck="false" onkeyup=""
+                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                        type="number" min="00" max="59" id="etmn" placeholder="min">
+
+
+                    <span id="endVal">
+                        <button id="apm2" onclick="amEnd()" class="bbus">PM</button>
+                    </span>
+
+
+                </p>
+                <p>
+                    <span id="staggerFunc">
+                        Stagger Breaks by: <button id="" onclick="s10()" class="abus">00</button>
+                    </span> min        
+                </p>
+
+   
+
+                <div id="shiftMenu" style="display: none" class="card">
+                    <div class="card-heading">Shifts</div>
+                    <div class="card-body">
+
+                        <p>
+                            <a class="a" onclick="leadShift(), showShifts()">Lead</a>
+                            <a class="a" onclick="supervisorShift(), showShifts()">Supervisor</a>
+                            <a class="a" onclick="assistantSupShift(), showShifts()">Assistant Sup.</a>
+                        </p>
+
+                        <p>
+                            <a class="a" onclick="frontlineShift(), showShifts()">Frontline</a>
+                            <a class="a" onclick="supportShift(), showShifts()">Support</a>
+                            <a class="a" onclick="backOfHouseShift(), showShifts()">Back of House</a>
+                        </p>
+
+                        <p>
+                            <input type="text" class="text-input" name="" id="shiftTitle" placeholder="Shift Title">    
+                            <button class="abus" onclick="customShift(), showShifts()">Input</button>
+                            </p>
+                    </div>
+                    
+                </div>
+
+                <p> <button onclick="addShift(), s0()" class="gbus">Add Shift</button>
+
+                    <button onclick="removeLastShift()"
+                        class="obus">Remove Shift</button>    
+                </p>
+
+
+
+                <div class="divider">***************</div>
+                            <center>
+            <p>This algorithm/program may make mistakes.</p>
+            <p>It is the individual business's and/or supervisor's respsonsibility to ensure that staff are provided breaks at the correct times in accordance with state and local laws.</p>
+            <p><i>Type sheet</i> is merely a break sheet <i>suggestion</i> generator.</p>
+            </center>
+            <div class="divider">***************</div>
+
+            
+                <section hidden id="">
+                    <span id="shiftName" ></span>
+                    <span id="error" ></span>
+                    <span id="ageError" ></span>
+                    <span id="ageVar" >18</span>
+                    <span id="stagger" >00</span>
+                    <span id="sthrVar" ></span>
+                    <span id="stmnVar" ></span>
+                    <span id="ethrVar" ></span>
+                    <span id="etmnVar" ></span>
+                    <span id="mnv" ></span>  
+                    <span id="hrmnv" ></span>   
+                    <span id="etmnv" ></span>  
+                    <span id="b1" ></span>
+                    <span id="lunch" ></span>
+                    <span id="b2" ></span>
+                </section>
+
+                <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
+                        Synapse</button> <button onclick="synapse_download()" class="abus">Download Synapse</button></p>
+
+
+            </center>
+        </div>
+
+        <section class="card-body-alt" id="breakSheet">
+
+            <section id="sheetHeader">
+            <p><span contenteditable="true" id="business">Business</span> </p> 
+            <p>Team: <span contenteditable="true" id="team">Department/Team</span> </p>       
+            <p>Date: <span contenteditable="true" id="date">xx/xx/xx</span> </p>    
+            </section>
+
+            <section id="breaks">
+            
+            </section>
+
+            <section id="sheetFooter">
+                <p>Notes:</p> 
+                <p><span contenteditable="true" id="note">Note here</span> </p> 
+            </section>
+
+        </section>
+    </div>
+
+
+
+
+
+
+
+		<!--
+	<script id="script" src="./authordev/app.js"></script>
+	-->
+
+	</section>
+</body>

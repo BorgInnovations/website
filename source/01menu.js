@@ -28,6 +28,20 @@ function showMenu() {
     }
  }
 
+
+  function showSched() {
+    document.getElementById("menuList").innerHTML = '			<div class="card-body"><center><ul><li><a class="a" onclick=" saveSheet(), closeA()">Save</a></li><li><a class="a" onclick=" saveSheet(), saveFile(), closeA()">Download</a></li><li><a class="a-comanche" onclick=" deleteSheet(), closeA()">Clear</a></li></ul></center>'
+
+    var x = document.getElementById("menuList");
+    if (x.style.display === "none") {
+       x.style.display = "block";
+       document.getElementById("abtn").innerHTML = 'XX';
+    } else {
+       x.style.display = "none";
+       document.getElementById("abtn").innerHTML = "TS";
+    }
+ }
+
  function showL() {
     document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a-comanche" onclick=" idbClear(),updateLFile(),showL()">Delete</a></li><li><a class="a" onclick=" openSnippets(), showL()">Snippets</a></li><li><a class="a" onclick=" updateLFile(),forceRenderAlert(),showL()">Render</a></li><li><a class="a" onclick=" copyCode(),showL()">Copy Code</a></li><li><a class="a" onclick=" saveFile(),showL()">Download</a></li></ul></center></div>'
 
