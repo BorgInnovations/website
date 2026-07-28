@@ -45,6 +45,24 @@ An American Space-Age Inspired CSS Library!
 
 }
 
+@font-face {
+    font-family: Liberation Sans;
+    src: url("https://fonts.borgcreative.com/liberation-sans-font/LiberationSans-BaDn.ttf");
+
+}
+
+@font-face {
+    font-family: Liberation Serif;
+    src: url("https://fonts.borgcreative.com/liberation-serif-font/LiberationSerif-wlR9.ttf");
+
+}
+
+@font-face {
+    font-family: Liberation Mono;
+    src: url("https://fonts.borgcreative.com/liberation-mono-font/LiberationMono-MW1v.ttf");
+
+}
+
 
 
 @property --luminary {
