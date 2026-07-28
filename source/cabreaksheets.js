@@ -1,4 +1,10 @@
 
+function versionID(){
+    document.getElementById("versionID").innerHTML = 'Alpha 1.0.1'
+}
+
+
+
 //Save Functions
 function saveSheet(){
     localStorage.sheet = document.getElementById("breaks").innerHTML
@@ -370,11 +376,11 @@ function addShift() {
             br1t = parseInt(sthr) + 2
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+ afternoon +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+  br1t +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             document.getElementById("lunch").innerHTML = ''
@@ -392,18 +398,18 @@ function addShift() {
             lunch = parseInt(sthr) + 3 
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseFloat(stmn)+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseFloat(stmn)+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
             }
             document.getElementById("ageError").innerHTML = ''
             document.getElementById("b2").innerHTML = ''
@@ -418,25 +424,25 @@ function addShift() {
             br2t = parseInt(sthr) + 5
             if (br1t>12){
                 afternoon = br1t-12
-                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+ afternoon + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b1").innerHTML ='break '+  br1t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             if (lunch>12){
                 lTime = lunch-12
-                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("lunch").innerHTML ='lunch '+ lTime +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("lunch").innerHTML ='lunch '+  lunch +':'+parseInt(document.getElementById("stagger").innerHTML)+' '
             }
             if (br2t>12){
                 evening = br2t-12
-                document.getElementById("b2").innerHTML =' break '+ evening +':'+ parseFloat(stmn)+ ':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b2").innerHTML =' break '+ evening +':'+ parseFloat(stmn)+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }else{
-                document.getElementById("b2").innerHTML =' break '+  br2t + ':'+parseInt(document.getElementById("stagger").innerHTML)
+                document.getElementById("b2").innerHTML =' break '+  br2t + ':'+parseInt(document.getElementById("stagger").innerHTML)+' '
 
             }
             document.getElementById("ageError").innerHTML = ''
