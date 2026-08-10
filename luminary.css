@@ -172,6 +172,49 @@ An American Space-Age Inspired CSS Library!
 }
 
 
+
+
+.mercury {
+    color: var(--mercury);
+    border-color: var(--mercury);
+}
+
+.luminary {
+    color: var(--luminary);
+}
+
+.mercury-glow {
+    box-shadow: 0px 0px 10px var(--mercury);
+}
+
+.comanche {
+    color: var(--comanche);
+    border-color: var(--comanche);
+}
+
+.comanche-glow {
+    box-shadow: 0px 0px 10px var(--comanche);
+}
+
+.neil {
+    color: var(--neil);
+    border-color: var(--neil);
+}
+
+.neil-glow {
+    box-shadow: 0px 0px 10px var(--neil);
+}
+
+.buzz {
+    color: var(--buzz);
+    border-color: var(--buzz);
+}
+
+.buzz-glow {
+    box-shadow: 0px 0px 10px var(--buzz);
+}
+
+
 /*Global*/
 html {
     font-family: Fira_Code;
@@ -599,19 +642,17 @@ a {
 /*Table*/
 
 table {
-
     border-collapse: collapse;
+
 }
 
 td {
-    color: var(--mercury);
-    border-bottom: 1px solid var(--mercury);
+    border: 1px solid var(--mercury);
     text-align: left;
+    min-width: 75px;
 }
 
-tr:hover {
-    background-color: var(--neil);
-}
+
 
 th {
     background-color: var(--mercury);
@@ -777,7 +818,6 @@ ul {
 .pdo-3 {
     filter: blur(0.3px);
 }
-
 
 
 

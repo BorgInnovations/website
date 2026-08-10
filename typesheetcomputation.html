@@ -11,7 +11,7 @@
     <script src="./luminary.js"></script>
     <script src="./menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/minisearch@7.2.0/dist/umd/index.min.js"></script>
-    <script src="./source/cabreaksheets.js"></script>
+    <script src="./source/tscomputation.js"></script>
     <script src="./source/FileSaver.js"></script>
     <!--<script src="./source/disableselect.js"></script>-->
 
@@ -57,7 +57,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 </header>
 
 
-<body onload="topMenu_load(), footMenu_load(), loadSheet(), versionID()">
+<body onload="topMenu_load(), footMenu_load(), loadSheet()">
     <section style="display: none;" id="contact">
 
         <div class="card">
@@ -89,11 +89,10 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     <div class="card">
         <div class="card-heading">
-            <h2 id="versionID"></h2>
+            <h2>Simplified Textual Computations</h2>
         </div>
         <div class="card-body">
             <center>
-                <h1>Simplified Textual Break Sheets</h1>
                 <h1 hidden style="text-decoration: none;">
                     type sheet
                 </h1>
@@ -107,116 +106,86 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
                     <input spellcheck="false" onkeyup=""
                         style="width:50%; max-width: 200px; min-width: 75px; text-align: center;" class="text-input"
-                        type="text" id="name" placeholder="* * * Name * * *">
-                    <a onclick="showShifts()" class="a" id="shiftName">lead</a>
+                        type="text" id="function" placeholder="* * * function * * *">
+                    <a onclick="showShifts()" class="a" id="shiftName">funcs</a>
+ 
 
-                    <span id="ageVal">
-                        <button id="agV" onclick="a21()" class="bbus">18</button>
-                    </span>
-                    <input spellcheck="false" onkeyup=""
+
+                    <span id="inputVars">
+                        <input spellcheck="false" onkeyup=""
                         style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="1" max="12" id="sthr" placeholder="hr">:
+                        type="number" id="var1" placeholder="var"> 
+                        
+                        <span id="funcSign"><button onclick="minus()" class="abus" id="">+</button></span>
 
                         <input spellcheck="false" onkeyup=""
                         style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="00" max="59" id="stmn" placeholder="min">
- 
-
-                    <span id="startVal">
-                        <button id="apm" onclick="pmStart()" class="gbus">AM</button>
+                        type="number" id="var2" placeholder="var">         
                     </span>
 
 
-
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="1" max="12" id="ethr" placeholder="hr">
-
-
-                    <input spellcheck="false" onkeyup=""
-                        style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
-                        type="number" min="00" max="59" id="etmn" placeholder="min">
-
-
-                    <span id="endVal">
-                        <button id="apm2" onclick="amEnd()" class="bbus">PM</button>
-                    </span>
-
-
+                    <span id="funcButt"><button onclick="addFunc()" class="abus" id="">=</button></span>
+                    <!--
+                    <button onclick="addVar()" class="abus" id="">+</button>
+                    -->
+                    
+                    
                 </p>
-                <p>
-                    <span id="staggerFunc">
-                        Stagger Breaks by: <button id="" onclick="s10()" class="abus">00</button>
-                    </span> min        
-                </p>
+
+                <section hidden>
+                    
+                <span id="result"></span>    
+                </section>
 
    
 
                 <div id="shiftMenu" style="display: none" class="card">
-                    <div class="card-heading">Shifts</div>
+                    <div class="card-heading">Functions</div>
                     <div class="card-body">
 
                         <p>
-                            <a class="a" onclick="leadShift(), showShifts()">Lead</a>
-                            <a class="a" onclick="supervisorShift(), showShifts()">Supervisor</a>
-                            <a class="a" onclick="assistantSupShift(), showShifts()">Assistant Sup.</a>
+                            <a class="a" onclick="add(), showShifts()">add</a>
                         </p>
 
-                        <p>
-                            <a class="a" onclick="frontlineShift(), showShifts()">Frontline</a>
-                            <a class="a" onclick="supportShift(), showShifts()">Support</a>
-                            <a class="a" onclick="backOfHouseShift(), showShifts()">Back of House</a>
-                        </p>
 
-                        <p>
-                            <input type="text" class="text-input" name="" id="shiftTitle" placeholder="Shift Title">    
-                            <button class="abus" onclick="customShift(), showShifts()">Input</button>
-                            </p>
                     </div>
                     
                 </div>
 
-                <p> <button onclick="addShift(), s0()" class="gbus">Add Shift</button>
+                <p> <button onclick="addLine()" class="gbus">Add Row</button>
                     <button
                         onclick="saveSheet()" class="bbus">Save</button>
                         
                     <button onclick="saveSheet(), saveFile()" class="bbus">Download</button>
-                    <button onclick="removeLastShift()"
-                        class="obus">Remove Shift</button>    
+                    <button onclick="removeLastLine()"
+                        class="obus">Remove Row</button>    
                         
                         <button onclick="deleteSheet()"
-                        class="obus">Delete All</button>
+                        class="obus">Delete Sheet</button>
                 </p>
 
 
 
+                <div class="divider">****PREVIEW****</div>
+                <table class="table">
+                    <tr>
+                        <td class="mercury" id="vizCell1">
+                        
+                        </td>   
+                        <td class="mercury" id="vizCell2">
+                            
+                        </td>   
+                        <td class="mercury" id="vizResult">
+                            
+                        </td>    
+                    </tr>
+                </table>
                 <div class="divider">***************</div>
-                            <center>
-            <p>This algorithm/program may make mistakes.</p>
-            <p>It is the individual business's and/or supervisor's respsonsibility to ensure that staff are provided breaks at the correct times in accordance with state and local laws.</p>
-            <p><i>Type sheet</i> is merely a break sheet <i>suggestion</i> generator.</p>
-            </center>
-            <div class="divider">***************</div>
-
-            
-                <section hidden id="">
-                    <span id="shiftName" ></span>
-                    <span id="error" ></span>
-                    <span id="ageError" ></span>
-                    <span id="ageVar" >18</span>
-                    <span id="stagger" >00</span>
-                    <span id="sthrVar" ></span>
-                    <span id="stmnVar" ></span>
-                    <span id="ethrVar" ></span>
-                    <span id="etmnVar" ></span>
-                    <span id="mnv" ></span>  
-                    <span id="hrmnv" ></span>   
-                    <span id="etmnv" ></span>  
-                    <span id="b1" ></span>
-                    <span id="lunch" ></span>
-                    <span id="b2" ></span>
-
-                    <span id="csv" ></span>
+                <span hidden id="varNum">2</span>
+                <span hidden id="lastResult"></span>
+                <span hidden id="color">var(--luminary)</span>
+                <section hidden id="vars">
+                    <span id="2"></span>
                 </section>
 
                 <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
@@ -226,22 +195,26 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
             </center>
         </div>
 
-        <section class="card-body-alt" id="breakSheet">
+        <section class="card-body-alt" id="sheet">
 
-            <section id="sheetHeader">
-            <p><span contenteditable="true" id="business">Business</span> </p> 
-            <p>Team: <span contenteditable="true" id="team">Department/Team</span> </p>       
-            <p>Date: <span contenteditable="true" id="date">xx/xx/xx</span> </p>    
+            <section id="sheetHeader" contenteditable="true">
+
             </section>
 
-            <section id="breaks">
+            <section id="sheetBody">
+
+                <table id="sheetTable"></table>
             
             </section>
 
-            <section id="sheetFooter">
+            <section id="sheetFooter" contenteditable="true">
+
+            </section>
+
+            <section>
                 <p>Notes:</p> 
                 <p><span contenteditable="true" id="note">Note here</span> </p> 
-            </section>
+                </section>
 
         </section>
     </div>

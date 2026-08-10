@@ -544,8 +544,6 @@ function addShift() {
     document.getElementById("breaks").appendChild(div);
 
 
-
-    
     //=====
 }
 
