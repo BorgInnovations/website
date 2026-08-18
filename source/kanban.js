@@ -139,6 +139,16 @@ function addNote() {
 
   }
 
+  if (tag == 'pur') {
+    var noteTitle = '<h3 class="card-heading-columbia" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+
+    if (tag == 'yel') {
+    var noteTitle = '<h3 class="card-heading-gus" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
+
+  }
+
   if (tag == 'nul') {
     var noteTitle = '<h3 class="card-heading" style="margin-top: 0px;" contentEditable="true">' + document.getElementById("noteTitle").value + '</h3>'
 

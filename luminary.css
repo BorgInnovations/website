@@ -130,6 +130,50 @@ An American Space-Age Inspired CSS Library!
     /*E0FF4F*/
 }
 
+@property --challenger {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ED7B84;
+    /*#ED7B84*/
+}
+
+@property --challengerdark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #b65e66;
+    /*E0FF4F*/
+}
+
+@property --columbia {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #907AD6;
+    /*#907AD6*/
+}
+
+@property --columbiadark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #7563b0;
+    /*E0FF4F*/
+}
+
+@property --gus {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #F4AC32;
+    /*#F4AC32*/
+}
+
+@property --gusdark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #d2942b;
+    /*E0FF4F*/
+}
+
+
+
 
 #mercury {
     color: var(--mercury);
@@ -458,6 +502,30 @@ a {
     text-align: center;
 }
 
+.card-heading-columbia {
+    background-color: var(--columbia);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.card-heading-challenger {
+    background-color: var(--challenger);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.card-heading-gus {
+    background-color: var(--gus);
+    color: var(--luminary);
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
 .card-heading h1,
 .card-heading h2,
 .card-heading h3,
@@ -582,6 +650,52 @@ a {
     background-color: var(--luminary);
     border-style: solid;
     border-color: var(--buzz);
+    border-width: 1px;
+    padding: 5px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.pbus {
+    color: var(--columbiadark);
+    background-color: var(--luminary);
+    border-style: solid;
+    border-color: var(--columbiadark);
+    border-width: 1px;
+    padding: 5px;
+
+
+}
+
+.pbus:hover {
+
+    color: var(--columbia);
+    background-color: var(--luminary);
+    border-style: solid;
+    border-color: var(--columbia);
+    border-width: 1px;
+    padding: 5px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.ybus {
+    color: var(--gusdark);
+    background-color: var(--luminary);
+    border-style: solid;
+    border-color: var(--gusdark);
+    border-width: 1px;
+    padding: 5px;
+
+
+}
+
+.ybus:hover {
+
+    color: var(--gus);
+    background-color: var(--luminary);
+    border-style: solid;
+    border-color: var(--gus);
     border-width: 1px;
     padding: 5px;
     opacity: 1.0;

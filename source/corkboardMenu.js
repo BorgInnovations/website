@@ -15,7 +15,21 @@ function tagred() {
 function taggrn() {
     document.getElementById("tagv").innerHTML = 'grn';
     console.log("tag grn")
-    document.getElementById("tag").innerHTML = '<button id="tagbtn" onclick="tagnul()" class="gbus">Grn</button>';
+    document.getElementById("tag").innerHTML = '<button id="tagbtn" onclick="tagpur()" class="gbus">Grn</button>';
+
+}
+
+function tagpur() {
+    document.getElementById("tagv").innerHTML = 'pur';
+    console.log("tag grn")
+    document.getElementById("tag").innerHTML = '<button id="tagbtn" onclick="tagyel()" class="pbus">Pur</button>';
+
+}
+
+function tagyel() {
+    document.getElementById("tagv").innerHTML = 'yel';
+    console.log("tag grn")
+    document.getElementById("tag").innerHTML = '<button id="tagbtn" onclick="tagnul()" class="ybus">Yel</button>';
 
 }
 
