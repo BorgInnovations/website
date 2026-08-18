@@ -130,6 +130,27 @@ An American Space-Age Inspired CSS Library!
     /*E0FF4F*/
 }
 
+/*
+We remember those brave astronauts horrifically lost on Apollo 1, Challenger, and Columbia.
+May the Lord have mercy on their souls
+*/
+
+
+/*
+January 28, 1986
+Space Shuttle Challenger and her crew were lost on launch due to a faulty O-ring.
+
+STS-51-L CREW
+Dick Scobee, commander
+Michael J. Smith, pilot
+Ronald McNair, mission specialist
+Ellison Onizuka, mission specialist
+Judith Resnik, mission specialist
+Gregory Jarvis, payload specialist
+Christa McAuliffe, payload specialist, teacher
+*/
+
+
 @property --challenger {
     syntax: "<color>";
     inherits: false;
@@ -144,6 +165,22 @@ An American Space-Age Inspired CSS Library!
     /*E0FF4F*/
 }
 
+/*
+
+February 1, 2003
+Space Shuttle Columbia broke up on reentry.
+
+STS-107 CREW
+Rick Husband, commander
+William C. McCool, pilot
+Michael P. Anderson, mission specialist
+Kalpana Chawla, mission specialist
+David M. Brown, mission specialist
+Laurel Clark, mission specialist
+Ilan Ramon, payload specialist
+*/
+
+
 @property --columbia {
     syntax: "<color>";
     inherits: false;
@@ -157,6 +194,16 @@ An American Space-Age Inspired CSS Library!
     initial-value: #7563b0;
     /*E0FF4F*/
 }
+
+/*
+January 27, 1967
+A fire broke out in the crew module during a launch rehearsal. Apollo 1 and her crew were lost.
+
+AS-204 CREW
+Gus Grissom
+Edward H. White II
+Roger B. Chaffee
+*/
 
 @property --gus {
     syntax: "<color>";
@@ -501,6 +548,8 @@ a {
     padding-right: 5px;
     text-align: center;
 }
+
+
 
 .card-heading-columbia {
     background-color: var(--columbia);
