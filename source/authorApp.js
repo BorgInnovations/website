@@ -108,11 +108,11 @@
    
       // Font families
       document.getElementById("heading").style.fontFamily =
-         (await dbGet("titlefont")) || "Fira_Code";
+         (await dbGet("titlefont")) || "Liberation Serif";
       document.getElementById("body").style.fontFamily =
-         (await dbGet("bodyfont"))  || "Fira_Code";
+         (await dbGet("bodyfont"))  || "Liberation Serif";
       document.getElementById("footer").style.fontFamily =
-         (await dbGet("footerfont"))|| "Fira_Code";
+         (await dbGet("footerfont"))|| "Liberation Serif";
    
       // Document layout
       document.getElementById("document").style.margin =
@@ -178,6 +178,15 @@
    
    function file() {
       var x = document.getElementById("file");
+      if (x.style.display === "none") {
+         x.style.display = "block";
+      } else {
+         x.style.display = "none";
+      }
+   }
+
+   function fontMenu() {
+      var x = document.getElementById("fontMenu");
       if (x.style.display === "none") {
          x.style.display = "block";
       } else {
@@ -387,6 +396,8 @@
       Font Family Controls
       ============================================================ */
    
+   
+
    async function hsetFiraCode() {
       document.getElementById("heading").style.fontFamily = 'Fira_Code';
       document.getElementById("hFont").innerHTML = 'Fira_Code';
@@ -403,6 +414,7 @@
       await dbSet("footerfont", 'Fira_Code');
    }
    
+   //Old fonts LEAVE TO AVOID CONFLICTS
    // Open_Sans
    async function hsetOpenSans() {
       document.getElementById("heading").style.fontFamily = 'Open_Sans';
@@ -453,7 +465,62 @@
       document.getElementById("fFont").innerHTML = 'Oswald';
       await dbSet("footerfont", 'Oswald');
    }
-   
+   //End of Old Fonts
+
+   //Liberation Fonts
+
+   //sans
+      async function hsetLibSans() {
+      document.getElementById("heading").style.fontFamily = 'Liberation Sans';
+      document.getElementById("hFont").innerHTML = 'Liberation Sans';
+      await dbSet("titlefont", 'Liberation Sans');
+   }
+   async function bsetLibSans() {
+      document.getElementById("body").style.fontFamily = 'Liberation Sans';
+      document.getElementById("bFont").innerHTML = 'Liberation Sans';
+      await dbSet("bodyfont", 'Liberation Sans');
+   }
+   async function fsetLibSans() {
+      document.getElementById("footer").style.fontFamily = 'Liberation Sans';
+      document.getElementById("fFont").innerHTML = 'Liberation Sans';
+      await dbSet("footerfont", 'Liberation Sans');
+   }
+
+   //serif
+   async function hsetLibSerif() {
+      document.getElementById("heading").style.fontFamily = 'Liberation Serif';
+      document.getElementById("hFont").innerHTML = 'Liberation Serif';
+      await dbSet("titlefont", 'Liberation Serif');
+   }
+   async function bsetLibSerif() {
+      document.getElementById("body").style.fontFamily = 'Liberation Serif';
+      document.getElementById("bFont").innerHTML = 'Liberation Serif';
+      await dbSet("bodyfont", 'Liberation Serif');
+   }
+   async function fsetLibSerif() {
+      document.getElementById("footer").style.fontFamily = 'Liberation Serif';
+      document.getElementById("fFont").innerHTML = 'Liberation Serif';
+      await dbSet("footerfont", 'Liberation Serif');
+   }
+
+
+   //mono
+   async function hsetLibMono() {
+      document.getElementById("heading").style.fontFamily = 'Liberation Mono';
+      document.getElementById("hFont").innerHTML = 'Liberation Mono';
+      await dbSet("titlefont", 'Liberation Mono');
+   }
+   async function bsetLibMono() {
+      document.getElementById("body").style.fontFamily = 'Liberation Mono';
+      document.getElementById("bFont").innerHTML = 'Liberation Mono';
+      await dbSet("bodyfont", 'Liberation Mono');
+   }
+   async function fsetLibMono() {
+      document.getElementById("footer").style.fontFamily = 'Liberation Mono';
+      document.getElementById("fFont").innerHTML = 'Liberation Mono';
+      await dbSet("footerfont", 'Liberation Mono');
+   }   
+
    // OpenDyslexic
    async function hsetOpenDyslexic() {
       document.getElementById("heading").style.fontFamily = 'OpenDyslexic';
@@ -518,6 +585,9 @@
       ============================================================ */
    
    async function cleardocument() {
+
+      if (confirm("Are you sure you want to DELETE? This CANNOT be undone.")){
+
       // Content
       await dbSet("title",  'The Title');
       await dbSet("body",   'The Body');
@@ -546,13 +616,13 @@
       document.getElementById("footer").style.textAlign  = 'left';
    
       // Font families
-      await dbSet("titlefont",  'Fira_Code');
-      await dbSet("bodyfont",   'Fira_Code');
-      await dbSet("footerfont", 'Fira_Code');
+      await dbSet("titlefont",  'Liberation Serif');
+      await dbSet("bodyfont",   'Liberation Serif');
+      await dbSet("footerfont", 'Liberation Serif');
    
-      document.getElementById("heading").style.fontFamily = 'Fira_Code';
-      document.getElementById("body").style.fontFamily    = 'Fira_Code';
-      document.getElementById("footer").style.fontFamily  = 'Fira_Code';
+      document.getElementById("heading").style.fontFamily = 'Liberation Serif';
+      document.getElementById("body").style.fontFamily    = 'Liberation Serif';
+      document.getElementById("footer").style.fontFamily  = 'Liberation Serif';
    
       // Font sizes
       await dbSet("titlefs",  '18pt ');
@@ -562,4 +632,8 @@
       document.getElementById("header").style.fontSize = '18pt';
       document.getElementById("body").style.fontSize   = '12pt';
       document.getElementById("footer").style.fontSize = '12pt';
+
+      }else{
+         alert("File NOT deleted")
+      }
    }
