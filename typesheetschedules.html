@@ -57,7 +57,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 </header>
 
 
-<body onload="topMenu_load(), footMenu_load(), loadSheet(), versionID()">
+<body onload="topMenu_ts_schedule_load(), footMenu_load(), loadSheet(), versionID()">
     <section style="display: none;" id="contact">
 
         <div class="card">
@@ -81,6 +81,32 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
     </section>
 
+
+
+
+
+<section style="display: none;" id="file">
+
+<div class="card">
+    <div class="card-heading">
+        <h1>File.</h1>
+    </div>
+    <div class="card-body">
+        <div>
+
+            <p>
+                <a class="a" onclick="saveSheet()">Save in Browser</a>    
+            </p>
+            <p>
+                <a class="a" onclick="saveFile(), saveSheet()">Download Schedule</a>    
+            </p>
+            <p>
+                <a class="a-comanche" onclick="deleteSheet(),saveSheetDeletion()">DELETE Schedule</a>    
+            </p>
+        </div>
+    </div>
+</div>
+</section>
 
     <center>
         <img src="./img/icons/typesheet_bordered.svg" style="width: 50%; min-width: 200px; max-width: 500px;" alt="">

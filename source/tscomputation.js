@@ -1,6 +1,7 @@
 
 //Save Functions
 function saveSheet(){
+    
 
     localStorage.sheet = document.getElementById("sheetBody").innerHTML
     localStorage.header = document.getElementById("sheetHeader").innerHTML
@@ -46,8 +47,9 @@ function deleteSheet(){
       const sheet  = localStorage.sheet
       const note  = localStorage.note
 
+
       var blob = new Blob(
-         ['<h1>' + business + '</h1>', '<p>' +team + '</p>','<p>' +date + '</p>', '<section>' + sheet + '</section>','<p>Notes:</p>','<section>' + note + '</section>','<h3><i>type sheet</i> is in alpha</h3>','<p><i>verify accuracy before use</i></p>'],
+         ['<table>' + document.getElementById("sheetBody").innerHTML + '</table>','<p>Notes:</p>','<section>' + note + '</section>','<h3><i>type sheet</i> is in alpha</h3>','<p><i>verify accuracy before use</i></p>'],
          { type: "text/plain;charset=utf-8" }
       );
       saveAs(blob, team+"typesheet.html");
@@ -107,6 +109,18 @@ function subFunc(){
 
 
 }
+
+//Function Sort 
+    function funcSort(){
+
+        if (document.getElementById('function').value == 'add') add();
+        if (document.getElementById('function').value == 'addition') add();
+        if (document.getElementById('function').value == 'minus') minus();
+        if (document.getElementById('function').value == 'subtract') minus();
+    }
+
+
+
 
 
 function showShifts() {
@@ -169,7 +183,7 @@ function addLine() {
 }
 
 function removeLastLine(){
-    const sheet = document.getElementById("sheetTable");
+    const sheet = document.getElementById("sheetBody");
     sheet.removeChild(sheet.lastElementChild);
 }
 

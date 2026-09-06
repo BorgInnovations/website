@@ -15,6 +15,14 @@ function saveSheet(){
     window.alert('Saved in browser')
 }
 
+function saveSheetDeletion(){
+    localStorage.sheet = document.getElementById("breaks").innerHTML
+    localStorage.business = document.getElementById("business").innerHTML
+    localStorage.team = document.getElementById("team").innerHTML
+    localStorage.date = document.getElementById("date").innerHTML
+    localStorage.note = document.getElementById("note").innerHTML
+}
+
 function loadSheet(){
     document.getElementById("breaks").innerHTML = localStorage.sheet
     document.getElementById("business").innerHTML = localStorage.business
@@ -554,3 +562,11 @@ function removeLastShift(){
 
 
 
+function file() {
+    var x = document.getElementById("file");
+    if (x.style.display === "none") {
+       x.style.display = "block";
+    } else {
+       x.style.display = "none";
+    }
+ }
