@@ -1,6 +1,6 @@
 
 function versionID(){
-    document.getElementById("versionID").innerHTML = 'Alpha 1.0.1'
+    document.getElementById("versionID").innerHTML = 'Alpha 1.0.2'
 }
 
 
