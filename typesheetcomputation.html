@@ -57,7 +57,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 </header>
 
 
-<body onload="topMenu_load(), footMenu_load(), loadSheet()">
+<body onload="topMenu_ts_computation_load(), footMenu_load(), loadSheet()">
     <section style="display: none;" id="contact">
 
         <div class="card">
@@ -80,6 +80,37 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
     <section style="display: none;" id="products">
 
     </section>
+
+    <section style="display: none;" id="file">
+
+<div class="card">
+    <div class="card-heading">
+        <h1>File.</h1>
+    </div>
+    <div class="card-body">
+        <div>
+
+            <p>
+                <a class="a" onclick="saveSheet(), file()">Save in Browser</a>    
+            </p>
+            <p>
+                <a class="a" onclick="saveName(), file()">Save As</a>    
+            </p>
+            <p>
+                <a class="a" onclick="printFile(), file()">PDF/Print Export</a>    
+            </p>
+            <!--
+            <p>
+                <a class="a" onclick="saveFile(),saveSheet(), file()">Download Sheet</a>    
+            </p>
+            -->
+            <p>
+                <a class="a-comanche" onclick="deleteSheet(), saveSheetDeletion(), file()">DELETE Sheet</a>    
+            </p>
+        </div>
+    </div>
+</div>
+</section>
 
 
     <center>
@@ -145,6 +176,9 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
 
                         <p>
                             <a class="a" onclick="add(), showShifts()">add</a>
+                            <a class="a" onclick="minus(), showShifts()">subtract</a>
+                            <a class="a" onclick="multiply(), showShifts()">multiply</a>
+                            <a class="a" onclick="divide(), showShifts()">divide</a>
                         </p>
 
 
@@ -153,15 +187,11 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                 </div>
 
                 <p> <button onclick="addLine()" class="gbus">Add Row</button>
-                    <button
-                        onclick="saveSheet()" class="bbus">Save</button>
                         
-                    <button onclick="saveSheet(), saveFile()" class="bbus">Download</button>
+
                     <button onclick="removeLastLine()"
                         class="obus">Remove Row</button>    
-                        
-                        <button onclick="deleteSheet()"
-                        class="obus">Delete Sheet</button>
+                    
                 </p>
 
 

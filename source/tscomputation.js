@@ -1,7 +1,7 @@
 
 //Save Functions
 function saveSheet(){
-    
+
 
     localStorage.sheet = document.getElementById("sheetBody").innerHTML
     localStorage.header = document.getElementById("sheetHeader").innerHTML
@@ -9,6 +9,19 @@ function saveSheet(){
     localStorage.note = document.getElementById("note").innerHTML
     window.alert('Saved in browser')
 }
+
+function saveName(){
+    var docTitle = prompt("Save Document As").replace(/\s/g, '')
+
+    document.getElementById("sheetHeader").innerHTML = docTitle
+    localStorage.sheet = document.getElementById("sheetBody").innerHTML
+    localStorage.header = docTitle
+    localStorage.footer = document.getElementById("sheetFooter").innerHTML
+    localStorage.note = document.getElementById("note").innerHTML
+    window.alert('Saved in browser')
+}
+
+
 
 function loadSheet(){
 
@@ -20,7 +33,7 @@ function loadSheet(){
 
 function deleteSheet(){
     if (confirm("Are you sure you want to DELETE? This CANNOT be undone.")){
-
+        localStorage.csv = ''
         localStorage.sheet = ''
         localStorage.header = ''
         localStorage.footer = ''
@@ -28,7 +41,7 @@ function deleteSheet(){
 
 
     document.getElementById("sheetBody").innerHTML = ''
-    document.getElementById("sheetHeader").innerHTML = ''
+    document.getElementById("sheetHeader").innerHTML = 'new document'
     document.getElementById("sheetFooter").innerHTML = ''
     document.getElementById("note").innerHTML = 'notes here'
         
@@ -41,9 +54,7 @@ function deleteSheet(){
 
 
     function saveFile() {
-      const business  = localStorage.business
-      const team  = localStorage.team
-      const date  = localStorage.date
+      const header  = localStorage.header
       const sheet  = localStorage.sheet
       const note  = localStorage.note
 
@@ -52,7 +63,23 @@ function deleteSheet(){
          ['<table>' + document.getElementById("sheetBody").innerHTML + '</table>','<p>Notes:</p>','<section>' + note + '</section>','<h3><i>type sheet</i> is in alpha</h3>','<p><i>verify accuracy before use</i></p>'],
          { type: "text/plain;charset=utf-8" }
       );
-      saveAs(blob, team+"typesheet.html");
+      saveAs(blob, header+"_typesheet.html");
+   }
+
+   function printFile(){
+    const header  = localStorage.header
+    const sheet  = localStorage.sheet
+    const note  = localStorage.note
+
+
+    const w = window.open("", "_blank");
+    w.document.write(`<html><head><title>Sheet</title></head><body><h1>${header}</h1><table style="border-collapse: collapse;">${sheet}</table><h3>Notes:</h3><div>${note}</div></body></html>`);
+    w.document.close();
+    w.focus();
+    w.print();
+    w.close();
+
+    console.log('Printer go brrrr');
    }
 
 
@@ -76,9 +103,24 @@ function add(){
 
 function minus(){
     document.getElementById("function").value = 'subtract'
-    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="">-</button>'
+    document.getElementById("funcSign").innerHTML = '<button onclick="multiply()" class="abus" id="">-</button>'
     document.getElementById("funcButt").innerHTML = '<button onclick="subFunc()" class="abus" id="">=</button>'
 }
+
+function multiply(){
+    document.getElementById("function").value = 'multiply'
+    document.getElementById("funcSign").innerHTML = '<button onclick="divide()" class="abus" id="">x</button>'
+    document.getElementById("funcButt").innerHTML = '<button onclick="multFunc()" class="abus" id="">=</button>'
+}
+
+function divide(){
+    document.getElementById("function").value = 'divide'
+    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="">/</button>'
+    document.getElementById("funcButt").innerHTML = '<button onclick="divFunc()" class="abus" id="">=</button>'
+}
+
+
+
 
 function addFunc(){
     varNum1 = parseFloat(document.getElementById('var1').value)
@@ -110,6 +152,36 @@ function subFunc(){
 
 }
 
+function multFunc(){
+    varNum1 = parseFloat(document.getElementById('var1').value)
+    varNum2 = parseFloat(document.getElementById('var2').value)
+
+    funcRes = varNum1*varNum2
+    
+    result = funcRes
+    document.getElementById('vizCell1').innerHTML = varNum1
+    document.getElementById('vizCell2').innerHTML = varNum2
+    document.getElementById('vizResult').innerHTML = result
+    document.getElementById('result').innerHTML = result
+
+
+}
+
+function divFunc(){
+    varNum1 = parseFloat(document.getElementById('var1').value)
+    varNum2 = parseFloat(document.getElementById('var2').value)
+
+    funcRes = varNum1/varNum2
+    
+    result = funcRes
+    document.getElementById('vizCell1').innerHTML = varNum1
+    document.getElementById('vizCell2').innerHTML = varNum2
+    document.getElementById('vizResult').innerHTML = result
+    document.getElementById('result').innerHTML = result
+
+
+}
+
 //Function Sort 
     function funcSort(){
 
@@ -117,6 +189,11 @@ function subFunc(){
         if (document.getElementById('function').value == 'addition') add();
         if (document.getElementById('function').value == 'minus') minus();
         if (document.getElementById('function').value == 'subtract') minus();
+        if (document.getElementById('function').value == 'multiply') multiply();
+        if (document.getElementById('function').value == 'times') multiply();
+        if (document.getElementById('function').value == 'multiplication') multiply();
+        if (document.getElementById('function').value == 'divide') divide();
+        if (document.getElementById('function').value == 'division') divide();
     }
 
 
@@ -163,7 +240,7 @@ function addLine() {
 
 
 
-
+    const csv = localStorage.csv
 
     varCount = parseFloat(varCount)+1
     console.log(varCount)
@@ -173,8 +250,9 @@ function addLine() {
     const tr = document.createElement("tr");
     tr.className = "";
     tr.contentEditable = 'true';
-    tr.innerHTML = '<td style="border-color:'+color+'; color:'+color+';">'+formVar1+'</td>'+'<td style="border-color:'+color+'; color:'+color+';">'+formVar2+'</td>'+'<td style="border-color:'+color+'; color:'+color+';">'+result+'</td>';
+    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+'</td>'+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+result+'</td>';
     document.getElementById("sheetBody").appendChild(tr);
+
 
 
 
@@ -189,3 +267,11 @@ function removeLastLine(){
 
 
 
+function file() {
+    var x = document.getElementById("file");
+    if (x.style.display === "none") {
+       x.style.display = "block";
+    } else {
+       x.style.display = "none";
+    }
+ }
