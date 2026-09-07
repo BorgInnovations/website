@@ -90,6 +90,13 @@ function injectFunc(){
     document.getElementById("function").innerHTML = 'add'
 }
 
+function injectLastResult(){
+    lastResult = parseFloat(document.getElementById('vizResult').value)
+    document.getElementById('var1').value = lastResult
+}
+
+
+
 
 //globals
 var varCount ='0'
@@ -131,6 +138,12 @@ function root(){
     document.getElementById("funcButt").innerHTML = '<button onclick="rootFunc()" class="abus" id="">=</button>'
 }
 
+function sine(){
+    document.getElementById("function").value = 'sine'
+    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="symbol">sin</button>'
+    document.getElementById("funcButt").innerHTML = '<button onclick="rootFunc()" class="abus" id="">=</button>'
+}
+
 
 
 
@@ -145,6 +158,7 @@ function addFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = '+'
 
 
 }
@@ -160,6 +174,7 @@ function subFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = '-'
 
 
 }
@@ -175,6 +190,7 @@ function multFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = 'x'
 
 
 }
@@ -190,6 +206,7 @@ function divFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = '/'
 
 
 }
@@ -205,6 +222,7 @@ function expFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = '^'
 
 
 }
@@ -220,6 +238,22 @@ function rootFunc(){
     document.getElementById('vizCell2').innerHTML = varNum2
     document.getElementById('vizResult').innerHTML = result
     document.getElementById('result').innerHTML = result
+    document.getElementById('symbolPrev').innerHTML = '✓'
+
+
+}
+
+function sinFunc(){
+    varNum1 = parseFloat(document.getElementById('var1').value)
+
+
+    funcRes = Math.sin(varNum1)
+    
+    result = funcRes
+    document.getElementById('vizCell1').innerHTML = varNum1
+    document.getElementById('vizResult').innerHTML = result
+    document.getElementById('result').innerHTML = result
+    document.getElementById('symbol').innerHTML = ''
 
 
 }
@@ -311,6 +345,31 @@ function addLine() {
     //=====
 }
 
+function addLineMobile() {
+
+    
+
+    const csv = localStorage.csv
+
+    varCount = parseFloat(varCount)+1
+    console.log(varCount)
+    formVar1 = document.getElementById('vizCell1').innerHTML
+    symbol = document.getElementById('symbol').innerHTML
+    formVar2 = document.getElementById('vizCell2').innerHTML
+    color = document.getElementById('color').innerHTML
+    const tr = document.createElement("tr");
+    tr.className = "";
+    tr.contentEditable = 'true';
+    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+symbol+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+result+'</td>';
+    document.getElementById("sheetBody").appendChild(tr);
+
+
+
+
+    
+    //=====
+}
+
 function addEmptyLine() {
 
     
@@ -329,10 +388,27 @@ function addEmptyLine() {
     tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+'</td>'+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+symbol+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+''+'</td>';
     document.getElementById("sheetBody").appendChild(tr);
 
+    //=====
+}
 
-
+function addEmptyLineMobile() {
 
     
+
+    const csv = localStorage.csv
+
+    varCount = parseFloat(varCount)+1
+    console.log(varCount)
+    formVar1 = 'row'
+    symbol = ''
+    formVar2 = ''
+    color = document.getElementById('color').innerHTML
+    const tr = document.createElement("tr");
+    tr.className = "";
+    tr.contentEditable = 'true';
+    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+symbol+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+result+'</td>';
+    document.getElementById("sheetBody").appendChild(tr);
+
     //=====
 }
 

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Borg Innovations</title>
+
+	<meta name="theme-color" content="#fff">
+	<meta property="og:image" content="./img/ads/notanaicompany.png">
+	<meta name="twitter:image" content="./img/ads/notanaicompany.png">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Borg Innovations">
+	<meta property="og:type" content="website">
+	<meta name="description" content="*Not an AI company">
+	<meta name="twitter:description" content="*Not an AI company">
+
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="/img/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__6.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__5.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__4.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__3.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01_192.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<link rel="apple-touch-icon" href="/images/icons/01/01__7.png" />
+	<meta name="apple-mobile-web-app-status-bar" content="#243743" />
+	<meta name="theme-color" content="#243743" />
+
+	<link rel="shortcut icon" href="./img/icons/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="./luminary.css">
+	<script src="./luminary.js"></script>
+	<script src="./source/01menu.js"></script>
+    <script src="./source/tscomputation.js"></script>
+    <script src="./source/FileSaver.js"></script>
+
+
+	<!-- Cronitor RUM -->
+	<!--
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+        window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+        cronitor('config', { clientKey: '1af84f6e29e2a2dd59b116c33da3b996' });
+    </script>
+    <script src="https://cdn.counter.dev/script.js" data-id="49ff21d8-7cbe-4f83-b436-97b778216657" data-utcoffset="-7"></script>
+-->
+</head>
+
+<!--
+          _____
+         /   o \
+        | o   O |
+        \_____ /
+                 
+        
+ /^\
+ |O|
+/| |\
+||_||
+^   ^
+^   ^
+^   ^
+
+Inspired by the software engineers of the Luminary and Comanche flight software system for the Apollo NASA program.
+    https://github.com/chrislgarry/Apollo-11
+    https://www.ibiblio.org/apollo/#gsc.tab=0
+-->
+
+
+<header>
+	<a id="top" hidden></a>
+	<div class="appMenu" id="topMenu" style="position: fixed;">
+
+		<a id="iobtn" class="menuItem" onclick="showMenu()">01</a>
+
+		<div id="menuList" class="card" style="display: none">
+
+		</div>
+
+
+	</div>
+
+	<div class="toolMenu" id="topMenu" style="position: fixed;">
+
+		<a id="abtn" class="menuItem" onclick="showComp()">TS</a>
+
+		<div id="toolList" class="card" style="display: none">
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+</header>
+
+<body onload="oiMenu_load(),loadSheet(), versionID()">
+	<a href="https://buymeacoffee.com/jborg_arts" target="_blank">
+		<button style="width: 50px; height: 50px;" class="bmc">
+			<img src="./img/icons/bmc-logo-no-background.png" height="40px" alt="">
+		</button>
+	</a>
+
+	<center>
+		<p>
+			<img src="./img/icons/typesheet_bordered.svg" style="width: 50%; min-width: 250px; max-width: 500px;"
+				alt='Borg Innovations logo with the tagline, "*not an ai company" below.'>
+		</p>
+	</center>
+
+
+	<section id="control_hub">
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+    <div class="card-heading">
+        <h2>Simplified Textual Computations</h2>
+    </div>
+    <div class="card-body">
+        <center>
+            <h1 hidden style="text-decoration: none;">
+                type sheet
+            </h1>
+
+
+        </center>
+        <div class="divider">***************</div>
+
+        <center>
+            <p>
+
+                <input spellcheck="false" onkeyup="funcSort()"
+                    style="width:50%; max-width: 200px; min-width: 75px; text-align: center;" class="text-input"
+                    type="text" id="function" placeholder="* * * function * * *">
+                <a onclick="showShifts()" class="a" id="shiftName">funcs</a>
+
+
+
+                <span id="inputVars">
+                    <input spellcheck="false" onkeyup=""
+                    style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                    type="number" id="var1" placeholder="var"> 
+                    
+                    <span id="funcSign"><button onclick="minus()" class="abus" id="symbol">+</button></span>
+
+                    <input spellcheck="false" onkeyup=""
+                    style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
+                    type="number" id="var2" placeholder="var">         
+                </span>
+
+
+                <span id="funcButt"><button onclick="addFunc()" class="abus" id="">=</button></span>
+                <!--
+                <button onclick="addVar()" class="abus" id="">+</button>
+                -->
+                
+                
+            </p>
+
+            <section hidden>
+                
+            <span id="result"></span>    
+            </section>
+
+
+
+            <div id="shiftMenu" style="display: none" class="card">
+                <div class="card-heading">Functions</div>
+                <div class="card-body">
+
+                    <p>
+                        <a class="a" onclick="add(), showShifts()">add</a>
+                        <a class="a" onclick="minus(), showShifts()">subtract</a>
+                        <a class="a" onclick="multiply(), showShifts()">multiply</a>
+                        <a class="a" onclick="divide(), showShifts()">divide</a>
+                    </p>
+
+                    <p>
+                        <a class="a" onclick="exponent(), showShifts()">exponentiation</a>
+                        <a class="a" onclick="root(), showShifts()">root</a>
+                        <!--
+                        <a class="a" onclick="sine(), showShifts()">sine</a>
+                        <a class="a" onclick="divide(), showShifts()">divide</a>
+                        -->
+                    </p>
+
+
+                </div>
+                
+            </div>
+
+            <p> <button onclick="addLineMobile()" class="gbus" style="margin-top: 5px">Add Row</button>
+                <button onclick="addEmptyLineMobile()" class="bbus" style="margin-top: 5px">Add Empty Row</button>
+                <button onclick="removeLastLine()" class="obus" style="margin-top: 5px">Remove Row</button>    
+                
+            </p>
+
+
+
+            <div class="divider">****PREVIEW****</div>
+            <table class="table">
+                <tr>
+                    <td class="mercury" id="vizCell1">
+                    
+                    </td> 
+                    <td class="mercury" id="symbolPrev">
+                        
+                    </td>     
+                    <td class="mercury" id="vizCell2">
+                        
+                    </td>   
+                    <td class="mercury" id="vizResult">
+                        
+                    </td>    
+                </tr>
+            </table>
+            <div class="divider">***************</div>
+            <span hidden id="varNum">2</span>
+            <span hidden id="lastResult"></span>
+            <span hidden id="color">var(--luminary)</span>
+            <section hidden id="vars">
+                <span id="2"></span>
+            </section>
+
+            <p id="synapse_options" style="display: none;"><button onclick="synapse_copy()" class="abus">Copy
+                    Synapse</button> <button onclick="synapse_download()" class="abus">Download Synapse</button></p>
+
+
+        </center>
+    </div>
+
+    <section class="card-body-alt" id="sheet">
+
+        <section id="sheetHeader" contenteditable="true">
+
+        </section>
+
+        <table id="sheetBody">
+
+
+        
+        </table>
+
+        <section id="sheetFooter" contenteditable="true">
+
+        </section>
+
+        <section>
+            <p>Notes:</p> 
+            <p><span contenteditable="true" id="note">Note here</span> </p> 
+            </section>
+
+    </section>
+</div>
+
+
+
+
+
+
+
+		<!--
+	<script id="script" src="./authordev/app.js"></script>
+	-->
+
+	</section>
+</body>

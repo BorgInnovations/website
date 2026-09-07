@@ -170,10 +170,40 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                             style="width: 50%; min-width: 200px; max-width: 500px;" alt="Cork Board"></a>
                 </p>
 
-
                 <p>
-                    <i>New Beta</i>
+                    <a onclick="showTypeSheet()"><img src="./img/icons/typesheet_bordered.svg"
+                            style="width: 50%; min-width: 200px; max-width: 500px;" alt="TypeSheet"></a>
                 </p>
+
+                <script>
+                    function showTypeSheet() {
+                        var x = document.getElementById("typesheetmenu");
+                        if (x.style.display === "none") {
+                        x.style.display = "block";
+                        } else {
+                        x.style.display = "none";
+                        }
+                    }    
+                </script>
+
+                <div class="card" id="typesheetmenu" style="display: none;">
+                    <h3 class="card-heading">
+                        TypeSheet
+                        
+                    </h3>
+                    <div class="card-body">
+                        <p>
+                            <a class="a" href="./01_typesheetschedules.html">schedules</a>
+                        </p>
+
+                        <p>
+                            <a class="a" href="./01_typesheetcomputations.html">computations</a>    
+                        </p>
+                    </div>
+                    
+                </div>
+
+
 
                 <!--
             <img src="./img/icons/Luminary.svg" style="width: 90%; min-width: 100px; max-width: 200px;" alt="">

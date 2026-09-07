@@ -184,8 +184,10 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                         <p>
                             <a class="a" onclick="exponent(), showShifts()">exponentiation</a>
                             <a class="a" onclick="root(), showShifts()">root</a>
-                            <a class="a" onclick="multiply(), showShifts()">multiply</a>
+                            <!--
+                            <a class="a" onclick="sine(), showShifts()">sine</a>
                             <a class="a" onclick="divide(), showShifts()">divide</a>
+                            -->
                         </p>
 
 
@@ -193,12 +195,9 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                     
                 </div>
 
-                <p> <button onclick="addLine()" class="gbus">Add Row</button>
-                    <button onclick="addEmptyLine()" class="bbus">Add Empty Row</button>
-                        
-
-                    <button onclick="removeLastLine()"
-                        class="obus">Remove Row</button>    
+                <p> <button onclick="addLine()" class="gbus" style="margin-top: 5px">Add Row</button>
+                    <button onclick="addEmptyLine()" class="bbus" style="margin-top: 5px">Add Empty Row</button>
+                    <button onclick="removeLastLine()" class="obus" style="margin-top: 5px">Remove Row</button>    
                     
                 </p>
 
@@ -209,7 +208,10 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                     <tr>
                         <td class="mercury" id="vizCell1">
                         
-                        </td>   
+                        </td> 
+                        <td class="mercury" id="symbolPrev">
+                            
+                        </td>     
                         <td class="mercury" id="vizCell2">
                             
                         </td>   

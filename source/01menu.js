@@ -4,7 +4,7 @@ function oiMenu_load() {
 
 
 function showMenu() {
-    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a class="a" href="./01.html" class="subMenuItem">Home</a> </p><p> <a class="a" href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a class="a" href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a class="a" href="./01_luminary.html" class="subMenuItem">Luminary</a> </p><p> <a class="a" href="./01_corkboard.html" class="subMenuItem">Cork Board</a> </p><p> <a class="a" href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
+    document.getElementById("menuList").innerHTML = '<div class="card-body"><center><p> <a class="a" href="./01.html" class="subMenuItem">Home</a> </p><p> <a class="a" href="./01_author.html" class="subMenuItem">Author|</a> </p><p> <a class="a" href="./01_c0rt3x.html" class="subMenuItem">C0RT3X</a> </p><p> <a class="a" href="./01_luminary.html" class="subMenuItem">Luminary</a> </p><p> <a class="a" href="./01_corkboard.html" class="subMenuItem">Cork Board</a> </p><p> <a class="a" href="./01_typesheetcomputations.html" class="subMenuItem">TypeSheet</a> </p><p> <a class="a" href="./01_about.html" class="subMenuItem">About</a> </p></center></div>';
     var x = document.getElementById("menuList");
     if (x.style.display === "none") {
        x.style.display = "block";
@@ -41,6 +41,19 @@ function showMenu() {
        document.getElementById("abtn").innerHTML = "TS";
     }
  }
+
+ function showComp() {
+   document.getElementById("menuList").innerHTML = '<div class="card-body"><center><ul><li><a class="a" onclick=" saveSheet(), showComp()">Save</a></li><li><a class="a" onclick=" saveName(), saveSheet(), showComp()">Save As</a></li><li><a class="a" onclick=" printFile(), file(), showComp()">PDF/Print</a></li><li><a class="a-comanche" onclick=" deleteSheet(), saveSheetDeletion(), showComp()">DELETE</a></li></ul></center>'
+
+   var x = document.getElementById("menuList");
+   if (x.style.display === "none") {
+      x.style.display = "block";
+      document.getElementById("abtn").innerHTML = 'XX';
+   } else {
+      x.style.display = "none";
+      document.getElementById("abtn").innerHTML = "TS";
+   }
+}
 
  
 
