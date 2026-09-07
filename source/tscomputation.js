@@ -97,26 +97,38 @@ var result = ''
 //Add
 function add(){
     document.getElementById("function").value = 'add'
-    document.getElementById("funcSign").innerHTML = '<button onclick="minus()" class="abus" id="">+</button>'
+    document.getElementById("funcSign").innerHTML = '<button onclick="minus()" class="abus" id="symbol">+</button>'
     document.getElementById("funcButt").innerHTML = '<button onclick="addFunc()" class="abus" id="">=</button>'
 }
 
 function minus(){
     document.getElementById("function").value = 'subtract'
-    document.getElementById("funcSign").innerHTML = '<button onclick="multiply()" class="abus" id="">-</button>'
+    document.getElementById("funcSign").innerHTML = '<button onclick="multiply()" class="abus" id="symbol">-</button>'
     document.getElementById("funcButt").innerHTML = '<button onclick="subFunc()" class="abus" id="">=</button>'
 }
 
 function multiply(){
     document.getElementById("function").value = 'multiply'
-    document.getElementById("funcSign").innerHTML = '<button onclick="divide()" class="abus" id="">x</button>'
+    document.getElementById("funcSign").innerHTML = '<button onclick="divide()" class="abus" id="symbol">x</button>'
     document.getElementById("funcButt").innerHTML = '<button onclick="multFunc()" class="abus" id="">=</button>'
 }
 
 function divide(){
     document.getElementById("function").value = 'divide'
-    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="">/</button>'
+    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="symbol">/</button>'
     document.getElementById("funcButt").innerHTML = '<button onclick="divFunc()" class="abus" id="">=</button>'
+}
+
+function exponent(){
+    document.getElementById("function").value = 'exponentiation'
+    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="symbol">^</button>'
+    document.getElementById("funcButt").innerHTML = '<button onclick="expFunc()" class="abus" id="">=</button>'
+}
+
+function root(){
+    document.getElementById("function").value = 'root'
+    document.getElementById("funcSign").innerHTML = '<button onclick="add()" class="abus" id="symbol">✓</button>'
+    document.getElementById("funcButt").innerHTML = '<button onclick="rootFunc()" class="abus" id="">=</button>'
 }
 
 
@@ -182,6 +194,38 @@ function divFunc(){
 
 }
 
+function expFunc(){
+    varNum1 = parseFloat(document.getElementById('var1').value)
+    varNum2 = parseFloat(document.getElementById('var2').value)
+
+    funcRes = varNum1**varNum2
+    
+    result = funcRes
+    document.getElementById('vizCell1').innerHTML = varNum1
+    document.getElementById('vizCell2').innerHTML = varNum2
+    document.getElementById('vizResult').innerHTML = result
+    document.getElementById('result').innerHTML = result
+
+
+}
+
+function rootFunc(){
+    varNum1 = parseFloat(document.getElementById('var1').value)
+    varNum2 = parseFloat(document.getElementById('var2').value)
+
+    funcRes = Math.pow(varNum2, 1 / varNum1)
+    
+    result = funcRes
+    document.getElementById('vizCell1').innerHTML = varNum1
+    document.getElementById('vizCell2').innerHTML = varNum2
+    document.getElementById('vizResult').innerHTML = result
+    document.getElementById('result').innerHTML = result
+
+
+}
+
+
+
 //Function Sort 
     function funcSort(){
 
@@ -194,7 +238,13 @@ function divFunc(){
         if (document.getElementById('function').value == 'multiplication') multiply();
         if (document.getElementById('function').value == 'divide') divide();
         if (document.getElementById('function').value == 'division') divide();
+        if (document.getElementById('function').value == 'exponentiation') exponent();
+        if (document.getElementById('function').value == 'exponent') exponent();
+        if (document.getElementById('function').value == 'cube') exponent();
+        if (document.getElementById('function').value == 'square') exponent();
+        if (document.getElementById('function').value == 'root') root();
     }
+
 
 
 
@@ -238,19 +288,45 @@ function addVar() {
 
 function addLine() {
 
-
+    
 
     const csv = localStorage.csv
 
     varCount = parseFloat(varCount)+1
     console.log(varCount)
     formVar1 = document.getElementById('vizCell1').innerHTML
+    symbol = document.getElementById('symbol').innerHTML
     formVar2 = document.getElementById('vizCell2').innerHTML
     color = document.getElementById('color').innerHTML
     const tr = document.createElement("tr");
     tr.className = "";
     tr.contentEditable = 'true';
-    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+'</td>'+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+result+'</td>';
+    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+'</td>'+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+symbol+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+result+'</td>';
+    document.getElementById("sheetBody").appendChild(tr);
+
+
+
+
+    
+    //=====
+}
+
+function addEmptyLine() {
+
+    
+
+    const csv = localStorage.csv
+
+    varCount = parseFloat(varCount)+1
+    console.log(varCount)
+    formVar1 = 'row'
+    symbol = ''
+    formVar2 = ''
+    color = document.getElementById('color').innerHTML
+    const tr = document.createElement("tr");
+    tr.className = "";
+    tr.contentEditable = 'true';
+    tr.innerHTML = '<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+formVar1+'</td>'+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+symbol+'<td style="border: 1px solid black; padding-left: 10px;padding-right: 10px;">'+formVar2+'</td>'+'<td style="border: 1px solid black;padding-left: 10px;padding-right: 10px;">'+''+'</td>';
     document.getElementById("sheetBody").appendChild(tr);
 
 

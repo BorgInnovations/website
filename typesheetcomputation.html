@@ -147,7 +147,7 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                         style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
                         type="number" id="var1" placeholder="var"> 
                         
-                        <span id="funcSign"><button onclick="minus()" class="abus" id="">+</button></span>
+                        <span id="funcSign"><button onclick="minus()" class="abus" id="symbol">+</button></span>
 
                         <input spellcheck="false" onkeyup=""
                         style="width:50%; max-width: 75px; min-width: 50px; text-align: center;" class="text-input"
@@ -181,12 +181,20 @@ Inspired by the software engineers of the Luminary and Comanche flight software 
                             <a class="a" onclick="divide(), showShifts()">divide</a>
                         </p>
 
+                        <p>
+                            <a class="a" onclick="exponent(), showShifts()">exponentiation</a>
+                            <a class="a" onclick="root(), showShifts()">root</a>
+                            <a class="a" onclick="multiply(), showShifts()">multiply</a>
+                            <a class="a" onclick="divide(), showShifts()">divide</a>
+                        </p>
+
 
                     </div>
                     
                 </div>
 
                 <p> <button onclick="addLine()" class="gbus">Add Row</button>
+                    <button onclick="addEmptyLine()" class="bbus">Add Empty Row</button>
                         
 
                     <button onclick="removeLastLine()"
